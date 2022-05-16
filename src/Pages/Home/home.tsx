@@ -9,7 +9,7 @@ export const Home = ():JSX.Element =>{
           <Header />
 
             <Link className="button1" to='/'>Home</Link>
-            <Link className="button2" to='/Pag2'>Usuários</Link>
+            <Link className="button2" to='/perfil'>Perfil</Link>
 
         </>
     );
