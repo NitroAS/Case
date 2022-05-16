@@ -1,13 +1,13 @@
 import '../../Assets/CSS/header.css'
 import { Link } from "react-router-dom";
-import HeaderFoto from "../../Assets/img/logo.png"
+import LogoHeader from "../../Assets/img/logo.png"
 export const Header = (): JSX.Element => {
 
     return (
         <>
 
             <div className="LogoHeader">
-                <img src={HeaderFoto} alt="Logo do header" />
+                <img src={LogoHeader} alt="Logo do header" />
             </div>
 
 
