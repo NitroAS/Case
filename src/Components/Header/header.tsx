@@ -1,6 +1,6 @@
 import '../../Assets/CSS/header.css'
 import { Link } from "react-router-dom";
-import HeaderFoto from "../../Assets/img/Group_1.png"
+import HeaderFoto from "../../Assets/img/logo.png"
 export const Header = (): JSX.Element => {
 
     return (
@@ -11,8 +11,8 @@ export const Header = (): JSX.Element => {
             </div>
 
 
-            {/* <Link className="button1" to='/'>Home</Link>
-            <Link className="button2" to='/Pag2'>Usuários</Link> */}
+            <Link className="button1" to='/'>Home</Link>
+            <Link className="button2" to='/Pag2'>Usuários</Link>
         </>
     );
 }
