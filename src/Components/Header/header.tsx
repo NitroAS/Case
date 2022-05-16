@@ -5,14 +5,20 @@ export const Header = (): JSX.Element => {
 
     return (
         <>
+            <Link className="button1" to='/'>Home</Link>
+            <Link className="button2" to='/carros'>Carros</Link>
+            <Link className="button3" to='/reservas'>Reservas</Link>
 
             <div className="LogoHeader">
                 <img src={LogoHeader} alt="Logo do header" />
             </div>
 
+            <Link className="button4" to='/locadora'>Locadora</Link>
+            <Link className="button5" to='/perfil'>Perfil</Link>
+            <Link className="button6" to='/'>Sair</Link>
 
-            <Link className="button1" to='/'>Home</Link>
-            <Link className="button2" to='/Pag2'>Usuários</Link>
+
+
         </>
     );
 }
