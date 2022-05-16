@@ -6,7 +6,7 @@ export const Perfil = ():JSX.Element =>{
     return(
         <>
             <Header />
-          
+            <p>OI</p>
         </>
     );
 }
