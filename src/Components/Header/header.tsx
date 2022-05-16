@@ -8,6 +8,8 @@ export const Header = (): JSX.Element => {
             <div className="LogoHeader">
                 <img src={LogoHeader} alt="Logo do header" />
             </div>
+
+            <Link className="button1" to='/'>Home</Link>
         </>
     );
 }
