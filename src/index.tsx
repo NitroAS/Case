@@ -1,7 +1,11 @@
 import ReactDOM from 'react-dom';
 import './Assets/CSS/global.css'
+
+// Rotas
 import { Home } from './Pages/Home/home'
 import { Login } from './Pages/login/login'
+
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -12,7 +16,6 @@ const Rotas = () =>{
           <Routes>
               <Route element={<Home/>} path="/"/>
               <Route element={<Login />} path="/Usuarios" />
-             
           </Routes>
       </BrowserRouter>
   );
