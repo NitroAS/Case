@@ -1,1 +1,62 @@
 @import '../CSS/global.css';
+
+.centralizarLogin{
+    display: flex;
+    justify-content: center;
+}
+
+.login{
+    width: 80%;
+}
+
+.centralizarLogo{
+    display: flex;
+    justify-content: center;
+}
+
+.loginCadastrar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardLogin{
+    border: 1px solid #9F9999;
+    border-radius: 10px;
+    width: 550px;
+    height: 893px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textoLogin{
+    max-width: 443px;
+}
+
+.cardCadastrar{
+    border: 1px solid #9F9999;
+    border-radius: 10px;
+    width: 550px;
+    height: 893px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputCadastrar{
+    width: 450px;
+    height: 70px;
+    background: #DCE0E2;
+    border-radius: 10px;
+    border: #DCE0E2;
+    margin-top: 45px;
+}
+
+.tituloCadastrar{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #040404;
+}
