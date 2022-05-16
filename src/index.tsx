@@ -12,7 +12,6 @@ const Rotas = () =>{
           <Routes>
               <Route element={<Home/>} path="/"/>
               <Route element={<Login />} path="/Usuarios" />
-             
           </Routes>
       </BrowserRouter>
   );
