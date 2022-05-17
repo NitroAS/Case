@@ -1,8 +1,28 @@
 @import '../CSS/global.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Quicksand&display=swap');
 
-
-.LogoHeader{
+*{
+    font-family: 'Quicksand'
+}
+.LogoHeader {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+
+}
+
+.AlinhamentoHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 321px;
+}
+
+.buttonHeader {
+    text-decoration: none;
+    font-size: 24px;
+    color: #040404;
+    
+}
+
+.buttonHeader::hover{
+    border-bottom: 2px solid black;
 }
