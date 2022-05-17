@@ -1,1 +1,77 @@
 @import '../CSS/global.css';
+
+/* Tamanhos e cores */
+
+.footer{
+    background-color: var(--cinzaFooter);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 328px;
+}
+
+.buttonFooter{
+    background-color: var(--cinzaFooter);
+    border: none;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--pretoFooter);
+}
+
+.buttonFooter:hover{
+    border-bottom: 2px solid ;
+}
+
+.pFooter{
+    color: var(--pretoFooter);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.imgFooter{
+    width: 60px;
+    height: 60px;
+}
+
+.pMaiorFooter{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--pretoFooter);
+}
+
+/* Alinhamento e mais alguns tamanhos */
+
+.alinhamentoFooter{
+    width: 1097px;
+    display: flex;
+    justify-content: space-between;
+    height: 267px;
+    margin-top: 30px;
+}
+
+.paiInfosFooter{
+    display: flex;
+}
+
+.infosFooter{
+    width: 600px;
+}
+
+.infosFooterUm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.barraFooter{
+    height: 266px;
+    width: 2px;
+    background-color: black;
+    margin-left: 40px;
+}
+
+.proteçãoBarra{
+    height: 266px;
+}
