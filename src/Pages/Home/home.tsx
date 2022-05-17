@@ -4,6 +4,7 @@ import '../../Assets/CSS/home.css'
 import Header from '../../Components/Header/header';
 import Footer from '../../Components/Footer/footer';
 
+
 export const Home = ():JSX.Element =>{
 
     return(
