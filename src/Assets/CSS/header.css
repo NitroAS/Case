@@ -9,7 +9,7 @@
 
 }
 
-.AlinhamentoHeaderPerfil {
+.AlinhamentoHeader {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -17,13 +17,13 @@
     width: 1440px;     
 }
 
-.btnHeaderPerfil {
+.buttonHeader {
     text-decoration: none;
     font-size: 24px;
     color: #040404;
     
 }
 
-.btnHeaderPerfil::hover{
+.buttonHeader::hover{
     border-bottom: 2px solid black;
 }
