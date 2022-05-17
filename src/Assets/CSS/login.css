@@ -5,10 +5,6 @@
     justify-content: center;
 }
 
-.login{
-    width: 80%;
-}
-
 .centralizarLogo{
     display: flex;
     justify-content: center;
@@ -17,6 +13,23 @@
 .loginCadastrar{
     display: flex;
     justify-content: space-between;
+    margin-top: 145px;
+    margin-bottom: 160px;
+}
+
+.centralizarLoginCadastrar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tituloLogin{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #040404;
+    margin-top: 49px;
 }
 
 .cardLogin{
@@ -31,6 +44,15 @@
 
 .textoLogin{
     max-width: 443px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #040404;
+    margin-top: 76px;
+    margin-bottom: 275px;
+    text-align: center;
 }
 
 .cardCadastrar{
@@ -41,6 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 25px;
 }
 
 .inputCadastrar{
@@ -50,6 +73,13 @@
     border-radius: 10px;
     border: #DCE0E2;
     margin-top: 45px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #040404;
+    padding-left: 20px;
 }
 
 .tituloCadastrar{
@@ -59,4 +89,19 @@
     font-size: 40px;
     line-height: 50px;
     color: #040404;
+    margin-top: 49px;
+}
+
+.botaoCadastrar{
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    margin-top: 323px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
 }
