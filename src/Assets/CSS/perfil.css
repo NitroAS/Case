@@ -1,3 +1,53 @@
 @import '../CSS/global.css';
 
 
+.BoxPerfil{
+    border: solid 1px #9F9999;
+    width: 1137px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.AlinhamentoTotal{
+ display: flex;
+ justify-content: center
+}
+
+
+
+
+.inputsPerfil{
+    background: #DCE0E2;
+    border-radius: 10px;
+    width: 953px;
+    height: 70px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #040404;
+    padding: 0px 0px 0px 50px;
+}
+
+.btnPerfilAtualizar{
+    background: #DB1812;
+    border-radius: 5px;
+    width: 250px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.btnPerfilExcluir{
+    border: 3px solid #DB1812;
+    border-radius: 5px;
+    width: 250px;
+    height: 70px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #DB1812;
+    font-size: 24px;
+    font-weight: 700;
+    }
