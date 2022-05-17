@@ -26,8 +26,9 @@
 .pFooter{
     color: var(--pretoFooter);
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .imgFooter{
@@ -58,11 +59,22 @@
 
 .infosFooter{
     width: 600px;
+    margin-top: 30px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .infosFooterUm{
     display: flex;
     justify-content: space-between;
+}
+
+.infosFooterDois{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .barraFooter{
@@ -74,4 +86,18 @@
 
 .proteçãoBarra{
     height: 266px;
+}
+
+.alinhamentoImgFooter{
+    width: 301px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ultimaDivFooter{
+    margin-top: 30px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

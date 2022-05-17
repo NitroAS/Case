@@ -19,7 +19,7 @@ export const Footer = ():JSX.Element =>{
                                 <button className='buttonFooter'>Trabalhe Conosco</button>
                                 <button className='buttonFooter'>PROCON</button>
                             </div>
-                            <div>
+                            <div className='infosFooterDois'>
                                 <p className='pFooter'>31 99999 9666 - contato@divinafashion.com</p>
                                 <p className='pFooter'>AV. Principal, 123 . BH/MG</p>
                             </div>
@@ -28,8 +28,8 @@ export const Footer = ():JSX.Element =>{
                     </div>
                     
                     
-                    <div>
-                        <div>
+                    <div className='ultimaDivFooter'>
+                        <div className='alinhamentoImgFooter'>
                             <img src={instagram} alt="Logo e link para o instagram" className='imgFooter' />
                             <img src={facebook} alt="Logo e link para o facebook" className='imgFooter' />
                             <img src={twitter} alt="Logo e link para o twitter" className='imgFooter' />
