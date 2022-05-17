@@ -101,3 +101,8 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.aFooter{
+    text-decoration: none;
+    color: var(--pretoFooter);
+}

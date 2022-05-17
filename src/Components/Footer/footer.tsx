@@ -15,9 +15,9 @@ export const Footer = ():JSX.Element =>{
                     <div className='paiInfosFooter'>
                         <div className='infosFooter'>
                             <div className='infosFooterUm'>
-                                <button className='buttonFooter'>Política de Segurança</button>
-                                <button className='buttonFooter'>Trabalhe Conosco</button>
-                                <button className='buttonFooter'>PROCON</button>
+                                <button className='buttonFooter'><a className='aFooter' href="#">Política de Segurança</a></button>
+                                <button className='buttonFooter'><a className='aFooter' href="#">Trabalhe Conosco</a></button>
+                                <button className='buttonFooter'><a className='aFooter' href="https://www.procon.pr.gov.br" target='_blank'>PROCON</a></button>
                             </div>
                             <div className='infosFooterDois'>
                                 <p className='pFooter'>31 99999 9666 - contato@divinafashion.com</p>
