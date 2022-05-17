@@ -67,6 +67,14 @@ h1{
     color: #FFFFFF;
 }
 
+.btnPerfilAtualizar:hover{
+    background-color: #DCE0E2;
+    color: #DB1812;
+    border: 3px solid #DB1812;
+}
+
+
+
 .btnPerfilExcluir{
     border: 3px solid #DB1812;
     border-radius: 5px;
@@ -77,4 +85,10 @@ h1{
     color: #DB1812;
     font-size: 24px;
     font-weight: 700;
+}
+
+.btnPerfilExcluir:hover{
+    background-color: #DB1812;
+    color: #DCE0E2;
+    border: 3px solid #DCE0E2;
 }
