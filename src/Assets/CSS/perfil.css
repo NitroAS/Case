@@ -110,7 +110,7 @@ h1{
 
 .pTituloPerfil{
     color: #000000;
-    font-weight: 200;
+    font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     font-family: 'Montserrat'
@@ -121,6 +121,7 @@ h1{
     font-size: 40px;
     line-height: 49px;
     color: #040404;
+    font-family: 'Montserrat'
 }
 
 .ContainerH2{
