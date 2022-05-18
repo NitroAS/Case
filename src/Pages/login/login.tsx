@@ -30,7 +30,7 @@ export const Login = ():JSX.Element =>{
                           <input placeholder='Nome Completo' className='inputCadastrar' type="text"/>
                           <input placeholder='Telefone' className='inputCadastrar' type="text"/>
                           <input placeholder='E-mail' className='inputCadastrar' type="text"/>
-                          <Link className='botaoCadastrar' to='/perfil'>Cadastrar</Link>
+                          <Link  to='/perfil'><button className='linkBtnCadastra'>Cadastrar</button></Link>
                         </div>
                       </div>  
                     </section>

@@ -30,7 +30,7 @@ export const Home = (): JSX.Element => {
 
                                 <div className='botoes1'>
 
-                                <Link className='LoginB' to='/login'>Login</Link>
+                                <Link className='LoginB' to='/login'><button className='linkBtnHome'>Login</button></Link>
 
                                     <button className='CadastrarB'>Cadastrar</button> 
 
