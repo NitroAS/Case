@@ -4,7 +4,7 @@ import { Home } from './Pages/Home/home'
 import { Login } from './Pages/login/login'
 import { Carros } from './Pages/Carros/carros'
 import { Locadora } from './Pages/Locadora/locadora'
-import { Perfil } from './Pages/Perfil/perfil'
+import { Perfil } from './Pages/perfil/perfil'
 import { Reservas } from './Pages/Reservas/reservas'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
