@@ -1,5 +1,5 @@
 import '../../Assets/CSS/home.css'
-
+import { Link } from "react-router-dom";
 import Logo from '../../Assets/img/logo.png'
 import PFoto from '../../Assets/img/banner-car 1.png'
 import SFoto from '../../Assets/img/car1 1.png'
@@ -30,7 +30,7 @@ export const Home = (): JSX.Element => {
 
                                 <div className='botoes1'>
 
-                                    <button className='LoginB'>Login</button>
+                                <Link className='LoginB' to='/login'>Login</Link>
 
                                     <button className='CadastrarB'>Cadastrar</button> 
 
