@@ -208,3 +208,10 @@ h1{
     font-weight: 700;
     font-family: 'Quicksand', sans-serif;
 }
+
+.buttonsDoCardcarro{
+    height: 162px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

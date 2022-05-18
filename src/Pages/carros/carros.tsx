@@ -53,8 +53,10 @@ export const Carros = ():JSX.Element => {
                                 <div className='divPCardCarros'>
                                     <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
                                 </div>
-                                <button className='buttonEditarCarros'>Editar</button>
-                                <button className='buttonExcluirCarros'>Excluir</button>
+                                <div className='buttonsDoCardcarro'>
+                                    <button className='buttonEditarCarros'>Editar</button>
+                                    <button className='buttonExcluirCarros'>Excluir</button>
+                                </div>
                             </div>
                         </div>
                     </section>
