@@ -137,3 +137,74 @@ h1{
 .sectionsDoscardscarros{
     height: 687px;
 }
+
+.espaçamentoEntreAsSections{
+    margin-top: 166px;
+}
+
+.cardsAPICarros{
+    border: 1px solid var(--cinzaClaroCardCarros);
+    border-radius: 10px;
+    width: 351px;
+    height: 600px;
+    margin-top: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nomeDoCarro{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: black;
+}
+
+.alinhamentocardCarros{
+    width: 251px;
+}
+
+.h3CardDiv{
+    height: 98px;
+    display: flex;
+    align-items: center;
+}
+
+.pCardCarros{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.divPCardCarros{
+    height: 114px;
+}
+
+.buttonEditarCarros{
+    border: 1px solid var(--vermelhoCarros);
+    border-radius: 5px;
+    background-color: var(--vermelhoCarros);
+    width: 250px;
+    height: 75px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.buttonEditarCarros:hover{
+    background-color: white;
+    color: var(--vermelhoCarros);
+}
+
+.buttonExcluirCarros{
+    border: 1px solid var(--vermelhoCarros);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--vermelhoCarros);
+    width: 250px;
+    height: 75px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+}

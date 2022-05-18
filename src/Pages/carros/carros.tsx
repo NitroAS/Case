@@ -1,6 +1,9 @@
 // css
 import '../../Assets/CSS/carros.css'
 
+// IMGs
+import car3_2 from '../../Assets/IMGsCarros/car3_2.png'
+
 export const Carros = ():JSX.Element => {
     return(
         <div>
@@ -36,10 +39,26 @@ export const Carros = ():JSX.Element => {
                             </div>
                         </div>
                     </section>
-                    <section className='sectionsDoscardscarros'>
+
+                    <section className='sectionsDoscardscarros espaçamentoEntreAsSections'>
                         <h2 className='h2Carros'>Econômico</h2>
                         <div className="barraDeSeparacaoCarros"></div>
+
+                        <div className='cardsAPICarros'>
+                            <img src={car3_2} alt="Imagem de um carro econômico" />
+                            <div className='alinhamentocardCarros'>
+                                <div className='h3CardDiv'>
+                                    <h3 className='nomeDoCarro'>Fiat Uno 1.0</h3>
+                                </div>
+                                <div className='divPCardCarros'>
+                                    <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
+                                </div>
+                                <button className='buttonEditarCarros'>Editar</button>
+                                <button className='buttonExcluirCarros'>Excluir</button>
+                            </div>
+                        </div>
                     </section>
+
                     <section className='sectionsDoscardscarros'>
                         <h2 className='h2Carros'>Especial</h2>
                         <div className="barraDeSeparacaoCarros"></div>
