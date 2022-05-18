@@ -1,6 +1,5 @@
 import '../../Assets/CSS/header.css'
-import { Link } from "react-router-dom";
-import HeaderFoto from "../../Assets/img/Group_1.png"
+import HeaderFoto from "../../Assets/img/logo.png"
 export const Header = (): JSX.Element => {
 
     return (
