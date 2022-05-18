@@ -136,6 +136,7 @@ h1{
 
 .sectionsDoscardscarros{
     height: 687px;
+    margin-top: 30px;
 }
 
 .espaçamentoEntreAsSections{
@@ -193,8 +194,8 @@ h1{
 }
 
 .buttonEditarCarros:hover{
-    background-color: white;
-    color: var(--vermelhoCarros);
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
 }
 
 .buttonExcluirCarros{
@@ -210,8 +211,8 @@ h1{
 }
 
 .buttonExcluirCarros:hover{
-    background-color: var(--vermelhoCarros);
-    color: white;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
 }
 
 .buttonsDoCardcarro{
