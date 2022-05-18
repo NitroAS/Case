@@ -123,18 +123,21 @@ h1{
     color: #040404;
 }
 
+.ContainerH2{
+    margin-top: 150px;
+}
 
 /* Borda */
 .bordaPerfil{
     background: #FFFFFF;
     border: 1px solid #C6C4C4;
     border-radius: 10px;
-    width: 1140px;
+    width: 1235px;
     height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px
+    margin-top: 70px
 }
 
 /* borda ´auxiliar por texto */
@@ -163,7 +166,7 @@ h1{
 .alinhamentoPerfilFinal{
     display: flex;
     flex-direction: column;
-   width: 1236px;
+    width: 1236px;
 }
 
 /* Alinhamento box-Secundaria */
@@ -171,7 +174,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1100px;
+    width: 1195px;
 
 }
 
