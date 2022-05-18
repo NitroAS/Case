@@ -1,6 +1,6 @@
 import '../../Assets/CSS/home.css'
 import { Link } from "react-router-dom";
-import Logo from '../../Assets/img/logo.png'
+import Logo from '../../Assets/img/logoBranco.png'
 import PFoto from '../../Assets/img/banner-car 1.png'
 import SFoto from '../../Assets/img/car1 1.png'
 import TFoto from '../../Assets/img/car2 1.png'
