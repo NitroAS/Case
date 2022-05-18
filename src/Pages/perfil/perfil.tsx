@@ -8,11 +8,11 @@ export const Perfil = (): JSX.Element => {
             <Header />
 
 
-            <div className='AlinhamentoTotal'>
+            <div className='AlinhamentoBoxPerfil'>
                 <div className='BoxPerfil'>
                     <div className="tituloAlinhamentoPerfil">
 
-                    <h1>Perfil</h1>
+                        <h1>Perfil</h1>
                     </div>
 
                     <div className="InputPerfilAlinhamento">
@@ -46,10 +46,45 @@ export const Perfil = (): JSX.Element => {
                         </div>
 
                     </div>
+
+
+
                 </div>
 
 
             </div>
+            <div className='alinhamentoPerfilFinal'>
+
+                <div className="ContainerH2">
+                    <h2 className='h2Perfil'>USUÁRIOS CADASTRADOS</h2>
+                </div>
+
+                <div className="bordaAuxiliar">
+
+                </div>
+                <div className="bordaPerfil">
+                    <div className="container">
+
+                        <div className="boxCadastro">
+                            <p className='pTituloPerfil'>Maria de Fátima Muniz</p>
+
+                            <p className='pMsgPerfil'>(11) 99999-9090</p>
+                            <p className='pMsgPerfil'>maria@gmail.com</p>
+
+                            <button className='excluirCadastroPerfil'>Excuir usuário</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
 
         </>
     );
