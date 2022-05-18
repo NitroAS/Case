@@ -1,1 +1,139 @@
 /* Tamanhos e cores */
+h1{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.escolherTiposDeCarros{
+    width: 918px;
+    height: 67px;
+    border: 1px solid var(--cinzaInputs);
+    background-color: var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros);
+}
+
+.selectBooleanoAirbag{
+    background-color: var(--cinzaInputs);
+    width: 320px;
+    height: 70px;
+    border: 1px solid var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros);
+}
+
+.inputsMenoresCarros{
+    background-color: var(--cinzaInputs);
+    width: 247px;
+    height: 70px;
+    border: 1px solid var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros);
+}
+
+.selectLocadouraCarros{
+    background-color: var(--cinzaInputs);
+    width: 583px;
+    height: 70px;
+    border: 1px solid var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros);
+}
+
+.buttonCadastrarCarros{
+    width: 250px;
+    height: 70px;
+    background-color: var(--vermelhoCarros);
+    color: white;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    border: 1px solid var(--vermelhoCarros);
+    border-radius: 5px;
+}
+
+.buttonCadastrarCarros:hover{
+    background-color: white;
+    color: var(--vermelhoCarros);
+}
+
+.h2Carros{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--pretoClarocarros);
+    margin-bottom: 10px;
+}
+
+.barraDeSeparacaoCarros{
+    width: 634px;
+    height: 1px;
+    background-color: black;
+}
+
+/* Posicionamentos */
+
+.mainCarros{
+    display: flex;
+    justify-content: center;
+}
+
+.alinhamentoMainCarros{
+    width: 1140px;
+}
+
+.alinhamentoSectionUmCarros{
+    margin-top: 10px;
+    border: 1px solid var(--cinzaCardCarros);
+    height: 531px;
+    display: flex;
+    justify-content: center;
+}
+
+.alinhamentoCadastrarCarros{
+    width: 991px;
+}
+
+.divH1Carros{
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divInputMaior{
+    height: 128px;
+}
+
+.inputsMenores{
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divCadastrarCarros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionsDoscardscarros{
+    height: 687px;
+}
