@@ -1,5 +1,6 @@
 import '../../Assets/CSS/perfil.css'
 import { Header } from '../../Components/Header/header'
+import { Footer } from '../../Components/Footer/footer'
 export const Perfil = (): JSX.Element => {
 
     return (
@@ -81,6 +82,7 @@ export const Perfil = (): JSX.Element => {
 
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

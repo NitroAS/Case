@@ -3,10 +3,13 @@ import '../../Assets/CSS/carros.css'
 
 // IMGs
 import car3_2 from '../../Assets/IMGsCarros/car3_2.png'
+import { Header } from '../../Components/Header/header'
+import { Footer } from '../../Components/Footer/footer'
 
 export const Carros = ():JSX.Element => {
     return(
         <div>
+            <Header />
             <div className='mainCarros'>
                 <div className='alinhamentoMainCarros'>
                     <section>
@@ -71,6 +74,7 @@ export const Carros = ():JSX.Element => {
                     </section>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

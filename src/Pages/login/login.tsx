@@ -3,6 +3,7 @@ import '../../Assets/CSS/login.css'
 import logo from '../../Assets/img/logo.png';
 import HandleCredentialResponse from '../../services/googleAuth';
 import { Link } from "react-router-dom";
+import { Footer } from '../../Components/Footer/footer'
 
 export const Login = ():JSX.Element =>{
   useEffect(()=>{    
@@ -36,6 +37,7 @@ export const Login = ():JSX.Element =>{
                     </section>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
