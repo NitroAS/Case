@@ -1,5 +1,7 @@
 import ReactDOM from 'react-dom';
 import './Assets/CSS/global.css'
+
+// Rotas
 import { Home } from './Pages/Home/home'
 import { Login } from './Pages/login/login'
 import { Carros } from './Pages/Carros/carros'

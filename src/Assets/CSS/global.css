@@ -19,8 +19,11 @@ code {
     --cor1: #040404;
     --cor2: #41B8D2;
     --cor3: #9BD2DE;
-    --cinzaFooter: #CAD0D3;
-    --pretoFooter: #060606;
+    --cinzaInputs: #DCE0E2;
+    --pretoClarocarros: #040404;
+    --vermelhoCarros: #DB1812;
+    --cinzaCardCarros: #9F9999;
+    --cinzaClaroCardCarros: #C6C4C4;
 }
 
 *{
