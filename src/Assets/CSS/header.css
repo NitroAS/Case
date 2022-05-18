@@ -24,6 +24,11 @@
     
 }
 
-.btnHeaderPerfil::hover{
+.btnHeaderPerfil:hover{
     border-bottom: 2px solid black;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
 }
