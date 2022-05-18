@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import '../../Assets/CSS/login.css'
 import logo from '../../Assets/img/logo.png';
 import HandleCredentialResponse from '../../services/googleAuth';
-
+import { Link } from "react-router-dom";
 
 export const Login = ():JSX.Element =>{
   useEffect(()=>{    
@@ -30,7 +30,7 @@ export const Login = ():JSX.Element =>{
                           <input placeholder='Nome Completo' className='inputCadastrar' type="text"/>
                           <input placeholder='Telefone' className='inputCadastrar' type="text"/>
                           <input placeholder='E-mail' className='inputCadastrar' type="text"/>
-                          <button className='botaoCadastrar'>Cadastrar</button>
+                          <Link className='botaoCadastrar' to='/perfil'>Cadastrar</Link>
                         </div>
                       </div>  
                     </section>
