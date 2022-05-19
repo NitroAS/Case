@@ -50,7 +50,7 @@ export const Reserva = (): JSX.Element => {
 
                         </div>
 
-
+                        <div></div>
 
                     </section>
 
