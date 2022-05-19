@@ -36,6 +36,8 @@
 
 .informacoesReserva{
     margin-bottom: 15px;
+    font-family: 'Quicksand';
+    font-size: 20px;
 }
 
 .Textos{
@@ -60,4 +62,15 @@
     border: 2px solid #DB1812;
     border-radius: 5px; 
     box-sizing: border-box;
+    background-color: white;
+    margin-right: 18px;
+}
+
+
+/* Alinhamento aereo significa que estou alinhando por fora o conteúdo que está grudando no canto da tela*/
+.alinhamentoAereoMain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }

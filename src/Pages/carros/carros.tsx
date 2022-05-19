@@ -3,8 +3,7 @@ import '../../Assets/CSS/carros.css'
 
 // IMGs
 import car3_2 from '../../Assets/IMGsCarros/car3_2.png'
-import { Header } from '../../Components/Header/header'
-import { Footer } from '../../Components/Footer/footer'
+
 
 // Header e Footer
 import Header from '../../Components/Header/header'

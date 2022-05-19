@@ -9,43 +9,44 @@ export const Reserva = (): JSX.Element => {
     return (
         <>
             <Header />
+            <div className='alinhamentoAereoMain'>
+                <div className='mainReserva'>
 
-            <div className='mainReserva'>
+                    <section>
 
-                <section>
+                        <h1 className='reservaText'>Reservas</h1>
 
-                    <h1 className='reservaText'>Reservas</h1>
+                        <div className='Centralizadora'>
 
-                    <div className='Centralizadora'>
+                            <div className='ImgCarro'>
 
-                        <div className='ImgCarro'>
+                                <img className='Imagem' src={carroAzul} alt="" />
 
-                            <img className='Imagem' src={carroAzul} alt="" />
+                            </div>
+
+                            <div className='Textos'>
+
+                                <h1 className='nomeCarro'>Fiat Uno 1.0</h1>
+
+                                <p className='informacoesReserva'>Data retirada: 22/05/2022</p>
+                                <p className='informacoesReserva'>Horário retirada: 16:30</p>
+                                <p className='informacoesReserva'>Data de devolução:  30/05/2022</p>
+
+                            </div>
+
+                            <div className='ButtonR'>
+
+                                <button className='ExcluirReserva'>Excluir Reserva</button>
+
+                            </div>
 
                         </div>
 
-                        <div className='Textos'>
-
-                            <h1 className='nomeCarro'>Fiat Uno 1.0</h1>
-
-                            <p className='informacoesReserva'>Data retirada: 22/05/2022</p>
-                            <p className='informacoesReserva'>Horário retirada: 16:30</p>
-                            <p className='informacoesReserva'>Data de devolução:  30/05/2022</p>
-
-                        </div>
-
-                        <div className='ButtonR'>
-
-                            <button className='ExcluirReserva'>Excluir Reserva</button>
-
-                        </div>
-
-                    </div>
 
 
+                    </section>
 
-                </section>
-
+                </div>
             </div>
             <Footer />
         </>
