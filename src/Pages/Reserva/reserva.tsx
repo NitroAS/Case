@@ -1,7 +1,7 @@
 import '../../Assets/CSS/reserva.css'
 import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
-import carroAzul from '../../Assets/img/car3 3.png'
+import carroAzul from '../../Assets/img/economico.png'
 let propsReserva: any = {
     descriptionHome:  'Home',
     descriptionCarros:  'Carros',
