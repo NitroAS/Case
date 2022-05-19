@@ -7,8 +7,7 @@ import HandleCredentialResponse from '../../services/googleAuth';
 export const Login = ():JSX.Element =>{
   useEffect(()=>{    
     HandleCredentialResponse()
-  },[]
-  )
+  },[])
 
     return(
         <>
