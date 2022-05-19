@@ -24,13 +24,13 @@ export const Login = ():JSX.Element =>{
                           <p className='textoLogin'>Este portal oferece uma experiência única, segura e oferta um serviço de qualidade!</p>
                           <div id="buttonDiv"></div>
                         </div>
-
+                        
                         <div className='cardCadastrar'>
                           <h2 className='tituloCadastrar'>Cadastrar</h2>
-                          <input placeholder='Nome Completo' className='inputCadastrar' type="text"/>
-                          <input placeholder='Telefone' className='inputCadastrar' type="text"/>
-                          <input placeholder='E-mail' className='inputCadastrar' type="text"/>
-                          <button className='botaoCadastrar'>Cadastrar</button>
+                          <input placeholder='Nome Completo' className='inputCadastrarLogin' type="text"/>
+                          <input placeholder='Telefone' className='inputCadastrarLogin' type="text"/>
+                          <input placeholder='E-mail' className='inputCadastrarLogin' type="text"/>
+                          <button className='botaoCadastrarLogin'>Cadastrar</button>
                         </div>
                       </div>  
                     </section>
