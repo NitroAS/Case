@@ -27,6 +27,8 @@ export const Perfil = (): JSX.Element => {
 
             })
 
+           
+
     }
 
     useEffect(() => {
@@ -42,7 +44,8 @@ export const Perfil = (): JSX.Element => {
                     window.location.reload()
 
                 })
-        }
+            }
+            
     }
 
 
@@ -51,8 +54,10 @@ export const Perfil = (): JSX.Element => {
         setNomePerfis(nome)
         setNomeEmail(email)
         
-    
+
     }
+    window.scroll({top:
+        310,left: 0,behavior: 'smooth'})
 
     const [nomePerfis, setNomePerfis] = useState('');
     const [nomeEmail, setNomeEmail] = useState('');
