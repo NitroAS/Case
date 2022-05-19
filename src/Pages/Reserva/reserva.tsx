@@ -2,13 +2,21 @@ import '../../Assets/CSS/reserva.css'
 import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
 import carroAzul from '../../Assets/img/car3 3.png'
-
+let propsReserva: any = {
+    descriptionHome:  'Home',
+    descriptionCarros:  'Carros',
+    descriptionReservas:  'Reservas',
+    descriptionLocadora:  'Locadora',
+    descriptionPerfil:  'Perfil',
+    supdescription: 'Sair',
+    underlineReserva: 'underlineReserva',
+}
 
 export const Reserva = (): JSX.Element => {
 
     return (
         <>
-            <Header />
+            <Header objeto={propsReserva} />
             <div className='alinhamentoAereoMain'>
                 <div className='mainReserva'>
 

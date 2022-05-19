@@ -1,7 +1,10 @@
 import '../../Assets/CSS/header.css'
 import { Link } from "react-router-dom";
 import LogoHeader from "../../Assets/img/logo.png"
-export const Header = (): JSX.Element => {
+export const Header = (props:any): JSX.Element => {
+
+
+
 
     return (
         <>
@@ -9,17 +12,17 @@ export const Header = (): JSX.Element => {
                 <div className="AlinhamentoHeaderPerfil">
                 
                         <Link className="btnHeaderPerfil" to='/'>Home</Link>
-                        <Link className="btnHeaderPerfil" to='/carros'>Carros</Link>
-                        <Link className="btnHeaderPerfil" to='/reservas'>Reservas</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underlineCarros} to='/carros'>{props.objeto.descriptionCarros}</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underlineReserva} to='/reservas'>{props.objeto.descriptionReservas}</Link>
                 
 
                     <div className="LogoHeader">
                         <img src={LogoHeader} alt="Logo do header" />
                     </div>
 
-                        <Link className="btnHeaderPerfil" to='/locadora'>Locadora</Link>
-                        <Link className="btnHeaderPerfil" to='/perfil'>Perfis</Link>
-                        <Link className="btnHeaderPerfil" to='/login'>Sair</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underlineLocadora} to='/locadora'>{props.objeto.descriptionLocadora}</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underline} to='/perfil'>{props.objeto.descriptionPerfil}</Link>
+                        <Link className="btnHeaderPerfilSair" to='/login'>{props.objeto.supdescription}</Link>
                     
                 </div>
             </div>
