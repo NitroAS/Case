@@ -2,10 +2,17 @@ import '../../Assets/CSS/perfil.css'
 import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
 export const Perfil = (): JSX.Element => {
-
+    let propsPerfil: any = {
+        descriptionCarros:  'Carros' ,
+        descriptionReservas:  'Reservas',
+        descriptionLocadora:  'Locadora',
+        descriptionPerfil:  'Perfis',
+        supdescription: 'Sair',
+        underline: 'underlinePerfil'
+    }
     return (
         <>
-            <Header />
+            <Header   objeto={propsPerfil} />
             <div className='alinahemntoGeralPerfil'>
 
                 <div className='AlinhamentoBoxPerfil'>

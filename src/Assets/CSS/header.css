@@ -17,18 +17,26 @@
     width: 1420px;   
 }
 
-.btnHeaderPerfil {
+.btnHeaderPerfil , .btnHeaderPerfilSair {
     text-decoration: none;
     font-size: 24px;
     color: #040404;
     
 }
 
-.btnHeaderPerfil:hover{
-    border-bottom: 2px solid black;
-}
+
 
 .header{
     display: flex;
     justify-content: center;
+}
+
+.btnHeaderPerfilSair{
+    text-decoration: underline;
+}
+
+
+
+.underlinePerfil , .underlineReserva , .underlineLocadora , .underlineCarros{
+    text-decoration: underline;
 }

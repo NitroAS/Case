@@ -11,10 +11,20 @@ import car1_1 from '../../Assets/IMGsCarros/car1_1.png'
 import Header from '../../Components/Header/header'
 import Footer from '../../Components/Footer/footer'
 
+let propsCarros: any = {
+    descriptionHome:  'Home',
+    descriptionCarros:  'Carros',
+    descriptionReservas:  'Reservas',
+    descriptionLocadora:  'Locadora',
+    descriptionPerfil:  'Perfil',
+    supdescription: 'Sair',
+    underlineCarros: 'underlineCarros'
+}
+
 export const Carros = ():JSX.Element => {
     return(
         <div>
-            <Header />
+            <Header objeto={propsCarros} />
             <div className='mainCarros espaçamentoFinalCarros'>
                 <div className='alinhamentoMainCarros'>
                     <section>

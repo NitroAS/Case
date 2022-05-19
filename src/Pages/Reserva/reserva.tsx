@@ -2,13 +2,21 @@ import '../../Assets/CSS/reserva.css'
 import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
 import carroAzul from '../../Assets/img/car3 3.png'
-
+let propsReserva: any = {
+    descriptionHome:  'Home',
+    descriptionCarros:  'Carros',
+    descriptionReservas:  'Reservas',
+    descriptionLocadora:  'Locadora',
+    descriptionPerfil:  'Perfil',
+    supdescription: 'Sair',
+    underlineReserva: 'underlineReserva',
+}
 
 export const Reserva = (): JSX.Element => {
 
     return (
         <>
-            <Header />
+            <Header objeto={propsReserva} />
             <div className='alinhamentoAereoMain'>
                 <div className='mainReserva'>
 
@@ -41,6 +49,91 @@ export const Reserva = (): JSX.Element => {
                             </div>
 
                         </div> 
+<<<<<<< HEAD
+=======
+
+                        <div className='Centralizadora'>
+
+                            <div className='ImgCarro'>
+
+                                <img className='Imagem' src={carroAzul} alt="" />
+
+                            </div>
+
+                            <div className='Textos'>
+
+                                <h1 className='nomeCarro'>Fiat Uno 1.0</h1>
+
+                                <p className='informacoesReserva'>Data retirada: 22/05/2022</p>
+                                <p className='informacoesReserva'>Horário retirada: 16:30</p>
+                                <p className='informacoesReserva'>Data de devolução:  30/05/2022</p>
+
+                            </div>
+
+                            <div className='ButtonR'>
+
+                                <button className='ExcluirReserva'>Excluir Reserva</button>
+
+                            </div>
+
+                        </div>
+                       
+
+                        <div className='Centralizadora'>
+
+                            <div className='ImgCarro'>
+
+                                <img className='Imagem' src={carroAzul} alt="" />
+
+                            </div>
+
+                            <div className='Textos'>
+
+                                <h1 className='nomeCarro'>Fiat Uno 1.0</h1>
+
+                                <p className='informacoesReserva'>Data retirada: 22/05/2022</p>
+                                <p className='informacoesReserva'>Horário retirada: 16:30</p>
+                                <p className='informacoesReserva'>Data de devolução:  30/05/2022</p>
+
+                            </div>
+
+                            <div className='ButtonR'>
+
+                                <button className='ExcluirReserva'>Excluir Reserva</button>
+
+                            </div>
+
+                        </div>
+                      
+
+                        <div className='Centralizadora'>
+
+                            <div className='ImgCarro'>
+
+                                <img className='Imagem' src={carroAzul} alt="" />
+
+                            </div>
+
+                            <div className='Textos'>
+
+                                <h1 className='nomeCarro'>Fiat Uno 1.0</h1>
+
+                                <p className='informacoesReserva'>Data retirada: 22/05/2022</p>
+                                <p className='informacoesReserva'>Horário retirada: 16:30</p>
+                                <p className='informacoesReserva'>Data de devolução:  30/05/2022</p>
+
+                            </div>
+
+                            <div className='ButtonR'>
+
+                                <button className='ExcluirReserva'>Excluir Reserva</button>
+
+                            </div>
+
+                        </div>
+
+                        <div></div>
+>>>>>>> 681df75cd586cc217d52d0e046fdf64beaa893b9
 
                     </section>
 
