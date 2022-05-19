@@ -8,6 +8,8 @@ import { Footer } from '../../Components/Footer/footer'
 export const Login = ():JSX.Element =>{
   useEffect(()=>{    
     HandleCredentialResponse()
+    let token:any = localStorage.getItem('token')
+    console.log( JSON.parse(token))
   },[]
   )
 
