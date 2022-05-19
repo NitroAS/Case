@@ -7,8 +7,8 @@ import { Login } from './Pages/login/login'
 import { Carros } from './Pages/carros/carros'
 import { Locadora } from './Pages/Locadora/locadora'
 import { Perfil } from './Pages/Perfil/perfil'
-import { Reservas } from './Pages/Reservas/reservas'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {Reserva} from './Pages/Reserva/reserva'
 
 
 const Rotas = () =>{
@@ -21,7 +21,7 @@ const Rotas = () =>{
               <Route element={<Carros/>} path="/carros" />
               <Route element={<Locadora/>} path="/locadora" />
               <Route element={<Perfil/>} path="/perfil" />
-              <Route element={<Reservas/>} path="/reservas" />
+              <Route element={<Reserva/>} path="/reservas" />
           </Routes>
       </BrowserRouter>
   );

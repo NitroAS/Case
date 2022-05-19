@@ -1,8 +1,6 @@
 export function HandleCredentialResponse(response) {
-  if(response !== undefined)  
-    console.log(response);
-  }
-  window.onload = function () {
+  
+      
     window.google.accounts.id.initialize({
       client_id: "671297347573-1m7mp3sei7iphdom1pa6cfvfg10dobv2.apps.googleusercontent.com",
       callback: HandleCredentialResponse

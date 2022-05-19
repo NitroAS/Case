@@ -1,15 +1,15 @@
 import '../../Assets/CSS/home.css'
-
-import Logo from '../../Assets/img/logo.png'
+import { Link } from "react-router-dom";
+import Logo from '../../Assets/img/logoBranco.png'
 import PFoto from '../../Assets/img/banner-car 1.png'
 import SFoto from '../../Assets/img/car1 1.png'
 import TFoto from '../../Assets/img/car2 1.png'
 import QFoto from '../../Assets/img/car3 2.png'
-
+import { Footer } from '../../Components/Footer/footer'
 export const Home = (): JSX.Element => {
 
-    return(
-        <> 
+    return (
+        <>
             <header>
 
                 <main>
@@ -22,17 +22,17 @@ export const Home = (): JSX.Element => {
 
                                 <div className='centralizarLogo'>
 
-                                    <img className='logo' src={Logo} alt = ""/>
+                                    <img className='logo' src={Logo} alt="" />
 
                                 </div>
 
-                                <img className='PrimeiraFoto' src={PFoto} alt = ""/>
+                                <img className='PrimeiraFoto' src={PFoto} alt="" />
 
                                 <div className='botoes1'>
 
-                                    <button className='LoginB'>Login</button>
+                                    <Link className='LoginB' to='/login'><button className='linkBtnHome'>Login</button></Link>
 
-                                    <button className='CadastrarB'>Cadastrar</button> 
+                                    <button className='CadastrarB'>Cadastrar</button>
 
 
 
@@ -82,7 +82,7 @@ export const Home = (): JSX.Element => {
                             </div>
 
                         </div>
-                        
+
 
 
 
@@ -96,7 +96,7 @@ export const Home = (): JSX.Element => {
 
             </header>
 
-
+            <Footer />
         </>
     );
 }

@@ -92,36 +92,26 @@
     margin-top: 49px;
 }
 
-.botaoCadastrar{
-    width: 250px;
-    height: 70px;
-    background: #DB1812;
-    border-radius: 5px;
-    margin-top: 323px;
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    color: #FFFFFF;
-}
 
-.botaoCadastrar{
-    width: 250px;
-    height: 70px;
-    background: #DB1812;
-    border-radius: 5px;
-    margin-top: 323px;
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    color: #FFFFFF;
-}
-
-.botaoCadastrar:hover{
+.linkBtnCadastra:hover{
     background: #fff;
-    border: 5px solid #DB1812 ;
+    border: 2px solid #DB1812 ;
     color: #DB1812;
+}
+
+.linkBtnCadastra{
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-top: 323px;
+    line-height: 30px;
+    
 }

@@ -7,7 +7,7 @@
 
 .BoxPerfil{
     border: solid 1px #9F9999;
-    border-radius: 10px;
+    border-radius: px;
     width: 1234px;
     display: flex;
     flex-direction: column;
@@ -47,6 +47,7 @@ h1{
     color: #040404;
     padding: 0px 0px 0px 60px ;
     margin-top: 60px;
+    border: none;
 }
 .btnPerfilAlinhamento{
     display: flex;
@@ -139,6 +140,7 @@ h1{
     justify-content: center;
     align-items: center;
     margin-top: 70px
+    
 }
 
 /* borda ´auxiliar por texto */

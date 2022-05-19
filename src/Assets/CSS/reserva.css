@@ -1,0 +1,63 @@
+@import '../CSS/global.css';
+
+
+.reservaText{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #040404;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.Imagem{
+    width: 350px;
+    height: 198.22px;
+    border-radius: 10px;
+}
+
+.Centralizadora{
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #C6C4C4;
+    border-radius: 10px;
+    width: 1140px;
+    height: 198px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nomeCarro{
+    margin-bottom: 25px;
+}
+
+.informacoesReserva{
+    margin-bottom: 15px;
+}
+
+.Textos{
+    flex-direction: column;
+}
+
+.ButtonR{
+    display: flex;
+    align-items: flex-end;
+    height: 160px;
+}
+
+.ExcluirReserva{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #DB1812;
+    width: 250px;
+    height: 70px;
+    border: 2px solid #DB1812;
+    border-radius: 5px; 
+    box-sizing: border-box;
+}
