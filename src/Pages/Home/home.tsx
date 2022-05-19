@@ -20,7 +20,7 @@ export const Home = (): JSX.Element => {
 
                             <div>
 
-                                <div className='centralizarLogo'>
+                                <div className='centralizarLogoBranco'>
 
                                     <img className='logo' src={Logo} alt="" />
 
@@ -44,9 +44,6 @@ export const Home = (): JSX.Element => {
 
 
                         </div>
-
-
-
 
 
                         <div className='cards'>
