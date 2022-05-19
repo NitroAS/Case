@@ -38,7 +38,7 @@ export const Login = ():JSX.Element =>{
                             </div>
 
                             <div className='divButtonCadastrarLogin'>
-                              <Link  to='/perfil'><button className='linkBtnCadastra'>Cadastrar</button></Link>
+                              <button className='linkBtnCadastra'>Cadastrar</button>
                             </div>
                           </div>
                         </div>
