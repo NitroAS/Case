@@ -33,7 +33,7 @@ h1{
 
 .inputsMenoresCarros{
     background-color: var(--cinzaInputs);
-    width: 247px;
+    width: 320px;
     height: 70px;
     border: 1px solid var(--cinzaInputs);
     border-radius: 10px;
@@ -220,4 +220,14 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.alinhamentoDosCards{
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.espaçamentoFinalCarros{
+    margin-bottom: 50px;
 }
