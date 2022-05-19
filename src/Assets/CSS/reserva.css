@@ -67,6 +67,11 @@
     margin-right: 18px;
 }
 
+.ExcluirReserva:hover{
+    background-color: var(--vermelhoCarros);
+    color: white;
+}
+
 
 /* Alinhamento aereo significa que estou alinhando por fora o conteúdo que está grudando no canto da tela*/
 .alinhamentoAereoMain{
