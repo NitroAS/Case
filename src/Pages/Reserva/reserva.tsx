@@ -49,8 +49,6 @@ export const Reserva = (): JSX.Element => {
                             </div>
 
                         </div> 
-<<<<<<< HEAD
-=======
 
                         <div className='Centralizadora'>
 
@@ -133,7 +131,6 @@ export const Reserva = (): JSX.Element => {
                         </div>
 
                         <div></div>
->>>>>>> 681df75cd586cc217d52d0e046fdf64beaa893b9
 
                     </section>
 
