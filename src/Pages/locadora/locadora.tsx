@@ -74,6 +74,29 @@ export const Locadora = (): JSX.Element => {
             }   
     }
 
+    const [cadastroLocadoras, setCadastroLocadoras] = useState<any>('');
+    const CadastrarLocadora = () => {
+        
+        if ( cadastroLocadoras !== '')
+        {
+            apiCase.post(`locadoras`, { nome : cadastroLocadoras })
+           
+            
+            .then(() => {
+                
+                setCadastroLocadoras('')
+                
+             })
+             
+             .then(() => {
+                 window.location.reload()
+             })
+         }
+         
+    
+         
+     
+ }
 
     return (
         <>
@@ -97,6 +120,7 @@ export const Locadora = (): JSX.Element => {
                         <div id='centralizarInputBotao'>
                             <input placeholder='Telefone:' className='inputCadastrarLocadora telefoneLocadora' type="text" />
                             <button className='botaoCadastrarLocadora'onClick={() => EditarLocadora(guardaIdLocadoras)}>Cadastrar</button>
+                            <button className='botaoCadastrarLoacadora'onClick={() => CadastrarLocadora()}>Cadastrar</button>
                         </div>
                     </div>
                 </section>

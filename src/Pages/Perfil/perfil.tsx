@@ -79,9 +79,7 @@ export const Perfil = (): JSX.Element => {
             }   
     }
 
-
-
-
+   
     return (
         <>
             <Header objeto={propsPerfil} />
@@ -131,6 +129,7 @@ export const Perfil = (): JSX.Element => {
 
                             <div className="btnAtualizar">
                                 <button className='btnPerfilAtualizar' onClick={() => EditarPerfil(guardaId)}>Atualizar</button>
+                         
                             </div>
 
                             <div className="btnExcluirAlinhamentoPerfil">
