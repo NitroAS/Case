@@ -48,12 +48,12 @@ export const Reserva = (): JSX.Element => {
         <>
             <Header objeto={propsReserva} />
 
+            <h1 className='reservaText'>Reservas</h1>
             {reserva.map((item): any => {
                 return (
                     <div className='alinhamentoAereoMain'>
                         <div className='mainReserva'>
                             <section>
-                                <h1 className='reservaText'>Reservas</h1>
                                 <div className='Centralizadora'>
                                     <div className='ImgCarro'>
                                         <img className='Imagem' src={carroAzul} alt="" />
