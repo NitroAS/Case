@@ -31,14 +31,6 @@
       "npessoas": 5,
       "airbag": true,
       "locadoraId": 1
-    },
-    {
-      "id": 2,
-      "nome": "Ford Focus",
-      "portas": 4,
-      "npessoas": 5,
-      "airbag": true,
-      "locadoraId": 1
     }
   ],
   "reservas": [

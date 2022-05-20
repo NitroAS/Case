@@ -11,6 +11,12 @@ import car1_1 from '../../Assets/IMGsCarros/car1_1.png'
 import Header from '../../Components/Header/header'
 import Footer from '../../Components/Footer/footer'
 
+// API
+import { apiCase } from '../../services/api'
+
+// useState e agregados
+import React, { useEffect, useState } from "react"
+
 let propsCarros: any = {
     descriptionHome:  'Home',
     descriptionCarros:  'Carros',
@@ -22,6 +28,31 @@ let propsCarros: any = {
 }
 
 export const Carros = ():JSX.Element => {
+    // Back-End
+
+
+    // Listar
+    const [nome, setNome] = useState<any[]>([])
+    const ListarNomes = ():any => {
+
+        apiCase.get('carros')
+        .then(resultado => {
+
+            setNome(resultado.data)
+        })
+
+    }
+
+    useEffect(() => {
+        ListarNomes()
+    }, [])
+
+    // Excluir
+    const Excluir = (id:number) => {
+        apiCase.delete(`carros/${id}`)
+        
+    }
+
     return(
         <div>
             <Header objeto={propsCarros} />
@@ -64,55 +95,28 @@ export const Carros = ():JSX.Element => {
                         <h2 className='h2Carros'>Econômico</h2>
                         <div className="barraDeSeparacaoCarros"></div>
 
-                        <div className='alinhamentoDosCards'>
-                            <div className='cardsAPICarros'>
-                                <img src={car3_2} alt="Imagem de um carro econômico" />
-                                <div className='alinhamentocardCarros'>
-                                    <div className='h3CardDiv'>
-                                        <h3 className='nomeDoCarro'>Fiat Uno 1.0</h3>
-                                    </div>
-                                    <div className='divPCardCarros'>
-                                        <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
-                                    </div>
-                                    <div className='buttonsDoCardcarro'>
-                                        <button className='buttonEditarCarros'>Editar</button>
-                                        <button className='buttonExcluirCarros'>Excluir</button>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div className='cardsAPICarros'>
-                                <img src={car3_2} alt="Imagem de um carro econômico" />
-                                <div className='alinhamentocardCarros'>
-                                    <div className='h3CardDiv'>
-                                        <h3 className='nomeDoCarro'>Fiat Uno 1.0</h3>
-                                    </div>
-                                    <div className='divPCardCarros'>
-                                        <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
-                                    </div>
-                                    <div className='buttonsDoCardcarro'>
-                                        <button className='buttonEditarCarros'>Editar</button>
-                                        <button className='buttonExcluirCarros'>Excluir</button>
-                                    </div>
-                                </div>
+                            <div className='alinhamentoDosCards'>
+                                {nome.map((item):any =>{
+                                    return(
+                                        <div className='cardsAPICarros'>
+                                            <img src={car3_2} alt="Imagem de um carro econômico" />
+                                            <div className='alinhamentocardCarros'>
+                                                <div className='h3CardDiv'>
+                                                    <h3 className='nomeDoCarro'>{item.nome}</h3>
+                                                </div>
+                                                <div className='divPCardCarros'>
+                                                    <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
+                                                </div>
+                                                <div className='buttonsDoCardcarro'>
+                                                    <button className='buttonEditarCarros'>Editar</button>
+                                                    <button className='buttonExcluirCarros' onClick={() => Excluir(item.id)}>Excluir</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
                             </div>
-
-                            <div className='cardsAPICarros'>
-                                <img src={car3_2} alt="Imagem de um carro econômico" />
-                                <div className='alinhamentocardCarros'>
-                                    <div className='h3CardDiv'>
-                                        <h3 className='nomeDoCarro'>Fiat Uno 1.0</h3>
-                                    </div>
-                                    <div className='divPCardCarros'>
-                                        <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
-                                    </div>
-                                    <div className='buttonsDoCardcarro'>
-                                        <button className='buttonEditarCarros'>Editar</button>
-                                        <button className='buttonExcluirCarros'>Excluir</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </section>
 
                     {/* Especial */}
