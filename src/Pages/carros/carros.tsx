@@ -30,15 +30,30 @@ let propsCarros: any = {
 export const Carros = ():JSX.Element => {
     // Back-End
 
+    // Listar Locadoras
+    const [locadoras, setLocadoras] = useState<any[]>([])
+    const ListarLocadoras = ():any => {
+
+        apiCase.get('locadoras')
+        .then(resultado => {
+            setLocadoras(resultado.data)
+        })
+
+    }
+
+    useEffect(() => {
+        ListarLocadoras()
+    }, [])
+
 
     // Listar
-    const [nome, setNome] = useState<any[]>([])
+    const [carros, setCarros] = useState<any[]>([])
     const ListarNomes = ():any => {
 
         apiCase.get('carros')
         .then(resultado => {
 
-            setNome(resultado.data)
+            setCarros(resultado.data)
         })
 
     }
@@ -50,8 +65,28 @@ export const Carros = ():JSX.Element => {
     // Excluir
     const Excluir = (id:number) => {
         apiCase.delete(`carros/${id}`)
-        
+        .then(() => window.location.reload())
     }
+
+    // Salvar
+    const [nome, setNome] = useState('')
+    const Salvar = () => {
+        apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
+        .then(ListarNomes())
+        .then(() => window.location.reload())
+    }
+
+    // Hook do airbag
+    const [airbag, setAirbag] = useState('false')
+
+    // Hook do Portas
+    const [portas, setPortas] = useState(0)
+
+    // Hook para guardar o valor da locadora
+    const [locadoraValor, setLocadoraValor] = useState('')
+
+    // Hook de números de pessoas 
+    const [npessoas, setNPessoas] = useState(0)
 
     return(
         <div>
@@ -65,25 +100,43 @@ export const Carros = ():JSX.Element => {
                                     <h1>Carros</h1>
                                 </div>
                                 <div className='divInputMaior'>
-                                    <input type="text" placeholder='Ex.: Onix 2.0' className='escolherTiposDeCarros'/>
+                                    <input 
+                                    type="text" 
+                                    placeholder='Ex.: Onix 2.0' 
+                                    value={nome}
+                                    onChange={(e) => setNome(e.target.value)}
+                                    className='escolherTiposDeCarros'/>
                                 </div>
                                 <div className='inputsMenores'>
-                                    <select className='selectBooleanoAirbag'>
-                                        <option selected disabled hidden>Airbag</option>
+                                    <select className='selectBooleanoAirbag' defaultValue='default' onChange={(e) => setAirbag(e.target.value)}>
+                                        <option value='default' disabled hidden>Airbag</option>
                                         <option value="false">Sem Airbag</option>
                                         <option value="true">Com Airbag</option>
                                     </select>
-                                    <input type="text" placeholder="Portas:" className='inputsMenoresCarros' />
-                                    <input type="text" placeholder="N° de Pessoas" className='inputsMenoresCarros' />
+                                    <input 
+                                    type="text" 
+                                    placeholder="Portas:" 
+                                    className='inputsMenoresCarros' 
+                                    
+                                    onChange = {(e) => setPortas(parseInt(e.target.value))} />
+
+                                    <input 
+                                    type="text" 
+                                    placeholder="N° de Pessoas" 
+                                    className='inputsMenoresCarros'
+                                    
+                                    onChange = {(e) => setNPessoas(parseInt(e.target.value))} />
                                 </div>
                                 <div className='divCadastrarCarros'>
-                                    <select className='selectLocadouraCarros'>
+                                    <select className='selectLocadouraCarros' onChange={(e) => setLocadoraValor(e.target.value)}>
                                         <option selected disabled hidden>Qual a Locadoura?</option>
-                                        <option>Loucadora 1</option>
-                                        <option>Loucadora 2</option>
-                                        <option>Loucadora 3</option>
+                                        {locadoras.map((item):any =>{
+                                            return(
+                                                <option value={item.id}>{item.nome}</option>
+                                            )
+                                        })}
                                     </select>
-                                    <button className='buttonCadastrarCarros'>Cadastrar</button>
+                                    <button className='buttonCadastrarCarros' onClick={() => Salvar()}>Cadastrar</button>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +150,7 @@ export const Carros = ():JSX.Element => {
 
 
                             <div className='alinhamentoDosCards'>
-                                {nome.map((item):any =>{
+                                {carros.map((item):any =>{
                                     return(
                                         <div className='cardsAPICarros'>
                                             <img src={car3_2} alt="Imagem de um carro econômico" />
