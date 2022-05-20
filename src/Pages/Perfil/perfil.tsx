@@ -59,8 +59,10 @@ export const Perfil = (): JSX.Element => {
     window.scroll({top:
         310,left: 0,behavior: 'smooth'})
 
-        
+
+        // const feita para guarda o Id e la em baixo representar
     const [guardaId, setGuardaId] = useState(0);
+
     const [nomePerfis, setNomePerfis] = useState('');
     const [nomeEmail, setNomeEmail] = useState('');
     
