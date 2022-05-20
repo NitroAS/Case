@@ -1,6 +1,7 @@
 import '../../Assets/CSS/header.css'
 import { Link } from "react-router-dom";
 import LogoHeader from "../../Assets/img/logo.png"
+import Logout from '../logout/logout';
 export const Header = (props:any): JSX.Element => {
 
 
@@ -22,8 +23,7 @@ export const Header = (props:any): JSX.Element => {
 
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineLocadora} to='/locadora'>{props.objeto.descriptionLocadora}</Link>
                         <Link className={"btnHeaderPerfil " + props.objeto.underline} to='/perfil'>{props.objeto.descriptionPerfil}</Link>
-                        <Link className="btnHeaderPerfilSair" to='/login'>{props.objeto.supdescription}</Link>
-                    
+                        <Logout btnSair={props.objeto.supdescription}/>
                 </div>
             </div>
 
