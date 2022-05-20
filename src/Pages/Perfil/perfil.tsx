@@ -60,7 +60,7 @@ export const Perfil = (): JSX.Element => {
         310,left: 0,behavior: 'smooth'})
 
 
-        // const feita para guarda o Id e la em baixo representar
+        // const feita para guarda o Id e la em baixo no Onclick
     const [guardaId, setGuardaId] = useState(0);
 
     const [nomePerfis, setNomePerfis] = useState('');
@@ -77,10 +77,6 @@ export const Perfil = (): JSX.Element => {
                 })
                 
             }   
-
-
-
-
     }
 
 
