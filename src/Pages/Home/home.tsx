@@ -43,7 +43,7 @@ export const Home = (): JSX.Element => {
 
                     <div className='Carros'>
 
-                        <img className='1FtDeBaixo' src={SFoto} alt="" />
+                        <img className='imagensCarros' src={SFoto} alt="Econômico" />
 
                         <h3 className='textoH3'>Econômico</h3>
 
@@ -53,7 +53,7 @@ export const Home = (): JSX.Element => {
 
                     <div className='Carros'>
 
-                        <img src={TFoto} alt="" />
+                        <img className='imagensCarros' src={TFoto} alt="Especial" />
 
                         <h3 className='textoH3'>Especial</h3>
 
@@ -63,7 +63,7 @@ export const Home = (): JSX.Element => {
 
                     <div className='Carros'>
 
-                        <img src={QFoto} alt="" />
+                        <img className='imagensCarros' src={QFoto} alt="Luxo" />
 
                         <h3 className='textoH3'>Luxo</h3>
 

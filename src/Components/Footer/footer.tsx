@@ -15,7 +15,7 @@ export const Footer = ():JSX.Element =>{
                     <div className='paiInfosFooter'>
                         <div className='infosFooter'>
                             <div className='infosFooterUm'>
-                                <button className='buttonFooter'><a className='aFooter' href="#">Política de Segurança</a></button>
+                                <button className='buttonFooter'><a className='aFooter' href="https://www.microcity.com.br/politica-de-seguranca-da-informacao/" target='_blank'>Política de Segurança</a></button>
                                 <button className='buttonFooter'><a className='aFooter' href="#">Trabalhe Conosco</a></button>
                                 <button className='buttonFooter'><a className='aFooter' href="https://www.procon.pr.gov.br" target='_blank'>PROCON</a></button>
                             </div>
@@ -30,8 +30,12 @@ export const Footer = ():JSX.Element =>{
                     
                     <div className='ultimaDivFooter'>
                         <div className='alinhamentoImgFooter'>
-                            <img src={instagram} alt="Logo e link para o instagram" className='imgFooter' />
-                            <img src={facebook} alt="Logo e link para o facebook" className='imgFooter' />
+                            <a href="https://www.instagram.com/um_arroz_doce_/" target='_blank'>
+                                <img src={instagram} alt="Logo e link para o instagram"  className='imgFooter'/>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100012529953763" target='_blank'>
+                                <img src={facebook} alt="Logo e link para o facebook" className='imgFooter' />
+                            </a>
                             <img src={twitter} alt="Logo e link para o twitter" className='imgFooter' />
                         </div>
                         <p className='pMaiorFooter'>Todos os direitos reservados</p>
