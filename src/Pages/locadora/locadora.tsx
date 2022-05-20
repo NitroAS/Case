@@ -1,9 +1,19 @@
 import '../../Assets/CSS/locadora.css'
-
+import { Header } from '../../Components/Header/header'
+import { Footer } from '../../Components/Footer/footer'
 export const Locadora = (): JSX.Element => {
-
+    let propsLocadora: any = {
+        descriptionHome: 'Home',
+        descriptionCarros: 'Carros',
+        descriptionReservas: 'Reservas',
+        descriptionLocadora: 'Locadora',
+        descriptionPerfil: 'Perfil',
+        supdescription: 'Sair',
+        underlineLocadora: 'underlineLocadora',
+    }
     return (
         <>
+                 <Header objeto={propsLocadora} />
             <div className='mainLocadora'>
                 <section className='locadora'>
                     <h2 id='tituloLocadora'>Locadora</h2>
@@ -36,6 +46,7 @@ export const Locadora = (): JSX.Element => {
                     </div>
                 </section>
             </div>
+            <Footer />
         </>
     );
 }
