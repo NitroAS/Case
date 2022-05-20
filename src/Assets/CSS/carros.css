@@ -105,6 +105,7 @@ h1{
     height: 531px;
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .alinhamentoCadastrarCarros{
