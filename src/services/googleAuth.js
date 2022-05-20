@@ -12,7 +12,7 @@ export function HandleCredentialResponse(response) {
     });
     window.google.accounts.id.renderButton(
       document.getElementById("buttonDiv"),
-      { theme: "outline", size: "large"}  // customization attributes
+      { theme: "outline", size: "large", width: 400}  // customization attributes
     );
     window.google.accounts.id.prompt(); // also display the One Tap dialog
   console.log(window.google.accounts)
