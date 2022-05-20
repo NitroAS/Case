@@ -1,0 +1,183 @@
+.mainLocadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 95px;
+    margin-bottom: 80px;
+}
+
+.locadora {
+    width: 1140px;
+    height: 531px;
+    border: 1px solid #9F9999;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tituloLocadora {
+    margin-top: 36px;
+    margin-bottom: 49px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #040404;
+}
+
+.inputsLocadora {
+    height: 326px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botaoCadastrarLocadora {
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.inputCadastrarLocadora {
+    width: 971px;
+    height: 70px;
+    background: #DCE0E2;
+    border-radius: 10px;
+    border: #DCE0E2;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #040404;
+    padding-left: 20px;
+}
+
+.botaoCadastrarLocadora:hover {
+    background: #fff;
+    border: 2px solid #DB1812;
+    color: #DB1812;
+}
+
+#centralizarInputBotao {
+    display: flex;
+    justify-content: space-between;
+    width: 991px;
+}
+
+#centralizarInputslocadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 991px;
+}
+
+.SectionCardsLocadora {
+    margin-top: 124px;
+    width: 1140px;
+    height: 110px;
+    background: #FFFFFF;
+    border: 1px solid #9F9999;
+    border-radius: 10px;
+    display: flex;    
+}
+
+.cardsLocadora{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.CentralizarNomeLocadora{
+    height: 50%;
+}
+
+.nomeLocadora{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.centralizarInformacoesLocadora{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.informacoesLocadora{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #040404;
+
+}
+
+.botoesLocadora{
+    display: flex;
+    justify-content: space-between;
+    width: 519px;
+}
+
+.botaoEditar{
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.botaoEditar:hover{
+    color: #DB1812;
+    background-color: #fff;
+    border: 2px solid #DB1812;
+}
+
+.botaoExcluir{
+    width: 250px;
+    height: 70px;
+    border: 2px solid #DB1812;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #DB1812;
+}
+
+.botaoExcluir:hover{
+    background-color: #DB1812;
+    color: #FFF;
+}
+
+.telefoneLocadora{
+    width: 450px;
+}
+    

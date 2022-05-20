@@ -26,7 +26,7 @@ export const Login = ():JSX.Element =>{
                           <p className='textoLogin'>Este portal oferece uma experiência única, segura e oferta um serviço de qualidade!</p>
                           <div id="buttonDiv"></div>
                         </div>
-
+                        
                         <div className='cardCadastrar'>
                           <h2 className='tituloCadastrar'>Cadastrar</h2>
                           <div className='alinhamentoButtonInputLogin'>
