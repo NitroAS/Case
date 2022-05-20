@@ -31,9 +31,9 @@ export const Login = ():JSX.Element =>{
                           <h2 className='tituloCadastrar'>Cadastrar</h2>
                           <div className='alinhamentoButtonInputLogin'>
                             <div className='alinharInputsLogin'>
-                              <input placeholder='Nome Completo' className='inputCadastrar' type="text"/>
-                              <input placeholder='Telefone' className='inputCadastrar' type="text"/>
-                              <input placeholder='E-mail' className='inputCadastrar' type="text"/>
+                              <input placeholder='Nome Completo' className='inputCadastrarLogin' type="text"/>
+                              <input placeholder='Telefone' className='inputCadastrarLogin' type="text"/>
+                              <input placeholder='E-mail' className='inputCadastrarLogin' type="text"/>
                             </div>
 
                             <div className='divButtonCadastrarLogin'>
