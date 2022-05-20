@@ -49,26 +49,33 @@ export const Perfil = (): JSX.Element => {
     }
 
 
-    const TrazerDadosDoPerfil = (id:number , nome:string , email:string) => {
+    const TrazerDadosDoPerfil = (id:number, nome:string , email:string) => {
 
         setNomePerfis(nome)
         setNomeEmail(email)
-        
+        setGuardaId(id)
 
     }
     window.scroll({top:
         310,left: 0,behavior: 'smooth'})
 
+        
+    const [guardaId, setGuardaId] = useState(0);
     const [nomePerfis, setNomePerfis] = useState('');
     const [nomeEmail, setNomeEmail] = useState('');
     
     const EditarPerfil = (id: number) => {
 
-        apiCase.put(`usuario/${id}`, { nome: nomePerfis, email: nomeEmail })
-            .then(() => {
-                window.location.reload()
+            if(nomePerfis !== '' && nomeEmail !== ''){
 
-            })
+                apiCase.put(`usuario/${id}`, { nome: nomePerfis, email: nomeEmail })
+                .then(() => {
+                    window.location.reload()
+                    
+                })
+                
+            }   
+
 
 
 
@@ -125,7 +132,7 @@ export const Perfil = (): JSX.Element => {
                         <div className="btnPerfilAlinhamento">
 
                             <div className="btnAtualizar">
-                                <button className='btnPerfilAtualizar'>Atualizar</button>
+                                <button className='btnPerfilAtualizar' onClick={() => EditarPerfil(guardaId)}>Atualizar</button>
                             </div>
 
                             <div className="btnExcluirAlinhamentoPerfil">
