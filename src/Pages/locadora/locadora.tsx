@@ -1,14 +1,12 @@
 import '../../Assets/CSS/locadora.css'
 
-// Footer e Header
-import Header from '../../Components/Header/header';
-import Footer from '../../Components/Footer/footer';
+
 
 export const Locadora = (): JSX.Element => {
 
     return (
         <>
-            {/* <Header /> */}
+            
             <div className='mainLocadora'>
                 <section className='locadora'>
                     <h2 id='tituloLocadora'>Locadora</h2>
@@ -41,7 +39,7 @@ export const Locadora = (): JSX.Element => {
                     </div>
                 </section>
             </div>
-            {/* <Footer /> */}
+            
         </>
     );
 }
