@@ -1,62 +1,68 @@
 {
-    "usuario": [
-        {
-            "id": 1,
-            "nome": "Paulo",
-            "email": "paulo@email.com",
-            "foto": "avatar.png"
-        },
-        {
-            "id": 2,
-            "nome": "Priscila",
-            "email": "priscila@email.com",
-            "foto": "avatar.png"
-        }
-    ],
-    "locadoras": [
-        {
-            "id": 1,
-            "nome": "Dois Irmãos"
-        },
-        {
-            "id": 2,
-            "nome": "Tres Irmãos"            
-        }
-    ],
-    "carros": [
-        {
-            "id": 1,
-            "nome": "Ford Fusion",
-            "portas": 4,
-            "npessoas": 5,
-            "airbag": true,
-            "locadoraId": 1
-        },
-        {
-            "id": 2,
-            "nome": "Ford Focus",
-            "portas": 4,
-            "npessoas": 5,
-            "airbag": true,
-            "locadoraId": 1
-        }
-    ],
-    "reservas": [
-        {
-            "id": 1,
-            "data": "2022-05-20",
-            "horario": "15:00",
-            "dataentrega": "2022-05-25",
-            "usuarioId": 1,
-            "carroId": 1
-        },
-        {
-            "id": 2,
-            "data": "2022-05-21",
-            "horario": "15:00",
-            "dataentrega": "2022-05-25",
-            "usuarioId": 2,
-            "carroId": 1            
-        }
-    ]
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Paulo",
+      "email": "paulo@email.com",
+      "foto": "avatar.png"
+    },
+    {
+      "id": 2,
+      "nome": "Priscila",
+      "email": "priscila@email.com",
+      "foto": "avatar.png"
+    }
+  ],
+  "locadoras": [
+    {
+      "id": 1,
+      "nome": "Dois Irmãos"
+    },
+    {
+      "id": 2,
+      "nome": "Tres Irmãos"
+    }
+  ],
+  "carros": [
+    {
+      "id": 1,
+      "nome": "Ford Fusion",
+      "portas": 4,
+      "npessoas": 5,
+      "airbag": true,
+      "locadoraId": 1
+    },
+    {
+      "nome": "",
+      "portas": "",
+      "npessoas": "",
+      "airbag": "false",
+      "id": 2
+    },
+    {
+      "nome": "",
+      "portas": "",
+      "npessoas": "",
+      "airbag": "false",
+      "id": 4
+    }
+  ],
+  "reservas": [
+    {
+      "id": 1,
+      "data": "2022-05-20",
+      "horario": "15:00",
+      "dataentrega": "2022-05-25",
+      "usuarioId": 1,
+      "carroId": 1
+    },
+    {
+      "id": 2,
+      "data": "2022-05-21",
+      "horario": "15:00",
+      "dataentrega": "2022-05-25",
+      "usuarioId": 2,
+      "carroId": 1
+    }
+  ]
 }
