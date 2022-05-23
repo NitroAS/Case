@@ -17,6 +17,9 @@ import { apiCase } from '../../services/api'
 // useState e agregados
 import React, { useEffect, useState } from "react"
 
+// Componente button
+import { Button } from '../../Components/BotaoEditarCarros/BotaoEditarCarros'
+
 let propsCarros: any = {
     descriptionHome:  'Home',
     descriptionCarros:  'Carros',
@@ -71,6 +74,7 @@ export const Carros = ():JSX.Element => {
     // Salvar
     const [nome, setNome] = useState('')
     const Salvar = () => {
+        
         apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
         .then(ListarNomes())
         .then(() => window.location.reload())
@@ -80,13 +84,13 @@ export const Carros = ():JSX.Element => {
     const [airbag, setAirbag] = useState('false')
 
     // Hook do Portas
-    const [portas, setPortas] = useState(0)
+    const [portas, setPortas] = useState('')
 
     // Hook para guardar o valor da locadora
     const [locadoraValor, setLocadoraValor] = useState('')
 
     // Hook de números de pessoas 
-    const [npessoas, setNPessoas] = useState(0)
+    const [npessoas, setNPessoas] = useState('')
 
     // Hook id
     const [id,  setId] = useState(0)
@@ -97,13 +101,15 @@ export const Carros = ():JSX.Element => {
     // Editar
    
 
+    const [booleano, setbooleano] = useState(false)
+
     const Editar = ():any => {
         apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
-        
+        .then(() => window.location.reload())
     }
 
-    let booleano = false
-    const EditarDois = (id:number, nome:string, portas:number, npessoas:number, airbag:string) => {
+    
+    const EditarDois = (id:number, nome:string, portas:string, npessoas:string, airbag:string) => {
         window.scroll({top:
         310,left: 0,behavior: 'smooth'})
 
@@ -111,12 +117,9 @@ export const Carros = ():JSX.Element => {
         setNome(nome)
         setPortas(portas)
         setNPessoas(npessoas)
-        setAirbag(airbag)
+        setAirbag(airbag)  
 
-        booleano = true
-        if(booleano === true){
-            return(<button className='editar' onClick={() => Editar()}>Editar</button>)
-        }
+        setbooleano(true)
     }
 
 
@@ -149,15 +152,15 @@ export const Carros = ():JSX.Element => {
                                     type="text" 
                                     placeholder="Portas:" 
                                     className='inputsMenoresCarros' 
-                                    
-                                    onChange = {(e) => setPortas(parseInt(e.target.value))} />
+                                    value={portas}
+                                    onChange = {(e) => setPortas(e.target.value)} />
 
                                     <input 
                                     type="text" 
                                     placeholder="N° de Pessoas" 
                                     className='inputsMenoresCarros'
-                                    
-                                    onChange = {(e) => setNPessoas(parseInt(e.target.value))} />
+                                    value={npessoas}
+                                    onChange = {(e) => setNPessoas(e.target.value)} />
                                 </div>
                                 <div className='divCadastrarCarros'>
                                     <select className='selectLocadouraCarros' onChange={(e) => setLocadoraValor(e.target.value)}>
@@ -168,7 +171,7 @@ export const Carros = ():JSX.Element => {
                                             )
                                         })}
                                     </select>
-                                    <button className='buttonCadastrarCarros' onClick={() => Salvar()}>Cadastrar</button>
+                                    <Button booleano={booleano} Editar={Editar} Salvar={Salvar} />
                                 </div>
                             </div>
                         </div>

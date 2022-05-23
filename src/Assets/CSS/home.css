@@ -66,6 +66,12 @@
     margin-right: 40px;
     font-family: 'Quicksand';
 }
+
+.ReservarB:hover{
+    background-color: #FFFFFF;
+    color: #DB1812;
+    border: 3px solid #DB1812;
+}
 .CadastrarB{
     width: 250px;
     height: 70px;
@@ -128,9 +134,10 @@
 .linkBtnHome:hover{
     color: #DB1812;
     background-color: white;
-    border: 2px solid #DB1812;
+    border: 3px solid #DB1812;
     border-radius: 5px;
 }
 
-
-
+.imagensCarros{
+    border-radius: 10px;
+}
