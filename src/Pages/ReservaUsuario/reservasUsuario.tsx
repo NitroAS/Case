@@ -54,31 +54,31 @@ export const ReservaUsuario = (): JSX.Element => {
                         <div className='alinhamentoSectionUmCarros'>
                             <div className='alinhamentoCadastrarCarros'>
                                 <div className='divH1Carros'>
-                                    <h1>Carros</h1>
+                                    <h1>Reservas</h1>
                                 </div>
                                 <div className='divInputMaior'>
                                     <input
                                         type="text"
-                                        placeholder='Ex.: Onix 2.0'
+                                        placeholder='Onix 2.0'
 
                                         className='escolherTiposDeCarros' />
                                 </div>
                                 <div className='inputsMenores'>
                                     <select className='selectBooleanoAirbag' defaultValue='default'>
-                                        <option value='default' disabled hidden>Airbag</option>
+                                        <option value='default' disabled hidden>Data Reservada</option>
                                         <option value="false">Sem Airbag</option>
                                         <option value="true">Com Airbag</option>
                                     </select>
                                     <input
                                         type="text"
-                                        placeholder="Portas:"
+                                        placeholder="Horário da reserva:"
                                         className='inputsMenoresCarros'
 
                                     />
 
                                     <input
                                         type="text"
-                                        placeholder="N° de Pessoas"
+                                        placeholder="Data de devolução:"
                                         className='inputsMenoresCarros'
 
                                     />
@@ -92,7 +92,7 @@ export const ReservaUsuario = (): JSX.Element => {
                                             )
                                         })} */}
                                     </select>
-                                    <button className='buttonCadastrarCarros'>Cadastrar</button>
+                                    <button className='buttonCadastrarCarros'>Reservar</button>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,13 @@ export const ReservaUsuario = (): JSX.Element => {
 
 
 
+            <div className="ContainerH2Reservas">
+                        <h2 className='h2PerfilReservas'>MINHAS RESERVAS</h2>
+                    </div>
 
+                    <div className="bordaAuxiliarReservas">
+
+                    </div>
 
             {
                 reserva.map((item): any => {

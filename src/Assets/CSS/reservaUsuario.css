@@ -188,6 +188,25 @@ h1{
 }
 
 
+/* borda */
+
+.ContainerH2Reservas{
+    margin-top: 150px;
+}
+
+.h2PerfilReservas{
+    font-size: 40px;
+    line-height: 49px;
+    color: #040404;
+    font-family: 'Montserrat'
+
+}
+
+.bordaAuxiliarReservas{
+    border: 1px solid #000000;
+    width: 634px;
+    margin-top: 10px;
+}
 
 
 /* parte das reservas dos carros */
