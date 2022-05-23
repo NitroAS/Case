@@ -5,7 +5,7 @@ import './Assets/CSS/global.css'
 import { Home } from './Pages/Home/home'
 import { Login } from './Pages/login/login'
 import { Carros } from './Pages/carros/carros'
-import { Locadora } from './Pages/locadora/locadora'
+import { Locadora } from './Pages/Locadora/locadora'
 import { Perfil } from './Pages/Perfil/perfil'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Reserva } from './Pages/Reserva/reserva'
