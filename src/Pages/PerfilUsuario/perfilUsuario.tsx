@@ -1,11 +1,11 @@
-import '../../Assets/CSS/perfil.css'
+import '../../Assets/CSS/perfilUsuario.css'
 import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
 import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
 
-export const Perfil = (): JSX.Element => {
-    let propsPerfil: any = {
+export const PerfilUsuario = (): JSX.Element => {
+    let propsPerfilUsuario: any = {
         descriptionCarros: 'Carros',
         descriptionReservas: 'Reservas',
         descriptionLocadora: 'Locadora',
@@ -25,7 +25,9 @@ export const Perfil = (): JSX.Element => {
 
                 setPerfis(resultado.data)
 
-            }) 
+            })
+
+           
 
     }
 
@@ -47,12 +49,12 @@ export const Perfil = (): JSX.Element => {
     }
 
 
-    const TrazerDadosDoPerfil = (id:number, nome:string , email:string , telefone:string) => {
+    const TrazerDadosDoPerfil = (id:number, nome:string , email:string) => {
 
         setNomePerfis(nome)
         setNomeEmail(email)
         setGuardaId(id)
-        setTelefone(telefone)
+
     }
     window.scroll({top:
         310,left: 0,behavior: 'smooth'})
@@ -60,15 +62,15 @@ export const Perfil = (): JSX.Element => {
 
         // const feita para guarda o Id e la em baixo no Onclick
     const [guardaId, setGuardaId] = useState(0);
+
     const [nomePerfis, setNomePerfis] = useState('');
     const [nomeEmail, setNomeEmail] = useState('');
-    const [telefone , setTelefone] = useState('')
     
     const EditarPerfil = (id: number) => {
 
-            if(nomePerfis !== '' && nomeEmail !== '' && telefone !== ''){
+            if(nomePerfis !== '' && nomeEmail !== ''){
 
-                apiCase.put(`usuario/${id}`, { nome: nomePerfis, email: nomeEmail , telefone: telefone })
+                apiCase.put(`usuario/${id}`, { nome: nomePerfis, email: nomeEmail })
                 .then(() => {
                     window.location.reload()
                     
@@ -77,41 +79,24 @@ export const Perfil = (): JSX.Element => {
             }   
     }
 
-
-    const CadastrarPerfil = () => {
-
-        for (let index = 0; index < perfis.length; index++) {
-            if(perfis[index].nome === nomePerfis)
-            {
-                return
-            }
-        }
-
-        apiCase.post(`usuario`, {nome: nomePerfis, email: nomeEmail, telefone: telefone})
-        .then(() => {
-            window.location.reload()
-            
-        })
-    }
-
    
     return (
         <>
-            <Header objeto={propsPerfil} />
-            <div className='alinahemntoGeralPerfil'>
+            <Header objeto={propsPerfilUsuario} />
+            <div className='alinahemntoGeralPerfilUsuario'>
 
-                <div className='AlinhamentoBoxPerfil'>
-                    <div className='BoxPerfil'>
-                        <div className="tituloAlinhamentoPerfil">
+                <div className='AlinhamentoBoxPerfilUsuario'>
+                    <div className='BoxPerfilUsuario'>
+                        <div className="tituloAlinhamentoPerfilUsuario">
 
                             <h1>Perfil</h1>
                         </div>
 
-                        <div className="InputPerfilAlinhamento">
+                        <div className="InputPerfilAlinhamentoUsuario">
 
                             <input
-                                className="inputsPerfil"
-                                type="text" name="InputPerfil"
+                                className="inputsPerfilUsuario"
+                                type="text" name="InputPerfilUsuario"
                                 placeholder="Maria de Fátma Muniz"
                                 maxLength={40}
                                 defaultValue={nomePerfis}
@@ -119,17 +104,14 @@ export const Perfil = (): JSX.Element => {
                                 ></input>
 
                             <input
-                                className="inputsPerfil"
+                                className="inputsPerfilUsuario"
                                 type="text"
                                 name="InputPerfil"
                                 placeholder="(11) 9999-9090"
-                                maxLength={40}
-                                defaultValue={telefone}
-                                onChange={e => setTelefone(e.target.value)}
-                                ></input>
+                                maxLength={40}></input>
 
                             <input 
-                            className="inputsPerfil"
+                            className="inputsPerfilUsuario"
                             type="text" 
                             name="InputPerfil" 
                             placeholder="maria@gmail.com" 
@@ -143,16 +125,15 @@ export const Perfil = (): JSX.Element => {
 
                         </div>
 
-                        <div className="btnPerfilAlinhamento">
+                        <div className="btnPerfilAlinhamentoUsuario">
 
-                            <div className="btnAtualizar">
-                                <button className='btnPerfilAtualizar' onClick={() => EditarPerfil(guardaId)}>Editar</button>
-                                <button className='btnPerfilAtualizar' onClick={() => CadastrarPerfil()}>Atualizar</button>
+                            <div className="btnAtualizarUsuario">
+                                <button className='btnPerfilAtualizarUsuario' onClick={() => EditarPerfil(guardaId)}>Atualizar</button>
                          
                             </div>
 
-                            <div className="btnExcluirAlinhamentoPerfil">
-                                <button className='btnPerfilExcluir'>Excluir Cadastro</button>
+                            <div className="btnExcluirAlinhamentoPerfilUsuario">
+                                <button className='btnPerfilExcluirUsuario'>Excluir Cadastro</button>
                             </div>
 
                         </div>
@@ -163,13 +144,13 @@ export const Perfil = (): JSX.Element => {
 
 
                 </div>
-                <div className='alinhamentoPerfilFinal'>
+                <div className='alinhamentoPerfilFinalUsuario'>
 
-                    <div className="ContainerH2">
-                        <h2 className='h2Perfil'>USUÁRIOS CADASTRADOS</h2>
+                    <div className="ContainerH2Usuario">
+                        <h2 className='h2PerfilUsuario'>USUÁRIOS CADASTRADOS</h2>
                     </div>
 
-                    <div className="bordaAuxiliar">
+                    <div className="bordaAuxiliarUsuario">
 
                     </div>
 
@@ -178,16 +159,16 @@ export const Perfil = (): JSX.Element => {
                         return (
 
 
-                            <div className="bordaPerfil" onClick={() => TrazerDadosDoPerfil (item.id , item.nome , item.email, item.telefone )}>
-                                <div className="container">
+                            <div className="bordaPerfilUsuario" onClick={() => TrazerDadosDoPerfil (item.id , item.nome , item.email )}>
+                                <div className="containerUsuario">
 
-                                    <div className="boxCadastro">
-                                        <p className='pTituloPerfil'>{item.nome}</p>
+                                    <div className="boxCadastroUsuario">
+                                        <p className='pTituloPerfilUsuario'>{item.nome}</p>
 
-                                        <p className='pMsgPerfil'>{item.telefone}</p>
-                                        <p className='pMsgPerfil'>{item.email}</p>
+                                        <p className='pMsgPerfilUsuario'>(11) 99999-9090</p>
+                                        <p className='pMsgPerfilUsuario'>{item.email}</p>
 
-                                        <button className='excluirCadastroPerfil' onClick={() => ExcluirPerfil( item.id)}>Excuir usuário</button>
+                                        <button className='excluirCadastroPerfilUsuario' onClick={() => ExcluirPerfil( item.id)}>Excuir usuário</button>
                                     </div>
 
                                 </div>
@@ -208,4 +189,4 @@ export const Perfil = (): JSX.Element => {
     );
 }
 
-export default Perfil
+export default PerfilUsuario

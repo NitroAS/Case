@@ -1,6 +1,8 @@
 @import '../CSS/global.css';
 
 
+
+/* parte dos cards das reservas */
 .reservaText{
     font-family: 'Quicksand';
     font-style: normal;
@@ -85,4 +87,5 @@
     width: 350px;
     height: 198.22px;
 }
+
 
