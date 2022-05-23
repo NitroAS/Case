@@ -25,9 +25,7 @@ export const Perfil = (): JSX.Element => {
 
                 setPerfis(resultado.data)
 
-            })
-
-           
+            }) 
 
     }
 
@@ -49,12 +47,12 @@ export const Perfil = (): JSX.Element => {
     }
 
 
-    const TrazerDadosDoPerfil = (id:number, nome:string , email:string) => {
+    const TrazerDadosDoPerfil = (id:number, nome:string , email:string , telefone:string) => {
 
         setNomePerfis(nome)
         setNomeEmail(email)
         setGuardaId(id)
-
+        setTelefone(telefone)
     }
     window.scroll({top:
         310,left: 0,behavior: 'smooth'})
@@ -62,21 +60,38 @@ export const Perfil = (): JSX.Element => {
 
         // const feita para guarda o Id e la em baixo no Onclick
     const [guardaId, setGuardaId] = useState(0);
-
     const [nomePerfis, setNomePerfis] = useState('');
     const [nomeEmail, setNomeEmail] = useState('');
+    const [telefone , setTelefone] = useState('')
     
     const EditarPerfil = (id: number) => {
 
-            if(nomePerfis !== '' && nomeEmail !== ''){
+            if(nomePerfis !== '' && nomeEmail !== '' && telefone !== ''){
 
-                apiCase.put(`usuario/${id}`, { nome: nomePerfis, email: nomeEmail })
+                apiCase.put(`usuario/${id}`, { nome: nomePerfis, email: nomeEmail , telefone: telefone })
                 .then(() => {
                     window.location.reload()
                     
                 })
                 
             }   
+    }
+
+
+    const CadastrarPerfil = () => {
+
+        for (let index = 0; index < perfis.length; index++) {
+            if(perfis[index].nome === nomePerfis)
+            {
+                return
+            }
+        }
+
+        apiCase.post(`usuario`, {nome: nomePerfis, email: nomeEmail, telefone: telefone})
+        .then(() => {
+            window.location.reload()
+            
+        })
     }
 
    
@@ -108,7 +123,10 @@ export const Perfil = (): JSX.Element => {
                                 type="text"
                                 name="InputPerfil"
                                 placeholder="(11) 9999-9090"
-                                maxLength={40}></input>
+                                maxLength={40}
+                                defaultValue={telefone}
+                                onChange={e => setTelefone(e.target.value)}
+                                ></input>
 
                             <input 
                             className="inputsPerfil"
@@ -128,7 +146,8 @@ export const Perfil = (): JSX.Element => {
                         <div className="btnPerfilAlinhamento">
 
                             <div className="btnAtualizar">
-                                <button className='btnPerfilAtualizar' onClick={() => EditarPerfil(guardaId)}>Atualizar</button>
+                                <button className='btnPerfilAtualizar' onClick={() => EditarPerfil(guardaId)}>Editar</button>
+                                <button className='btnPerfilAtualizar' onClick={() => CadastrarPerfil()}>Atualizar</button>
                          
                             </div>
 
@@ -159,13 +178,13 @@ export const Perfil = (): JSX.Element => {
                         return (
 
 
-                            <div className="bordaPerfil" onClick={() => TrazerDadosDoPerfil (item.id , item.nome , item.email )}>
+                            <div className="bordaPerfil" onClick={() => TrazerDadosDoPerfil (item.id , item.nome , item.email, item.telefone )}>
                                 <div className="container">
 
                                     <div className="boxCadastro">
                                         <p className='pTituloPerfil'>{item.nome}</p>
 
-                                        <p className='pMsgPerfil'>(11) 99999-9090</p>
+                                        <p className='pMsgPerfil'>{item.telefone}</p>
                                         <p className='pMsgPerfil'>{item.email}</p>
 
                                         <button className='excluirCadastroPerfil' onClick={() => ExcluirPerfil( item.id)}>Excuir usuário</button>
