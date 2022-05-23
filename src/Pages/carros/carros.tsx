@@ -88,6 +88,34 @@ export const Carros = ():JSX.Element => {
     // Hook de números de pessoas 
     const [npessoas, setNPessoas] = useState(0)
 
+    // Hook id
+    const [id,  setId] = useState(0)
+
+    // Hook botão
+    const [botao, setBotao] = useState(true)
+
+    // Editar
+   
+
+    const Editar = () => {
+        apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
+        
+    }
+
+    const EditarDois = (id:number, nome:string, portas:number, npessoas:number, airbag:string) => {
+        window.scroll({top:
+        310,left: 0,behavior: 'smooth'})
+
+        setId(id)
+        setNome(nome)
+        setPortas(portas)
+        setNPessoas(npessoas)
+        setAirbag(airbag)
+
+
+    }
+
+
     return(
         <div>
             <Header objeto={propsCarros} />
