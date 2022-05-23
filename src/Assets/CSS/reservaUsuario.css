@@ -1,0 +1,88 @@
+@import '../CSS/global.css';
+
+
+.reservaTextUsuario{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #040404;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.ImagemUsuario{
+    width: 350px;
+    height: 198.22px;
+    border-radius: 10px;
+}
+
+.CentralizadoraUsuario{
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #C6C4C4;
+    border-radius: 10px;
+    width: 1140px;
+    height: 198px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.nomeCarroUsuario{
+    margin-bottom: 25px;
+}
+
+.informacoesReservaUsuario{
+    margin-bottom: 15px;
+    font-family: 'Quicksand';
+    font-size: 20px;
+}
+
+.TextosUsuario{
+    flex-direction: column;
+}
+
+.ButtonRUsuario{
+    display: flex;
+    align-items: flex-end;
+    height: 160px;
+}
+
+.ExcluirReservaUsuario{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #DB1812;
+    width: 250px;
+    height: 70px;
+    border: 2px solid #DB1812;
+    border-radius: 5px; 
+    box-sizing: border-box;
+    background-color: white;
+    margin-right: 18px;
+}
+
+.ExcluirReservaUsuario:hover{
+    background-color: var(--vermelhoCarros);
+    color: white;
+}
+
+
+/* Alinhamento aereo significa que estou alinhando por fora o conteúdo que está grudando no canto da tela*/
+.alinhamentoAereoMainUsuario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ImgCarroUsuario{
+    width: 350px;
+    height: 198.22px;
+}
+
