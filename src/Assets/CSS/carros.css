@@ -232,3 +232,20 @@ h1{
 .espaçamentoFinalCarros{
     margin-bottom: 50px;
 }
+
+.editar{
+    border: 1px solid var(--vermelhoCarros);
+    border-radius: 5px;
+    background-color: white;
+    color: var(--vermelhoCarros);
+    width: 250px;
+    height: 75px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.editar:hover{
+    background-color: var(--vermelhoCarros);
+    color: white;
+}

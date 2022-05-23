@@ -97,11 +97,12 @@ export const Carros = ():JSX.Element => {
     // Editar
    
 
-    const Editar = () => {
+    const Editar = ():any => {
         apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
         
     }
 
+    let booleano = false
     const EditarDois = (id:number, nome:string, portas:number, npessoas:number, airbag:string) => {
         window.scroll({top:
         310,left: 0,behavior: 'smooth'})
@@ -112,7 +113,10 @@ export const Carros = ():JSX.Element => {
         setNPessoas(npessoas)
         setAirbag(airbag)
 
-
+        booleano = true
+        if(booleano === true){
+            return(<button className='editar' onClick={() => Editar()}>Editar</button>)
+        }
     }
 
 
@@ -190,7 +194,7 @@ export const Carros = ():JSX.Element => {
                                                     <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
                                                 </div>
                                                 <div className='buttonsDoCardcarro'>
-                                                    <button className='buttonEditarCarros'>Editar</button>
+                                                    <button className='buttonEditarCarros' onClick={() => EditarDois(item.id, item.nome, item.portas, item.npessoas, item.airbag)}>Editar</button>
                                                     <button className='buttonExcluirCarros' onClick={() => Excluir(item.id)}>Excluir</button>
                                                 </div>
                                             </div>

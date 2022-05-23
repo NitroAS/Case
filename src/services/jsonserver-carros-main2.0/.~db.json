@@ -46,13 +46,6 @@
       "npessoas": 5,
       "airbag": "true",
       "id": 3
-    },
-    {
-      "nome": "",
-      "portas": 0,
-      "npessoas": 0,
-      "airbag": "false",
-      "id": 4
     }
   ],
   "reservas": [
