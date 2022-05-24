@@ -1,30 +1,26 @@
 {
   "usuario": [
     {
-      "nome": "asas",
-      "email": "as@gmail.com",
-      "telefones": "as",
-      "id": 1
+      "id": 1,
+      "nome": "Paulo",
+      "email": "paulo@email.com",
+      "foto": "avatar.png"
     },
     {
+      "id": 2,
       "nome": "Priscila",
       "email": "priscila@email.com",
-      "telefone": "2122",
-      "id": 2
+      "foto": "avatar.png"
     }
   ],
   "locadoras": [
     {
-      "nome": "Dois Irmãos",
-      "endereco": "asss",
-      "telefone": "as",
-      "id": 1
+      "id": 1,
+      "nome": "Dois Irmãos"
     },
     {
-      "nome": "Tres Irmãos ",
-      "endereco": "Ruas",
-      "telefone": "(21) 9999-900",
-      "id": 2
+      "id": 2,
+      "nome": "Tres Irmãos"
     }
   ],
   "carros": [
@@ -47,12 +43,12 @@
   ],
   "reservas": [
     {
-      "id": 1,
       "data": "2022-05-20",
       "horario": "15:00",
       "dataentrega": "2022-05-25",
       "usuarioId": 1,
-      "carroId": 1
+      "carroId": 1,
+      "id": 1
     },
     {
       "id": 2,
