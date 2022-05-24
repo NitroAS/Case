@@ -15,12 +15,16 @@
   ],
   "locadoras": [
     {
-      "id": 1,
-      "nome": "Dois Irmãos"
+      "nome": "Dois Irmãos",
+      "endereco": "as",
+      "telefone": "as",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Tres Irmãos"
+      "nome": "Tres Irmãos ",
+      "endereco": "Ruas",
+      "telefone": "(21) 9999-900",
+      "id": 2
     }
   ],
   "carros": [
@@ -33,11 +37,12 @@
       "locadoraId": 1
     },
     {
-      "nome": "",
-      "portas": "",
-      "npessoas": "",
-      "airbag": "false",
-      "id": 2
+      "id": 2,
+      "nome": "Ford Focus",
+      "portas": 4,
+      "npessoas": 5,
+      "airbag": true,
+      "locadoraId": 1
     }
   ],
   "reservas": [
