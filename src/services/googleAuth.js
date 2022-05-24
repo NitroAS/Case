@@ -1,12 +1,12 @@
 import jwt_decode from "jwt-decode";
-import { decode } from "punycode";
 
 export function HandleCredentialResponse(response) {
   
   if(response !== undefined){
     let token = parseJwt(response.credential)
     localStorage.setItem('token', JSON.stringify(token))
-    window.location.replace('http://localhost:3000/carros')
+    console.log(token)
+    
   }
 
     window.google.accounts.id.initialize({
@@ -24,7 +24,11 @@ export function HandleCredentialResponse(response) {
 function parseJwt (token) {
   var decoded = jwt_decode(token);
   console.log(decoded)
-  return JSON.parse(decoded);
+  // let redirect = localStorage.getItem('token')
+  if(decoded.email === "viniciusgomesdecerqueira@gmail.com" || decoded.email === "alexsandrosouzadasilva75@gmail.com" ){
+    window.location.replace('http://localhost:3000/carros')
+  }
+  return decoded;
 };
 
 export default HandleCredentialResponse;
