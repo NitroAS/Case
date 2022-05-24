@@ -137,7 +137,6 @@ h1{
 }
 
 .sectionsDoscardscarros{
-    height: 687px;
     margin-top: 30px;
 }
 
@@ -228,7 +227,6 @@ h1{
     width: 1240px;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
 }
 
 .espaçamentoFinalCarros{
