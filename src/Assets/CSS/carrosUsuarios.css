@@ -1,0 +1,28 @@
+.cardsAPICarrosUsuarios{
+    border: 1px solid var(--cinzaClaroCardCarros);
+    border-radius: 10px;
+    width: 351px;
+    height: 526px;
+    margin-top: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.buttonDetalhesCarros{
+    border: 1px solid var(--vermelhoCarros);
+    border-radius: 5px;
+    background-color: var(--vermelhoCarros);
+    width: 250px;
+    height: 75px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.buttonDetalhesCarros:hover{
+    background-color: white;
+    color: var(--vermelhoCarros);
+}

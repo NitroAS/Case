@@ -11,6 +11,7 @@ import { PerfilUsuario } from './Pages/PerfilUsuario/perfilUsuario'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Reserva } from './Pages/Reserva/reserva'
 import { ReservaUsuario } from './Pages/ReservaUsuario/reservasUsuario'
+import { CarrosUsuario } from './Pages/CarrosUsuario/carrosUsuario';
 
 
 const Rotas = () =>{
@@ -26,6 +27,7 @@ const Rotas = () =>{
               <Route element={<PerfilUsuario/>} path="/perfilUsuario" />
               <Route element={<Reserva/>} path="/reservas" />
               <Route element={<ReservaUsuario/>} path="/reservasUsuario" />
+              <Route element={<CarrosUsuario/>} path="/CarrosUsuario" />
           </Routes>
       </BrowserRouter>
   );

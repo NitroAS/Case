@@ -33,17 +33,24 @@
       "locadoraId": 1
     },
     {
-      "nome": "",
-      "portas": "",
-      "npessoas": "",
+      "nome": "radamdamdam",
+      "portas": "4",
+      "npessoas": "5",
       "airbag": "false",
       "id": 2
     },
     {
-      "nome": "",
-      "portas": "",
-      "npessoas": "",
+      "nome": "rtx blaster mega uper super boss nice",
+      "portas": "4",
+      "npessoas": "5",
       "airbag": "false",
+      "id": 3
+    },
+    {
+      "nome": "andrei",
+      "portas": "10",
+      "npessoas": "1",
+      "airbag": "true",
       "id": 4
     }
   ],
