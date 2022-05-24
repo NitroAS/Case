@@ -16,24 +16,24 @@ let propsReservaUsuario: any = {
 
 export const ReservaUsuario = (): JSX.Element => {
 
-    const [reserva, setReserva] = useState<any[]>([]);
-    const PegandoReservas = () => {
+    const [reservaUsuario, setReservaUsuario] = useState<any[]>([]);
+    const PegandoReservasUsuario = () => {
 
         apiCase.get('reservas?_expand=carro')
             .then(resultado => {
 
-                setReserva(resultado.data)
+                setReservaUsuario(resultado.data)
                 console.log(resultado.data);
             })
     }
     useEffect(() => {
 
-        PegandoReservas()
+        PegandoReservasUsuario()
     }, [])
 
 
 
-    const ExcluirReservas = (id: any) => {
+    const ExcluirReservasUsuario = (id: any) => {
         if (window.confirm('Deseja realmente excluir o Perfil?')) {
             apiCase.delete(`reservas/${id}`)
                 .then(() => {
@@ -41,50 +41,108 @@ export const ReservaUsuario = (): JSX.Element => {
 
                 })
         }
-
     }
+
+    const TrazerDadosDoReservasUsuario = ( id:number ,nome: string, data: string, horario: string, dataentrega: string) => {
+
+        setNomeCarroUsuario(nome)
+        setDataRetiradaReservaUsuario(data)
+        setHorarioRetiradaUsuario(horario)
+        setdevolucaoUsuario(dataentrega)
+        setGuardaIReservasdUsuario(id)
+        
+    }
+    window.scroll({top:
+        310,left: 0,behavior: 'smooth'})
+
+    const [guardaIReservasdUsuario, setGuardaIReservasdUsuario] = useState(0);
+    const [nomeCarroUsuario, setNomeCarroUsuario] = useState('');
+    const [dataRetiradaReservaUsuario, setDataRetiradaReservaUsuario] = useState('');
+    const [horarioRetiradaUsuario, setHorarioRetiradaUsuario] = useState('');
+    const [devolucaoUsuario, setdevolucaoUsuario] = useState('');
+
+    const EditarReservasUsuario = (id: number) => {
+
+        if (nomeCarroUsuario !== '' && dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '') {
+
+            apiCase.put(`reservas?_expand=carro/${id}`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario })
+                .then(() => {
+                    window.location.reload()
+
+                })
+
+        }
+    }
+
+    const CadastrarReservasUsuario = () => {
+
+        for (let index = 0; index < reservaUsuario.length; index++) {
+            if(reservaUsuario[index].nome === reservaUsuario)
+            {
+                return
+            }
+        }
+
+        apiCase.post(`reservas?_expand=carro`,{ nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario })
+        .then(() => {
+            window.location.reload()
+            
+        })
+    }
+
+
+
+
     return (
         <>
             <Header objeto={propsReservaUsuario} />
 
 
-            <div className='mainCarros espaçamentoFinalCarros'>
-                <div className='alinhamentoMainCarros'>
+            <div className='mainCarros espaçamentoFinalCarrosUsuario'>
+                <div className='alinhamentoMainCarrosUsuario'>
                     <section>
-                        <div className='alinhamentoSectionUmCarros'>
-                            <div className='alinhamentoCadastrarCarros'>
-                                <div className='divH1Carros'>
+                        <div className='alinhamentoSectionUmCarrosUsuario'>
+                            <div className='alinhamentoCadastrarCarrosUsuario'>
+                                <div className='divH1CarrosUsuario'>
                                     <h1>Reservas</h1>
                                 </div>
-                                <div className='divInputMaior'>
+                                <div className='divInputMaiorUsuario'>
                                     <input
                                         type="text"
                                         placeholder='Onix 2.0'
-
-                                        className='escolherTiposDeCarros' />
+                                        className='escolherTiposDeCarros'
+                                        defaultValue={nomeCarroUsuario}
+                                        onChange={e => setNomeCarroUsuario(e.target.value)} />
                                 </div>
-                                <div className='inputsMenores'>
-                                    <select className='selectBooleanoAirbag' defaultValue='default'>
-                                        <option value='default' disabled hidden>Data Reservada</option>
-                                        <option value="false">Sem Airbag</option>
-                                        <option value="true">Com Airbag</option>
-                                    </select>
+                                <div className='inputsMenoresUsuario'>
                                     <input
                                         type="text"
                                         placeholder="Horário da reserva:"
-                                        className='inputsMenoresCarros'
+                                        className='inputsMenoresCarrosUsuario'
+                                        defaultValue={dataRetiradaReservaUsuario}
+                                        onChange={e => setDataRetiradaReservaUsuario(e.target.value)}
+
+                                    />
+                                  
+                                    <input
+                                        type="text"
+                                        placeholder="Horário da reserva:"
+                                        className='inputsMenoresCarrosUsuario'
+                                        defaultValue={horarioRetiradaUsuario}
+                                        onChange={e => setHorarioRetiradaUsuario(e.target.value)}
 
                                     />
 
                                     <input
                                         type="text"
                                         placeholder="Data de devolução:"
-                                        className='inputsMenoresCarros'
-
+                                        className='inputsMenoresCarrosUsuario'
+                                        defaultValue={devolucaoUsuario}
+                                        onChange={e => setdevolucaoUsuario(e.target.value)}
                                     />
                                 </div>
-                                <div className='divCadastrarCarros'>
-                                    <select className='selectLocadouraCarros'>
+                                <div className='divCadastrarCarrosUsuario'>
+                                    <select className='selectLocadouraCarrosUsuario'>
                                         <option selected disabled hidden>Qual a Locadoura?</option>
                                         {/* {locadoras.map((item):any =>{
                                             return(
@@ -92,7 +150,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                             )
                                         })} */}
                                     </select>
-                                    <button className='buttonCadastrarCarros'>Reservar</button>
+                                    <button className='buttonCadastrarCarrosUsuario'onClick={() => CadastrarReservasUsuario()}>Reservar</button>
+                                    <button className='buttonCadastrarCarrosUsuario'onClick={() => EditarReservasUsuario(guardaIReservasdUsuario)}>Editar</button>
                                 </div>
                             </div>
                         </div>
@@ -102,16 +161,16 @@ export const ReservaUsuario = (): JSX.Element => {
 
 
 
-            <div className="ContainerH2Reservas">
-                        <h2 className='h2PerfilReservas'>MINHAS RESERVAS</h2>
-                    </div>
+            <div className="ContainerH2ReservasUsuario">
+                <h2 className='h2PerfilReservasUsuario'>MINHAS RESERVAS</h2>
+            </div>
 
-                    <div className="bordaAuxiliarReservas">
+            <div className="bordaAuxiliarReservasUsuario">
 
-                    </div>
+            </div>
 
             {
-                reserva.map((item): any => {
+                reservaUsuario.map((item): any => {
                     return (
                         <div className='alinhamentoAereoMainUsuario'>
                             <div className='mainReservaUsuario'>
@@ -121,13 +180,14 @@ export const ReservaUsuario = (): JSX.Element => {
                                             <img className='ImagemUsuario' src={carroAzul} alt="" />
                                         </div>
                                         <div className='TextosUsuario'>
-                                            <h1 className='nomeCarroUsuario'>Fiat Uno 1.0</h1>
-                                            <p className='informacoesReservaUsuario'>Data retirada: 22/05/2022</p>
-                                            <p className='informacoesReservaUsuario'>Horário retirada: 16:30</p>
-                                            <p className='informacoesReservaUsuario'>Data de devolução:  30/05/2022</p>
+                                            <p className='nomeCarroUsuario'>{item.carro.nome}</p>
+                                            <p className='informacoesReservaUsuario'>{item.data}</p>
+                                            <p className='informacoesReservaUsuario'>{item.horario}</p>
+                                            <p className='informacoesReservaUsuario'>{item.dataentrega}</p>
                                         </div>
                                         <div className='ButtonRUsuario'>
-                                            <button className='ExcluirReservaUsuario' onClick={() => ExcluirReservas(item.id)} >Excluir Reserva</button>
+                                            <button className='ExcluirReservaUsuario' onClick={() => ExcluirReservasUsuario(item.id)} >Excluir Reserva</button>
+                                            <button className='ExcluirReservaUsuario'onClick={() => TrazerDadosDoReservasUsuario (item.id , item.carro.nome , item.data, item.horario , item.dataentrega )}>Editar</button>
                                         </div>
                                     </div>
                                 </section>

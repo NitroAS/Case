@@ -1,22 +1,22 @@
 {
   "usuario": [
     {
-      "id": 1,
-      "nome": "Paulo",
-      "email": "paulo@email.com",
-      "foto": "avatar.png"
+      "nome": "asas",
+      "email": "as@gmail.com",
+      "telefones": "as",
+      "id": 1
     },
     {
-      "id": 2,
       "nome": "Priscila",
       "email": "priscila@email.com",
-      "foto": "avatar.png"
+      "telefone": "2122",
+      "id": 2
     }
   ],
   "locadoras": [
     {
       "nome": "Dois Irmãos",
-      "endereco": "as",
+      "endereco": "asss",
       "telefone": "as",
       "id": 1
     },

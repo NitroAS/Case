@@ -8,7 +8,7 @@ h1{
     font-size: 40px;
 }
 
-.escolherTiposDeCarros{
+.escolherTiposDeCarrosUsuario{
     width: 991px;
     height: 67px;
     border: 1px solid var(--cinzaInputs);
@@ -21,7 +21,7 @@ h1{
     color: var(--pretoClarocarros);
 }
 
-.selectBooleanoAirbag{
+.selectBooleanoAirbagUsuario{
     background-color: var(--cinzaInputs);
     width: 320px;
     height: 70px;
@@ -34,7 +34,7 @@ h1{
     color: var(--pretoClarocarros);
 }
 
-.inputsMenoresCarros{
+.inputsMenoresCarrosUsuario{
     background-color: var(--cinzaInputs);
     width: 320px;
     height: 70px;
@@ -47,7 +47,7 @@ h1{
     color: var(--pretoClarocarros);
 }
 
-.selectLocadouraCarros{
+.selectLocadouraCarrosUsuario{
     background-color: var(--cinzaInputs);
     width: 583px;
     height: 70px;
@@ -60,7 +60,7 @@ h1{
     color: var(--pretoClarocarros);
 }
 
-.buttonCadastrarCarros{
+.buttonCadastrarCarrosUsuario{
     width: 250px;
     height: 70px;
     background-color: var(--vermelhoCarros);
@@ -72,12 +72,12 @@ h1{
     border-radius: 5px;
 }
 
-.buttonCadastrarCarros:hover{
+.buttonCadastrarCarrosUsuario:hover{
     background-color: white;
     color: var(--vermelhoCarros);
 }
 
-.h2Carros{
+.h2CarrosUsuario{
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -85,7 +85,7 @@ h1{
     margin-bottom: 10px;
 }
 
-.barraDeSeparacaoCarros{
+.barraDeSeparacaoCarrosUsuario{
     width: 634px;
     height: 1px;
     background-color: black;
@@ -93,16 +93,16 @@ h1{
 
 /* Posicionamentos */
 
-.mainCarros{
+.mainCarrosUsuario{
     display: flex;
     justify-content: center;
 }
 
-.alinhamentoMainCarros{
+.alinhamentoMainCarrosUsuario{
     width: 1140px;
 }
 
-.alinhamentoSectionUmCarros{
+.alinhamentoSectionUmCarrosUsuario{
     margin-top: 10px;
     border: 1px solid var(--cinzaCardCarros);
     height: 531px;
@@ -111,12 +111,12 @@ h1{
     border-radius: 10px;
 }
 
-.alinhamentoCadastrarCarros{
+.alinhamentoCadastrarCarrosUsuario{
     width: 991px;
     flex-wrap: wrap;
 }
 
-.divH1Carros{
+.divH1CarrosUsuario{
     height: 135px;
     display: flex;
     flex-direction: column;
@@ -124,31 +124,31 @@ h1{
     align-items: center;
 }
 
-.divInputMaior{
+.divInputMaiorUsuario{
     height: 128px;
 }
 
-.inputsMenores{
+.inputsMenoresUsuario{
     height: 128px;
     display: flex;
     justify-content: space-between;
 }
 
-.divCadastrarCarros{
+.divCadastrarCarrosUsuario{
     display: flex;
     justify-content: space-between;
 }
 
-.sectionsDoscardscarros{
+.sectionsDoscardscarrosUsuario{
     height: 687px;
     margin-top: 30px;
 }
 
-.espaçamentoEntreAsSections{
+.espaçamentoEntreAsSectionsUsuario{
     margin-top: 166px;
 }
 
-.cardsAPICarros{
+.cardsAPICarrosUsuario{
     border: 1px solid var(--cinzaClaroCardCarros);
     border-radius: 10px;
     width: 351px;
@@ -160,41 +160,41 @@ h1{
     margin-right: 40px;
 }
 
-.nomeDoCarro{
+.nomeDoCarroUsuario{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 24px;
     color: black;
 }
 
-.alinhamentocardCarros{
+.alinhamentocardCarrosUsuario{
     width: 251px;
 }
 
-.h3CardDiv{
+.h3CardDivUsuario{
     height: 98px;
     display: flex;
     align-items: center;
 }
 
-.pCardCarros{
+.pCardCarrosUsuario{
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
 
-.divPCardCarros{
+.divPCardCarrosUsuario{
     height: 114px;
 }
 
 
 /* borda */
 
-.ContainerH2Reservas{
+.ContainerH2ReservasUsuario{
     margin-top: 150px;
 }
 
-.h2PerfilReservas{
+.h2PerfilReservasUsuario{
     font-size: 40px;
     line-height: 49px;
     color: #040404;
@@ -202,7 +202,7 @@ h1{
 
 }
 
-.bordaAuxiliarReservas{
+.bordaAuxiliarReservasUsuario{
     border: 1px solid #000000;
     width: 634px;
     margin-top: 10px;

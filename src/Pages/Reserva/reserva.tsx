@@ -33,6 +33,18 @@ export const Reserva = (): JSX.Element => {
     }, [])
 
 
+    // const TrazerDadosDoReservas = (nome: any, data: any, horario: number, dataentrega: any) => {
+
+    //     setNomeCarro(nome)
+    //     setDataRetiradaReserva(data)
+    //     setHorarioRetirada(horario)
+    //     setdevolucao(dataentrega)
+    // }
+
+    // const [nomeCarro, setNomeCarro] = useState<any[]>([]);
+    // const [dataRetiradaReserva, setDataRetiradaReserva] = useState<any[]>([]);
+    // const [horarioRetirada, setHorarioRetirada] = useState<number>(0);
+    // const [devolucao, setdevolucao] = useState<any[]>([]);
 
     const ExcluirReservas = (id: any) => {
         if (window.confirm('Deseja realmente excluir o Perfil?')) {
@@ -59,10 +71,10 @@ export const Reserva = (): JSX.Element => {
                                         <img className='Imagem' src={carroAzul} alt="" />
                                     </div>
                                     <div className='Textos'>
-                                        <h1 className='nomeCarro'>Fiat Uno 1.0</h1>
-                                        <p className='informacoesReserva'>Data retirada: 22/05/2022</p>
-                                        <p className='informacoesReserva'>Horário retirada: 16:30</p>
-                                        <p className='informacoesReserva'>Data de devolução:  30/05/2022</p>
+                                        <h1 className='nomeCarro'>{item.carro.nome}</h1>
+                                        <p className='informacoesReserva'>{item.data}</p>
+                                        <p className='informacoesReserva'>{item.horario}</p>
+                                        <p className='informacoesReserva'>{item.dataentrega}</p>
                                     </div>
                                     <div className='ButtonR'>
                                         <button className='ExcluirReserva' onClick={() => ExcluirReservas(item.id)} >Excluir Reserva</button>

@@ -68,10 +68,6 @@ export const Locadora = (): JSX.Element => {
     // const feita para guarda o Id e la em baixo no Onclick
 
 
-
-
-
-
     const EditarLocadora = (id: number) => {
 
         if (nomeLocadoras !== '' && enderecoLocadoras !== '' && telefonelocadora !== '' ) {
@@ -85,28 +81,24 @@ export const Locadora = (): JSX.Element => {
         }
     }
 
-    const [cadastroLocadoras, setCadastroLocadoras] = useState<any>('');
     const CadastrarLocadora = () => {
 
-        if (cadastroLocadoras !== '') {
-            apiCase.post(`locadoras`, { nome: cadastroLocadoras })
-
-
-                .then(() => {
-
-                    setCadastroLocadoras('')
-
-                })
-
-                .then(() => {
-                    window.location.reload()
-                })
+        for (let index = 0; index < locadora.length; index++) {
+            if(locadora[index].nome === nomeLocadoras)
+            {
+                return
+            }
         }
 
-
-
-
+        apiCase.post(`locadoras`, {nome: nomeLocadoras, endereco: enderecoLocadoras, telefone: telefonelocadora})
+        .then(() => {
+            window.location.reload()
+            
+        })
     }
+
+
+
 
     return (
         <>
