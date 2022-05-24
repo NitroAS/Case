@@ -5,6 +5,7 @@ import carroAzul from '../../Assets/img/economico.png'
 import { apiCase } from '../../services/api'
 import { useEffect, useState } from 'react'
 
+
 let propsReservaUsuario: any = {
     descriptionHome: 'Home',
     descriptionCarros: 'Carros',
@@ -40,29 +41,37 @@ export const ReservaUsuario = (): JSX.Element => {
         }
     }
 
-    const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string) => {
+    const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string , carroId: number) => {
+        setGuardaIReservasdUsuario(id)
         setNomeCarroUsuario(nome)
         setDataRetiradaReservaUsuario(data)
         setHorarioRetiradaUsuario(horario)
         setdevolucaoUsuario(dataentrega)
-        setGuardaIReservasdUsuario(id)
+        setGuardaGuardaCarroId(1)
+        console.log(carroId);
+        console.log(guardaUsuarioId);
+        
+        
     }
     window.scroll({
         top:
             310, left: 0, behavior: 'smooth'
     })
 
+    const [guardaUsuarioId, setGuardaUsuarioId] = useState(1);
+    const [guardaCarroId, setGuardaGuardaCarroId] = useState(1);
     const [guardaIReservasdUsuario, setGuardaIReservasdUsuario] = useState(0);
+    // const [guardaILocadoradUsuario, setGuardaILocadoradUsuario] = useState(0);
     const [nomeCarroUsuario, setNomeCarroUsuario] = useState('');
     const [dataRetiradaReservaUsuario, setDataRetiradaReservaUsuario] = useState('');
     const [horarioRetiradaUsuario, setHorarioRetiradaUsuario] = useState('');
     const [devolucaoUsuario, setdevolucaoUsuario] = useState('');
-
+   
     const EditarReservasUsuario = (id: number) => {
 
         if (nomeCarroUsuario !== '' && dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '') {
 
-            apiCase.put(`reservas?_expand=carro/${id}`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario })
+            apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId  })
                 .then(() => {
                     window.location.reload()
 
@@ -79,7 +88,7 @@ export const ReservaUsuario = (): JSX.Element => {
             }
         }
 
-        apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario })
+        apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId })
             .then(() => {
                 window.location.reload()
 
@@ -103,7 +112,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                         placeholder='Onix 2.0'
                                         className='escolherTiposDeCarros'
                                         defaultValue={nomeCarroUsuario}
-                                        onChange={e => setNomeCarroUsuario(e.target.value)} />
+                                        disabled
+                                         />
                                 </div>
                                 <div className='inputsMenoresUsuario'>
                                     <input
@@ -130,6 +140,7 @@ export const ReservaUsuario = (): JSX.Element => {
                                     />
                                 </div>
                                 <div className='divCadastrarCarrosUsuario'>
+                                    {}
                                     <select className='selectLocadouraCarrosUsuario'>
                                         <option selected disabled hidden>Qual a Locadoura?</option>
                                     </select>
@@ -146,6 +157,7 @@ export const ReservaUsuario = (): JSX.Element => {
                     </div>
                 </div >
             </div>
+
             {
                 reservaUsuario.map((item): any => {
                     return (
@@ -164,7 +176,7 @@ export const ReservaUsuario = (): JSX.Element => {
                                         </div>
                                         <div className='ButtonRUsuario'>
                                             <button className='ExcluirReservaUsuario' onClick={() => ExcluirReservasUsuario(item.id)} >Excluir Reserva</button>
-                                            <button className='ExcluirReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega)}>Editar</button>
+                                            <button className='ExcluirReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega,item.carroId)}>Editar</button>
                                         </div>
                                     </div>
                                 </section>
