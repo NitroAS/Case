@@ -3,7 +3,7 @@ import './Assets/CSS/global.css'
 
 // Rotas
 import { Home } from './Pages/Home/home'
-import { Login } from './Pages/login/login'
+// import { Login } from './Pages/login/login'
 import { Carros } from './Pages/carros/carros'
 import { Locadora } from './Pages/locadora/locadora'
 import { Perfil } from './Pages/Perfil/perfil'
@@ -19,7 +19,7 @@ const Rotas = () =>{
     <BrowserRouter>
           <Routes>
               <Route element={<Home/>} path="/"/>
-              <Route element={<Login/>} path="/login" />
+              {/* <Route element={<Login/>} path="/login" /> */}
               <Route element={<Carros/>} path="/carros" />
               <Route element={<Locadora/>} path="/locadora" />
               <Route element={<Perfil/>} path="/perfil" />

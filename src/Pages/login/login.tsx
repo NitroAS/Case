@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import '../../Assets/CSS/login.css'
 import logo from '../../Assets/img/logo.png';
-import HandleCredentialResponse from '../../services/googleAuth';
+// import HandleCredentialResponse from '../../services/googleAuth';
 import { Footer } from '../../Components/Footer/footer'
 
 export const Login = ():JSX.Element =>{
   useEffect(()=>{    
-    HandleCredentialResponse()
+    // HandleCredentialResponse()
     let token:any = localStorage.getItem('token')
     console.log( JSON.parse(token))
   },[]

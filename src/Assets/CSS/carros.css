@@ -225,10 +225,10 @@ h1{
 }
 
 .alinhamentoDosCards{
-    width: 1140px;
+    width: 1240px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 .espaçamentoFinalCarros{
