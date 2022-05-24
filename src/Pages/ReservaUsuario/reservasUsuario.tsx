@@ -6,6 +6,7 @@ import { apiCase } from '../../services/api'
 import { useEffect, useState } from 'react'
 
 
+
 let propsReservaUsuario: any = {
     descriptionHome: 'Home',
     descriptionCarros: 'Carros',
@@ -30,6 +31,21 @@ export const ReservaUsuario = (): JSX.Element => {
 
         PegandoReservasUsuario()
     }, [])
+    
+      // Listar Locadoras
+      const [locadoras, setLocadoras] = useState<any[]>([])
+      const ListarLocadoras = ():any => {
+  
+          apiCase.get('locadoras')
+          .then(resultado => {
+              setLocadoras(resultado.data)
+          })
+  
+      }
+  
+      useEffect(() => {
+          ListarLocadoras()
+      }, [])
 
     const ExcluirReservasUsuario = (id: any) => {
         if (window.confirm('Deseja realmente excluir o Perfil?')) {
@@ -41,16 +57,14 @@ export const ReservaUsuario = (): JSX.Element => {
         }
     }
 
-    const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string , carroId: number) => {
+    const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string , carroId: number , locadoraId: string) => {
         setGuardaIReservasdUsuario(id)
         setNomeCarroUsuario(nome)
         setDataRetiradaReservaUsuario(data)
         setHorarioRetiradaUsuario(horario)
         setdevolucaoUsuario(dataentrega)
         setGuardaGuardaCarroId(1)
-        console.log(carroId);
-        console.log(guardaUsuarioId);
-        
+        setLocadoraValorUsuario(locadoraId)
         
     }
     window.scroll({
@@ -61,7 +75,7 @@ export const ReservaUsuario = (): JSX.Element => {
     const [guardaUsuarioId, setGuardaUsuarioId] = useState(1);
     const [guardaCarroId, setGuardaGuardaCarroId] = useState(1);
     const [guardaIReservasdUsuario, setGuardaIReservasdUsuario] = useState(0);
-    // const [guardaILocadoradUsuario, setGuardaILocadoradUsuario] = useState(0);
+    const [locadoraValorUsuario, setLocadoraValorUsuario] = useState('')
     const [nomeCarroUsuario, setNomeCarroUsuario] = useState('');
     const [dataRetiradaReservaUsuario, setDataRetiradaReservaUsuario] = useState('');
     const [horarioRetiradaUsuario, setHorarioRetiradaUsuario] = useState('');
@@ -69,9 +83,9 @@ export const ReservaUsuario = (): JSX.Element => {
    
     const EditarReservasUsuario = (id: number) => {
 
-        if (nomeCarroUsuario !== '' && dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '') {
+        if (nomeCarroUsuario !== '' && dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '' && locadoraValorUsuario !== '') {
 
-            apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId  })
+            apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario})
                 .then(() => {
                     window.location.reload()
 
@@ -88,7 +102,7 @@ export const ReservaUsuario = (): JSX.Element => {
             }
         }
 
-        apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId })
+        apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario  })
             .then(() => {
                 window.location.reload()
 
@@ -140,10 +154,17 @@ export const ReservaUsuario = (): JSX.Element => {
                                     />
                                 </div>
                                 <div className='divCadastrarCarrosUsuario'>
-                                    {}
                                     <select className='selectLocadouraCarrosUsuario'>
                                         <option selected disabled hidden>Qual a Locadoura?</option>
-                                    </select>
+                                    {locadoras.map((item): any => {
+                                        return(
+                                        <option value={item.locadoraId}>{item.nome}</option>
+                                        )
+                                    })
+                                }
+                                </select>
+
+                                    
                                     <button className='buttonCadastrarCarrosUsuario' onClick={() => CadastrarReservasUsuario()}>Reservar</button>
                                     <button className='buttonCadastrarCarrosUsuario' onClick={() => EditarReservasUsuario(guardaIReservasdUsuario)}>Editar</button>
                                 </div>
@@ -176,7 +197,7 @@ export const ReservaUsuario = (): JSX.Element => {
                                         </div>
                                         <div className='ButtonRUsuario'>
                                             <button className='ExcluirReservaUsuario' onClick={() => ExcluirReservasUsuario(item.id)} >Excluir Reserva</button>
-                                            <button className='ExcluirReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega,item.carroId)}>Editar</button>
+                                            <button className='ExcluirReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega,item.carroId , item.carro.locadoraId)}>Editar</button>
                                         </div>
                                     </div>
                                 </section>
