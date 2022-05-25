@@ -111,7 +111,7 @@ const CadastrarPerfil = () => {
                     defaultValue={nomeEmail}
                     onChange={e => setNomeEmail(e.target.value)}
                     minLength={10}
-                    maxLength={25}
+                    maxLength={40}
                    />
                   </div>
                   <div className='divButtonCadastrarLogin'>
