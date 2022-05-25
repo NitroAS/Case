@@ -99,27 +99,28 @@ export const Carros = ():JSX.Element => {
     const [botao, setBotao] = useState(true)
 
     // Editar
-   
-
     const [booleano, setbooleano] = useState(false)
 
     const Editar = ():any => {
-        apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
+        console.log(locadoraValor);
+        
+        apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
         .then(() => window.location.reload())
     }
 
     
-    const EditarDois = (id:number, nome:string, portas:string, npessoas:string, airbag:string) => {
+    const EditarDois = (id:number, nome:string, portas:string, npessoas:string, airbag:string, locadoraValor:string) => {
         window.scroll({top:
         310,left: 0,behavior: 'smooth'})
-
+        setbooleano(true)
+        
         setId(id)
         setNome(nome)
         setPortas(portas)
         setNPessoas(npessoas)
-        setAirbag(airbag)  
+        setAirbag(airbag)
+        setLocadoraValor(locadoraValor.toString())
 
-        setbooleano(true)
     }
 
 
@@ -197,7 +198,7 @@ export const Carros = ():JSX.Element => {
                                                     <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
                                                 </div>
                                                 <div className='buttonsDoCardcarro'>
-                                                    <button className='buttonEditarCarros' onClick={() => EditarDois(item.id, item.nome, item.portas, item.npessoas, item.airbag)}>Editar</button>
+                                                    <button className='buttonEditarCarros' onClick={() => EditarDois(item.id, item.nome, item.portas, item.npessoas, item.airbag, item.locadoraId)}>Editar</button>
                                                     <button className='buttonExcluirCarros' onClick={() => Excluir(item.id)}>Excluir</button>
                                                 </div>
                                             </div>
