@@ -141,44 +141,40 @@ export const Perfil = (): JSX.Element => {
                             <h1>Perfil</h1>
                         </div>
                         <div className="InputPerfilAlinhamento">
-                            <input
-                                className="inputsPerfil"
-                                type="text" name="InputPerfil"
-                                placeholder="Maria de Fátma Muniz"
-                                maxLength={40}
-                                defaultValue={nomePerfis}
-                                onChange={e => setNomePerfis(e.target.value)}
-                            ></input>
-                            <input
-                                className="inputsPerfil"
-                                type="text"
-                                name="InputPerfil"
-                                placeholder="(11) 9999-9090"
-                                maxLength={40}
-                                defaultValue={telefone}
-                                onChange={e => setTelefone(e.target.value)}
-                            ></input>
-
-                            <input
-                                className="inputsPerfil"
-                                type="text"
-                                name="InputPerfil"
-                                placeholder="maria@gmail.com"
-                                maxLength={40}
-                                defaultValue={nomeEmail}
-                                onChange={e => setNomeEmail(e.target.value)}
-
-
-                            ></input>
-                            <input 
-                                className="inputsPerfil"
-                                type="text" 
-                                name="InputPerfil" 
-                                placeholder="maria@gmail.com" 
-                                maxLength={40}
-                                defaultValue={nomeEmail}
-                                onChange={e => setNomeEmail(e.target.value)}
-                            ></input>
+                            <div className='inputNomeGeral'>  
+                                <input
+                                    className="inputsPerfil"
+                                    type="text" name="InputPerfil"
+                                    placeholder="Maria de Fátma Muniz"
+                                    maxLength={40}
+                                    defaultValue={nomePerfis}
+                                    onChange={e => setNomePerfis(e.target.value)}
+                                ></input>
+                            </div>
+                            <div className='inputTelefoneGeral'>
+                                <input
+                                    className="inputsPerfil"
+                                    type="text"
+                                    name="InputPerfil"
+                                    placeholder="(11) 9999-9090"
+                                    minLength={3}
+                                    maxLength={22}
+                                    defaultValue={telefone}
+                                    onChange={e => setTelefone(e.target.value)}
+                                ></input>
+                            </div>
+                            <div className='inputEmailGeral'>
+                                <input
+                                    className="inputsPerfil"
+                                    type="text"
+                                    name="InputPerfil"
+                                    placeholder="maria@gmail.com"
+                                    minLength={10}
+                                    maxLength={15}
+                                    defaultValue={nomeEmail}
+                                    onChange={e => setNomeEmail(e.target.value)}
+                                ></input>
+                            </div>                       
                         </div>
                         <div className="btnPerfilAlinhamento">
                             <div className="btnAtualizar">

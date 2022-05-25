@@ -106,32 +106,41 @@ export const PerfilUsuario = (): JSX.Element => {
                             <h1>Perfil</h1>
                         </div>
                         <div className="InputPerfilAlinhamentoUsuario">
-                            <input
-                                className="inputsPerfilUsuario"
-                                type="text" name="InputPerfil"
-                                placeholder="Maria de Fátma Muniz"
-                                maxLength={40}
-                                defaultValue={nomePerfisUsuario}
-                                onChange={e => setNomePerfisUsuario(e.target.value)}
+                            <div className='inputNomeGeral'>
+                                <input
+                                    className="inputsPerfilUsuario"
+                                    type="text" name="InputPerfil"
+                                    placeholder="Maria de Fátma Muniz"
+                                    minLength={3}
+                                    maxLength={28}
+                                    defaultValue={nomePerfisUsuario}
+                                    onChange={e => setNomePerfisUsuario(e.target.value)}
                                 ></input>
-                            <input
-                                className="inputsPerfilUsuario"
-                                type="text"
-                                name="InputPerfil"
-                                placeholder="(11) 9999-9090"
-                                maxLength={40}
-                                defaultValue={telefoneUsuario}
-                                onChange={e => setTelefoneUsuario(e.target.value)}
+                            </div>
+                            <div className='inputTelefoneGeral'>
+                                <input
+                                    className="inputsPerfilUsuario"
+                                    type="text"
+                                    name="InputPerfil"
+                                    placeholder="(11) 9999-9090"
+                                    minLength={10}
+                                    maxLength={15}
+                                    defaultValue={telefoneUsuario}
+                                    onChange={e => setTelefoneUsuario(e.target.value)}
                                 ></input>
-                            <input 
-                                className="inputsPerfilUsuario"
-                                type="text" 
-                                name="InputPerfil" 
-                                placeholder="maria@gmail.com" 
-                                maxLength={40}
-                                defaultValue={nomeEmailUsuario}
-                                onChange={e => setNomeEmailUsuario(e.target.value)}
-                            ></input>
+                            </div>
+                            <div className='inputEmailGeral'>    
+                                <input 
+                                    className="inputsPerfilUsuario"
+                                    type="text" 
+                                    name="InputPerfil" 
+                                    placeholder="maria@gmail.com" 
+                                    minLength={10}
+                                    maxLength={35}
+                                    defaultValue={nomeEmailUsuario}
+                                    onChange={e => setNomeEmailUsuario(e.target.value)}
+                                ></input>
+                            </div>
                         </div>
                         <div className="btnPerfilAlinhamentoUsuario">
                             <div className="btnAtualizarUsuario">

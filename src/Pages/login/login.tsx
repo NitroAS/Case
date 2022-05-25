@@ -92,7 +92,7 @@ const CadastrarPerfil = () => {
                     defaultValue={nomeUsuario}
                     onChange={e => setNomeUsuario(e.target.value)}
                     minLength={3}
-                    maxLength={15}
+                    maxLength={22}
                     />
                     <input 
                     placeholder='Telefone' 
@@ -110,7 +110,7 @@ const CadastrarPerfil = () => {
                     type="text"
                     defaultValue={nomeEmail}
                     onChange={e => setNomeEmail(e.target.value)}
-                    minLength={15}
+                    minLength={10}
                     maxLength={25}
                    />
                   </div>

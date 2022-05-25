@@ -192,6 +192,10 @@ h1{
     width: 1236px;
 }
 
+.inputNomeGeral{
+    width:376.72px;
+}
+
 /* Alinhamento box-Secundaria */
 .boxCadastro{
     display: flex;
