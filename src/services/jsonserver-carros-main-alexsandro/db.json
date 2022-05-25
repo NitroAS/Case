@@ -14,8 +14,10 @@
   ],
   "locadoras": [
     {
-      "id": 1,
-      "nome": "Dois Irmãos"
+      "nome": "Dois Irmãos",
+      "endereco": "Rua",
+      "telefone": "(21) 9998-000",
+      "id": 1
     },
     {
       "id": 2,

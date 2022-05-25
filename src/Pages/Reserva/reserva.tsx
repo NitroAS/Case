@@ -4,6 +4,7 @@ import { Footer } from '../../Components/Footer/footer'
 import carroAzul from '../../Assets/img/economico.png'
 import { apiCase } from '../../services/api'
 import { useEffect, useState } from 'react'
+import Swal from 'sweetalert2'
 
 let propsReserva: any = {
     descriptionHome: 'Home',
@@ -46,13 +47,26 @@ export const Reserva = (): JSX.Element => {
     // const [devolucao, setdevolucao] = useState<any[]>([]);
 
     const ExcluirReservas = (id: any) => {
-        if (window.confirm('Deseja realmente excluir o Perfil?')) {
-            apiCase.delete(`reservas/${id}`)
-                .then(() => {
-                    window.location.reload()
+        Swal.fire({
+            title: 'Deseja Deleta essa Reserva??',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete!'
+          })
 
-                })
-        }
+          .then((resultado) => {
+            if(resultado.isConfirmed){
+                apiCase.delete(`reservas/${id}`)
+                    .then(() => {
+                        window.location.reload()
+    
+                    })
+            }
+          })
+
+    
 
     }
     return (
