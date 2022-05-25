@@ -1,16 +1,30 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../../Assets/CSS/login.css'
 import logo from '../../Assets/img/logo.png';
 import HandleCredentialResponse from '../../services/googleAuth';
 import { Footer } from '../../Components/Footer/footer'
 
 export const Login = (): JSX.Element => {
+
   useEffect(() => {
     HandleCredentialResponse()
     let token: any = localStorage.getItem('token')
     console.log(JSON.parse(token))
   }, []
   )
+  
+  
+  const [cadastrar, setCadastrar] = useState('')
+    // const salvar = () =>{
+    //     apiFilmes.post('genero', {Genero : inputGenero})
+    //     .then( () =>{
+    //         setCadastrar('')
+    //     })
+    //     .then(() =>{
+    //         window.location.reload()
+    //     })
+    // }
+  
   return (
     <>
       <div className='centralizarLogin'>
