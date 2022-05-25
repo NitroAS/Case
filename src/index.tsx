@@ -12,8 +12,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Reserva } from './Pages/Reserva/reserva'
 import { ReservaUsuario } from './Pages/ReservaUsuario/reservasUsuario'
 import { CarrosUsuario } from './Pages/CarrosUsuario/carrosUsuario';
-
-
 const Rotas = () =>{
 
   return(
@@ -31,7 +29,6 @@ const Rotas = () =>{
           </Routes>
       </BrowserRouter>
   );
-  
 }
 
 ReactDOM.render(<Rotas/> , document.getElementById('root'));

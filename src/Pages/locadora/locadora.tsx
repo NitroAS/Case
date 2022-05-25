@@ -17,17 +17,14 @@ export const Locadora = (): JSX.Element => {
     const [locadora, setLocadora] = useState<any[]>([]);
 
     const PegandoLocadora = () => {
-
         apiCase.get('locadoras')
             .then(resultado => {
                 setLocadora(resultado.data)
 
             })
-
     }
 
     useEffect(() => {
-
         PegandoLocadora()
     }, [])
 
@@ -40,19 +37,15 @@ export const Locadora = (): JSX.Element => {
 
                 })
         }
-
     }
 
-    
     const [guardaIdLocadoras, setGuardaIdLocadoras] = useState(0);
     const [nomeLocadoras, setNomeLocadoras] = useState('');
     const [enderecoLocadoras, setEnderecoLocadora] = useState('');
     const [telefonelocadora, setTelefoneLocadora] = useState('')
 
-    
         const TrazerDadosDoLocadora = (id:number, nome: string, endereco: string, telefone: string) => {
-    
-           
+
             setNomeLocadoras(nome)
             setEnderecoLocadora(endereco)
             setTelefoneLocadora(telefone)
@@ -64,20 +57,15 @@ export const Locadora = (): JSX.Element => {
             310, left: 0, behavior: 'smooth'
     })
 
-
     // const feita para guarda o Id e la em baixo no Onclick
-
 
     const EditarLocadora = (id: number) => {
 
         if (nomeLocadoras !== '' && enderecoLocadoras !== '' && telefonelocadora !== '' ) {
-
             apiCase.put(`locadoras/${id}`, { nome: nomeLocadoras , endereco: enderecoLocadoras , telefone: telefonelocadora  })
                 .then(() => {
                     window.location.reload()
-
                 })
-
         }
     }
 
@@ -93,12 +81,8 @@ export const Locadora = (): JSX.Element => {
         apiCase.post(`locadoras`, {nome: nomeLocadoras, endereco: enderecoLocadoras, telefone: telefonelocadora})
         .then(() => {
             window.location.reload()
-            
         })
     }
-
-
-
 
     return (
         <>
@@ -127,10 +111,10 @@ export const Locadora = (): JSX.Element => {
                         </div>
                         <div id='centralizarInputBotao'>
                             <input 
-                            placeholder='Telefone:' 
-                            className='inputCadastrarLocadora telefoneLocadora'
-                             type="text"
-                             defaultValue={telefonelocadora}
+                                placeholder='Telefone:' 
+                                className='inputCadastrarLocadora telefoneLocadora'
+                                type="text"
+                                defaultValue={telefonelocadora}
                                 onChange={e => setTelefoneLocadora(e.target.value)}
                              />
                             <button className='botaoCadastrarLocadora' onClick={() => EditarLocadora(guardaIdLocadoras)}>Editar</button>
@@ -141,7 +125,6 @@ export const Locadora = (): JSX.Element => {
 
                 {locadora.map((item): any => {
                     return (
-
                         <section className='SectionCardsLocadora'>
                             <div className='cardsLocadora'>
                                 <div className='CentralizarNomeLocadora'>

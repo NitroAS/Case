@@ -15,15 +15,10 @@ export const Perfil = (): JSX.Element => {
         underline: 'underlinePerfil'
     }
 
-
     const [perfis, setPerfis] = useState<any[]>([]);
-
     const PegandoPerfis = () => {
-
         apiCase.get('usuario')
             .then(resultado => {
-
-
                 setPerfis(resultado.data)
 
             })
@@ -31,10 +26,8 @@ export const Perfil = (): JSX.Element => {
     }
 
     useEffect(() => {
-
         PegandoPerfis()
     }, [])
-
 
     const ExcluirPerfil = (id: any) => {
         
@@ -106,9 +99,7 @@ export const Perfil = (): JSX.Element => {
 
     }
 
-
     const CadastrarPerfil = () => {
-
         for (let index = 0; index < perfis.length; index++) {
             if (perfis[index].nome === nomePerfis) {
                 return
@@ -144,16 +135,12 @@ export const Perfil = (): JSX.Element => {
         <>
             <Header objeto={propsPerfil} />
             <div className='alinahemntoGeralPerfil'>
-
                 <div className='AlinhamentoBoxPerfil'>
                     <div className='BoxPerfil'>
                         <div className="tituloAlinhamentoPerfil">
-
                             <h1>Perfil</h1>
                         </div>
-
                         <div className="InputPerfilAlinhamento">
-
                             <input
                                 className="inputsPerfil"
                                 type="text" name="InputPerfil"
@@ -162,7 +149,6 @@ export const Perfil = (): JSX.Element => {
                                 defaultValue={nomePerfis}
                                 onChange={e => setNomePerfis(e.target.value)}
                             ></input>
-
                             <input
                                 className="inputsPerfil"
                                 type="text"
@@ -184,41 +170,34 @@ export const Perfil = (): JSX.Element => {
 
 
                             ></input>
-
-
+                            <input 
+                                className="inputsPerfil"
+                                type="text" 
+                                name="InputPerfil" 
+                                placeholder="maria@gmail.com" 
+                                maxLength={40}
+                                defaultValue={nomeEmail}
+                                onChange={e => setNomeEmail(e.target.value)}
+                            ></input>
                         </div>
-
                         <div className="btnPerfilAlinhamento">
-
                             <div className="btnAtualizar">
                                 <button className='btnPerfilAtualizar' onClick={() => EditarPerfil(guardaId)}>Editar</button>
                                 <button className='btnPerfilAtualizar' onClick={() => CadastrarPerfil()}>Atualizar</button>
-
                             </div>
-
                             <div className="btnExcluirAlinhamentoPerfil">
                                 <button className='btnPerfilExcluir'>Excluir Cadastro</button>
                             </div>
-
                         </div>
-
-
-
                     </div>
-
-
                 </div>
                 <div className='alinhamentoPerfilFinal'>
-
                     <div className="ContainerH2">
                         <h2 className='h2Perfil'>USUÁRIOS CADASTRADOS</h2>
                     </div>
-
                     <div className="bordaAuxiliar">
 
                     </div>
-
-
                     {perfis.map((item): any => {
                         return (
 
@@ -228,24 +207,21 @@ export const Perfil = (): JSX.Element => {
 
                                     <div className="boxCadastro">
                                         <p className='pTituloPerfil'>{item.nome}</p>
-
-                                        <p className='pMsgPerfil'>{item.telefone}</p>
-                                        <p className='pMsgPerfil'>{item.email}</p>
+                                        <div className='centralizarInfoPerfil'>
+                                            <div>
+                                                <p className='pMsgPerfil'>{item.email}</p>
+                                            </div>
+                                            <div className='infoTelefonePerfil'>
+                                                <p className='pMsgPerfil'>{item.telefone}</p>
+                                            </div>
+                                        </div>
 
                                         <button className='excluirCadastroPerfil' onClick={() => ExcluirPerfil(item.id)}>Excuir usuário</button>
                                     </div>
-
                                 </div>
                             </div>
-
-
                         )
                     })}
-
-
-
-
-
                 </div>
             </div>
             <Footer />
