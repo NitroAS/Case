@@ -10,10 +10,10 @@ import { useEffect, useState } from 'react'
 let propsReservaUsuario: any = {
     descriptionHome: 'Home',
     descriptionCarros: 'Carros',
-    descriptionReservas: 'Reservas',
+    descriptionReservasUsuario: 'Reservas',
     descriptionPerfil: 'Perfil',
     supdescription: 'Sair',
-    underlineReserva: 'underlineReserva',
+    underlineReservaUsuario: 'underlineReservaUsuario',
 }
 
 export const ReservaUsuario = (): JSX.Element => {

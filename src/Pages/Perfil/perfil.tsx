@@ -32,7 +32,7 @@ export const Perfil = (): JSX.Element => {
     const ExcluirPerfil = (id: any) => {
         
             Swal.fire({
-                title: 'Deseja Deleta??',
+                title: 'Deseja Deleta esse Perfil??',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -88,7 +88,7 @@ export const Perfil = (): JSX.Element => {
 
         else {
             Swal.fire({
-                title: 'Preencha os campos vazios',
+                title: 'Por Favor, Preencha os campos vazios',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#DB1812',
@@ -120,7 +120,7 @@ export const Perfil = (): JSX.Element => {
 
         else {
             Swal.fire({
-                title: 'Preencha os campos vazios',
+                title: 'Por Favor, Preencha os campos vazios',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#DB1812',

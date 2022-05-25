@@ -7,10 +7,10 @@ import { apiCase } from '../../services/api'
 export const PerfilUsuario = (): JSX.Element => {
     let propsPerfilUsuario: any = {
         descriptionCarros: 'Carros',
-        descriptionReservas: 'Reservas',
-        descriptionPerfil: 'Perfis',
+        descriptionReservasUsuario: 'Reservas',
+        descriptionPerfilUsuario: 'Perfis',
         supdescription: 'Sair',
-        underline: 'underlinePerfil'
+        underlinePerfilUsuario: 'underlinePerfilUsuario'
     }
 
     const [perfisUsuario, setPerfisUsuario] = useState<any[]>([]);

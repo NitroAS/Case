@@ -24,7 +24,7 @@ const Rotas = () =>{
               <Route element={<Perfil/>} path="/perfil" />
               <Route element={<PerfilUsuario/>} path="/perfilUsuario" />
               <Route element={<Reserva/>} path="/reservas" />
-              <Route element={<ReservaUsuario/>} path="/reservasUsuario" />
+              <Route element={<ReservaUsuario/>} path="/ReservasUsuario" />
               <Route element={<CarrosUsuario/>} path="/CarrosUsuario" />
           </Routes>
       </BrowserRouter>
