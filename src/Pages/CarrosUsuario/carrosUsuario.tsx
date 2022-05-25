@@ -11,6 +11,11 @@ import car1_1 from '../../Assets/IMGsCarros/car1_1.png'
 import '../../Assets/CSS/carros.css'
 import '../../Assets/CSS/carrosUsuarios.css'
 
+// useState e agregados
+import React, { useEffect, useState } from "react"
+
+// API
+import { apiCase } from '../../services/api'
 
 export const CarrosUsuario = ():JSX.Element => {
     
@@ -23,6 +28,22 @@ export const CarrosUsuario = ():JSX.Element => {
         supdescription: 'Sair',
         underlineLocadora: 'underlineLocadora',
     }
+
+    // Listar
+    const [carros, setCarros] = useState<any[]>([])
+    const ListarNomes = ():any => {
+ 
+        apiCase.get('carros')
+        .then(resultado => {
+ 
+            setCarros(resultado.data)
+         })
+ 
+     }
+ 
+     useEffect(() => {
+         ListarNomes()
+     }, [])
     
     return(
         <>
