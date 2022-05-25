@@ -6,7 +6,7 @@ import { apiCase } from '../../services/api'
 
 export const PerfilUsuario = (): JSX.Element => {
     let propsPerfilUsuario: any = {
-        descriptionCarros: 'Carros',
+        descriptionCarrosUsuario: 'Carros',
         descriptionReservasUsuario: 'Reservas',
         descriptionPerfilUsuario: 'Perfis',
         supdescription: 'Sair',

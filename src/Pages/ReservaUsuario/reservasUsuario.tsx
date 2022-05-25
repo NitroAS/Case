@@ -9,9 +9,9 @@ import { useEffect, useState } from 'react'
 
 let propsReservaUsuario: any = {
     descriptionHome: 'Home',
-    descriptionCarros: 'Carros',
+    descriptionCarrosUsuario: 'Carros',
     descriptionReservasUsuario: 'Reservas',
-    descriptionPerfil: 'Perfil',
+    descriptionPerfilUsuario: 'Perfil',
     supdescription: 'Sair',
     underlineReservaUsuario: 'underlineReservaUsuario',
 }
