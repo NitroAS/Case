@@ -144,7 +144,8 @@ export const Perfil = (): JSX.Element => {
                                     className="inputsPerfil"
                                     type="text" name="InputPerfil"
                                     placeholder="Maria de Fátma Muniz"
-                                    maxLength={40}
+                                    minLength={3}
+                                    maxLength={28}
                                     defaultValue={nomePerfis}
                                     onChange={e => setNomePerfis(e.target.value)}
                                 ></input>
