@@ -1,16 +1,14 @@
 {
   "usuario": [
     {
-      "nome": "asas",
-      "email": "ASUAIRMÂ@gmail.com",
-      "telefone": "21 9983-4335",
+      "nome": "Paulo",
+      "email": "paulo@email.com",
       "id": 1
     },
     {
-      "id": 2,
       "nome": "Priscila",
       "email": "priscila@email.com",
-      "telefone": "11 9999 5555",
+      "telefone": "a",
       "id": 2
     }
   ],
