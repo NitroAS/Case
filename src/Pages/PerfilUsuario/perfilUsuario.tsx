@@ -3,7 +3,7 @@ import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
 import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
-
+import Swal from 'sweetalert2'
 export const PerfilUsuario = (): JSX.Element => {
     let propsPerfilUsuario: any = {
         descriptionCarrosUsuario: 'Carros',
@@ -63,21 +63,37 @@ export const PerfilUsuario = (): JSX.Element => {
             }   
     }
 
-    // const CadastrarPerfilUsuario = () => {
+    const CadastrarPerfilUsuario = () => {
 
-    //     for (let index = 0; index < perfisUsuario.length; index++) {
-    //         if(perfisUsuario[index].nome === nomePerfisUsuario)
-    //         {
-    //             return
-    //         }
-    //     }
+        for (let index = 0; index < perfisUsuario.length; index++) {
+            if(perfisUsuario[index].nome === nomePerfisUsuario)
+            {
+                return
+            }
+        }
 
-    //     apiCase.post(`usuario`, {nome: nomePerfisUsuario, email: nomeEmailUsuario, telefone: telefoneUsuario})
-    //     .then(() => {
-    //         window.location.reload()
-            
-    //     })
-    // }
+        if (nomePerfisUsuario !== '' && nomeEmailUsuario !== '' && telefoneUsuario !== '') {
+
+            apiCase.post(`usuario`, {nome: nomePerfisUsuario, email: nomeEmailUsuario, telefone: telefoneUsuario})
+            .then(() => {
+                window.location.reload()
+                
+            })
+        }
+
+        else {
+            Swal.fire({
+                title: 'Por Favor, Preencha os campos vazios',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#DB1812',
+                cancelButtonColor: '#41B8D2',
+                confirmButtonText: 'OK'
+            })
+        }
+        
+     
+    }
    
     return (
         <>
@@ -119,7 +135,7 @@ export const PerfilUsuario = (): JSX.Element => {
                         <div className="btnPerfilAlinhamentoUsuario">
                             <div className="btnAtualizarUsuario">
                                 <button className='btnPerfilAtualizarUsuario' onClick={() => EditarPerfilUsuario(guardaIdUsuario)}>Editar</button>
-                                <button className='btnPerfilAtualizarUsuario'>Atualizar</button>
+                                <button className='btnPerfilAtualizarUsuario' onClick={() => CadastrarPerfilUsuario()}>Atualizar</button>
                             </div>
                             <div className="btnExcluirAlinhamentoPerfilUsuario">
                                 <button className='btnPerfilExcluirUsuario'>Excluir Cadastro</button>
