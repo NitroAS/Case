@@ -76,6 +76,7 @@
     box-sizing: border-box;
     background-color: white;
     margin-right: 18px;
+    cursor: pointer;
 }
 
 .ExcluirReserva:hover{
