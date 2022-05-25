@@ -196,8 +196,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                             <p className='informacoesReservaUsuario'>{`Data de devolução: ${item.dataentrega}`}</p>
                                         </div>
                                         <div className='ButtonRUsuario'>
+                                            <button className='EditarReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega,item.carroId , item.carro.locadoraId)}>Editar</button>
                                             <button className='ExcluirReservaUsuario' onClick={() => ExcluirReservasUsuario(item.id)} >Excluir Reserva</button>
-                                            <button className='ExcluirReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega,item.carroId , item.carro.locadoraId)}>Editar</button>
                                         </div>
                                     </div>
                                 </section>

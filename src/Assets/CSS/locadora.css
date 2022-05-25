@@ -46,6 +46,7 @@
     line-height: 30px;
     color: #FFFFFF;
     border: none;
+    cursor: pointer;
 }
 
 .inputCadastrarLocadora {
@@ -150,6 +151,7 @@
     line-height: 30px;
     color: #FFFFFF;
     border: none;
+    cursor: pointer;
 }
 
 .botaoEditar:hover{
@@ -170,6 +172,7 @@
     font-size: 24px;
     line-height: 30px;
     color: #DB1812;
+    cursor: pointer;
 }
 
 .botaoExcluir:hover{

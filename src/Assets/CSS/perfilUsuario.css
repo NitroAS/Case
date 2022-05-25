@@ -57,7 +57,6 @@ h1{
 }
 .btnExcluirAlinhamentoPerfilUsuario{
     margin-left: 20px;
-    
 }
 
 
@@ -71,6 +70,7 @@ h1{
     line-height: 30px;
     color: #FFFFFF;
     border:none;
+    cursor: pointer;
 }
 
 .btnPerfilAtualizarUsuario:hover{
@@ -92,6 +92,7 @@ h1{
     font-size: 24px;
     font-weight: 700;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .btnPerfilExcluirUsuario:hover{

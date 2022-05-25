@@ -12,19 +12,7 @@ export const Login = (): JSX.Element => {
     console.log(JSON.parse(token))
   }, []
   )
-  
-  
-  const [cadastrar, setCadastrar] = useState('')
-    // const salvar = () =>{
-    //     apiFilmes.post('genero', {Genero : inputGenero})
-    //     .then( () =>{
-    //         setCadastrar('')
-    //     })
-    //     .then(() =>{
-    //         window.location.reload()
-    //     })
-    // }
-  
+   
   return (
     <>
       <div className='centralizarLogin'>
