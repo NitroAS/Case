@@ -260,8 +260,8 @@ h1{
 
 .ButtonRUsuario{
     display: flex;
-    align-items: flex-end;
-    height: 160px;
+    flex-direction: column;
+    height: 80%;
 }
 
 .ExcluirReservaUsuario{
@@ -277,7 +277,6 @@ h1{
     border-radius: 5px; 
     box-sizing: border-box;
     background-color: white;
-    margin-right: 18px;
 }
 
 .ExcluirReservaUsuario:hover{
