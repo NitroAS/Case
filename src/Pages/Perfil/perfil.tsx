@@ -12,7 +12,7 @@ export const Perfil = (): JSX.Element => {
         descriptionLocadora: 'Locadora',
         descriptionPerfil: 'Perfis',
         supdescription: 'Sair',
-        underline: 'underlinePerfil'
+        underlinePerfil: 'underlinePerfil'
     }
 
     const [perfis, setPerfis] = useState<any[]>([]);

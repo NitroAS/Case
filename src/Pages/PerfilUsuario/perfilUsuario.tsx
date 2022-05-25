@@ -10,7 +10,7 @@ export const PerfilUsuario = (): JSX.Element => {
         descriptionReservasUsuario: 'Reservas',
         descriptionPerfilUsuario: 'Perfis',
         supdescription: 'Sair',
-        underlinePerfilUsuario: 'underlinePerfilUsuario'
+        underlinePerfil: 'underlinePerfil'
     }
 
     const [perfisUsuario, setPerfisUsuario] = useState<any[]>([]);

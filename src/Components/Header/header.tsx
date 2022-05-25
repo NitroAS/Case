@@ -16,7 +16,7 @@ export const Header = (props:any): JSX.Element => {
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineCarros} to='/carros'>{props.objeto.descriptionCarros}</Link>
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineCarros} to='/CarrosUsuario'>{props.objeto.descriptionCarrosUsuario}</Link>
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineReserva} to='/reservas'>{props.objeto.descriptionReservas}</Link>
-                        <Link className={"btnHeaderPerfil " + props.objeto.underlineReservaUsuario} to='/reservasUsuario'>{props.objeto.descriptionReservasUsuario}</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underlineReserva} to='/reservasUsuario'>{props.objeto.descriptionReservasUsuario}</Link>
                 
 
                     <div className="LogoHeader">
@@ -24,8 +24,8 @@ export const Header = (props:any): JSX.Element => {
                     </div>
 
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineLocadora} to='/locadora'>{props.objeto.descriptionLocadora}</Link>
-                        <Link className={"btnHeaderPerfil " + props.objeto.underline} to='/perfil'>{props.objeto.descriptionPerfil}</Link>
-                        <Link className={"btnHeaderPerfil " + props.objeto.underlinePerfilUsuario} to='/perfilUsuario'>{props.objeto.descriptionPerfilUsuario}</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underlinePerfil} to='/perfil'>{props.objeto.descriptionPerfil}</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underlinePerfil} to='/perfilUsuario'>{props.objeto.descriptionPerfilUsuario}</Link>
                         <Logout btnSair={props.objeto.supdescription}/>
                 </div>
             </div>

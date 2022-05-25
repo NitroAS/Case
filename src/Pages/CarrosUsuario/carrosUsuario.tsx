@@ -23,10 +23,9 @@ export const CarrosUsuario = ():JSX.Element => {
         descriptionHome: 'Home',
         descriptionCarrosUsuario: 'Carros',
         descriptionReservasUsuario: 'Reservas',
-        descriptionLocadora: 'Locadora',
         descriptionPerfilUsuario: 'Perfil',
         supdescription: 'Sair',
-        underlineLocadora: 'underlineLocadora',
+        underlineCarros: 'underlineCarros',
     }
 
     // Listar

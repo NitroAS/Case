@@ -13,7 +13,7 @@ let propsReservaUsuario: any = {
     descriptionReservasUsuario: 'Reservas',
     descriptionPerfilUsuario: 'Perfil',
     supdescription: 'Sair',
-    underlineReservaUsuario: 'underlineReservaUsuario',
+    underlineReserva: 'underlineReserva',
 }
 
 export const ReservaUsuario = (): JSX.Element => {
