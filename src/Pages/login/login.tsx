@@ -4,51 +4,51 @@ import logo from '../../Assets/img/logo.png';
 import HandleCredentialResponse from '../../services/googleAuth';
 import { Footer } from '../../Components/Footer/footer'
 
-export const Login = ():JSX.Element =>{
-  useEffect(()=>{    
+export const Login = (): JSX.Element => {
+  useEffect(() => {
     HandleCredentialResponse()
-    let token:any = localStorage.getItem('token')
-    console.log( JSON.parse(token))
-  },[]
+    let token: any = localStorage.getItem('token')
+    console.log(JSON.parse(token))
+  }, []
   )
-
-    
-    return(
-        <>
-            <div className='centralizarLogin'>
-                <div className='login'>
-                    <div className='centralizarLogo'>
-                      <img src={logo} alt="logo"/>
-                    </div>
-                    <section className='loginCadastrar'>
-                      <div className='centralizarLoginCadastrar'>
-                        <div className='cardLogin'>
-                          <h2 className='tituloLogin'>Login</h2>
-                          <p className='textoLogin'>Este portal oferece uma experiência única, segura e oferta um serviço de qualidade!</p>
-                          <div id="buttonDiv"></div>
-                        </div>
-                        
-                        <div className='cardCadastrar'>
-                          <h2 className='tituloCadastrar'>Cadastrar</h2>
-                          <div className='alinhamentoButtonInputLogin'>
-                            <div className='alinharInputsLogin'>
-                              <input placeholder='Nome Completo' className='inputCadastrarLogin' type="text"/>
-                              <input placeholder='Telefone' className='inputCadastrarLogin' type="text"/>
-                              <input placeholder='E-mail' className='inputCadastrarLogin' type="text"/>
-                            </div>
-
-                            <div className='divButtonCadastrarLogin'>
-                              <button className='linkBtnCadastra'>Cadastrar</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>  
-                    </section>
+  return (
+    <>
+      <div className='centralizarLogin'>
+        <div className='login'>
+          <div className='centralizarLogo'>
+            <img src={logo} alt="logo" />
+          </div>
+          <section className='loginCadastrar'>
+            <div className='centralizarLoginCadastrar'>
+              <div className='cardLogin'>
+                <h2 className='tituloLogin'>Login</h2>
+                <p className='textoLogin'>
+                  Este portal oferece uma experiência única, segura e oferta um serviço de qualidade!
+                </p>
+                <div id="buttonDiv">
                 </div>
+              </div>
+
+              <div className='cardCadastrar'>
+                <h2 className='tituloCadastrar'>Cadastrar</h2>
+                <div className='alinhamentoButtonInputLogin'>
+                  <div className='alinharInputsLogin'>
+                    <input placeholder='Nome Completo' className='inputCadastrarLogin' type="text" />
+                    <input placeholder='Telefone' className='inputCadastrarLogin' type="text" />
+                    <input placeholder='E-mail' className='inputCadastrarLogin' type="text" />
+                  </div>
+                  <div className='divButtonCadastrarLogin'>
+                    <button className='linkBtnCadastra'>Cadastrar</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <Footer />
-        </>
-    );
+          </section>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
 }
 
 export default Login

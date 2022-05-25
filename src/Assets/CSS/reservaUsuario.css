@@ -160,7 +160,7 @@ h1{
     margin-right: 40px;
 }
 
-.nomeDoCarroUsuario{
+.nomeCarroUsuario{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 24px;
@@ -247,7 +247,11 @@ h1{
 .informacoesReservaUsuario{
     margin-bottom: 15px;
     font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
     font-size: 20px;
+    line-height: 25px;
+    color: #040404;
 }
 
 .TextosUsuario{

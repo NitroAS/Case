@@ -10,10 +10,10 @@ import { useEffect, useState } from 'react'
 let propsReservaUsuario: any = {
     descriptionHome: 'Home',
     descriptionCarros: 'Carros',
-    descriptionReservas: 'Reservas',
+    descriptionReservasUsuario: 'Reservas',
     descriptionPerfil: 'Perfil',
     supdescription: 'Sair',
-    underlineReserva: 'underlineReserva',
+    underlineReservaUsuario: 'underlineReservaUsuario',
 }
 
 export const ReservaUsuario = (): JSX.Element => {
@@ -118,7 +118,7 @@ export const ReservaUsuario = (): JSX.Element => {
                         <div className='alinhamentoSectionUmCarrosUsuario'>
                             <div className='alinhamentoCadastrarCarrosUsuario'>
                                 <div className='divH1CarrosUsuario'>
-                                    <h1>Reservas</h1>
+                                    <h1 className='tituloReservasUsuario'>Reservas</h1>
                                 </div>
                                 <div className='divInputMaiorUsuario'>
                                     <input
@@ -191,9 +191,9 @@ export const ReservaUsuario = (): JSX.Element => {
                                         </div>
                                         <div className='TextosUsuario'>
                                             <p className='nomeCarroUsuario'>{item.carro.nome}</p>
-                                            <p className='informacoesReservaUsuario'>{item.data}</p>
-                                            <p className='informacoesReservaUsuario'>{item.horario}</p>
-                                            <p className='informacoesReservaUsuario'>{item.dataentrega}</p>
+                                            <p className='informacoesReservaUsuario'>{`Data retirada: ${item.data}`}</p>
+                                            <p className='informacoesReservaUsuario'>{`Horário retirada: ${item.horario}`}</p>
+                                            <p className='informacoesReservaUsuario'>{`Data de devolução: ${item.dataentrega}`}</p>
                                         </div>
                                         <div className='ButtonRUsuario'>
                                             <button className='ExcluirReservaUsuario' onClick={() => ExcluirReservasUsuario(item.id)} >Excluir Reserva</button>

@@ -35,12 +35,21 @@
 
 .nomeCarro{
     margin-bottom: 25px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
 }
 
 .informacoesReserva{
     margin-bottom: 15px;
     font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
     font-size: 20px;
+    line-height: 25px;
+    color: #040404;
 }
 
 .Textos{
