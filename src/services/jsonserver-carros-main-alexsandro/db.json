@@ -1,16 +1,15 @@
 {
   "usuario": [
     {
-      "id": 1,
       "nome": "Paulo",
       "email": "paulo@email.com",
-      "foto": "avatar.png"
+      "id": 1
     },
     {
-      "id": 2,
       "nome": "Priscila",
       "email": "priscila@email.com",
-      "foto": "avatar.png"
+      "telefone": "a",
+      "id": 2
     }
   ],
   "locadoras": [
