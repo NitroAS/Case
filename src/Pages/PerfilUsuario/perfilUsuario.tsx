@@ -72,6 +72,7 @@ export const PerfilUsuario = (): JSX.Element => {
             }
         }
 
+
         if (nomePerfisUsuario !== '' && nomeEmailUsuario !== '' && telefoneUsuario !== '') {
 
             apiCase.post(`usuario`, {nome: nomePerfisUsuario, email: nomeEmailUsuario, telefone: telefoneUsuario})
@@ -144,11 +145,10 @@ export const PerfilUsuario = (): JSX.Element => {
                     </div>
                 </div>
                 <div className='alinhamentoPerfilFinal'>
-                    <div className="ContainerH2">
-                        <h2 className='h2Perfil'>USUÁRIOS CADASTRADOS</h2>
-                    </div>
-                    <div className="bordaAuxiliar">
-                    </div>
+                  
+                   
+                    
+                    
                     {perfisUsuario.map((item): any => {
                         return (
                             <div className="bordaPerfil" onClick={() => TrazerDadosDoPerfilUsuario (item.id , item.nome , item.email, item.telefone )}>
