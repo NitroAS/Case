@@ -51,8 +51,6 @@ export const Perfil = (): JSX.Element => {
                   }
               })
         
-      
-
     }
 
 
