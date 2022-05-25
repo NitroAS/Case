@@ -66,21 +66,25 @@ export const CarrosUsuario = ():JSX.Element => {
 
                                 <div className='alinhamentoDosCards'>
                                     
-                                        
-                                    <div className='cardsAPICarrosUsuarios'>
-                                        <img src={car3_2} alt="Imagem de um carro econômico" />
-                                        <div className='alinhamentocardCarros'>
-                                            <div className='h3CardDiv'>
-                                                <h3 className='nomeDoCarro'>nome do carro</h3>
+                                    {carros.map((item):any =>{
+                                        return(
+
+                                            <div className='cardsAPICarrosUsuarios'>
+                                                <img src={car3_2} alt="Imagem de um carro econômico" />
+                                                <div className='alinhamentocardCarros'>
+                                                    <div className='h3CardDiv'>
+                                                        <h3 className='nomeDoCarro'>{item.nome}</h3>
+                                                    </div>
+                                                    <div className='divPCardCarros'>
+                                                        <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
+                                                    </div>
+                                                    <div className='buttonsDoCardcarro'>
+                                                        <button className='buttonDetalhesCarros'>Detalhes</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div className='divPCardCarros'>
-                                                <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
-                                            </div>
-                                            <div className='buttonsDoCardcarro'>
-                                                <button className='buttonDetalhesCarros'>Detalhes</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        )
+                                    })}    
                                         
                                     
                                 </div>
