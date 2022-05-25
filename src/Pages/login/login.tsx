@@ -3,6 +3,8 @@ import '../../Assets/CSS/login.css'
 import logo from '../../Assets/img/logo.png';
 import HandleCredentialResponse from '../../services/googleAuth';
 import { Footer } from '../../Components/Footer/footer'
+import { apiCase } from '../../services/api';
+import Swal from 'sweetalert2'
 
 export const Login = (): JSX.Element => {
 
@@ -13,18 +15,54 @@ export const Login = (): JSX.Element => {
   }, []
   )
   
-  
-  const [cadastrar, setCadastrar] = useState('')
-    // const salvar = () =>{
-    //     apiFilmes.post('genero', {Genero : inputGenero})
-    //     .then( () =>{
-    //         setCadastrar('')
-    //     })
-    //     .then(() =>{
-    //         window.location.reload()
-    //     })
-    // }
-  
+  const [usuarioCadastro, setusuarioCadastro] = useState<any[]>([]);
+  const PegandoUsuarioCadastro = () => {
+      apiCase.get('usuario')
+          .then(resultado => {
+            setusuarioCadastro(resultado.data)
+
+          })
+  }
+
+  useEffect(() => {
+    PegandoUsuarioCadastro()
+}, [])
+
+
+
+const [nomeUsuario, setNomeUsuario] = useState('');
+const [nomeEmail, setNomeEmail] = useState('');
+const [telefone, setTelefone] = useState('')
+
+const CadastrarPerfil = () => {
+  for (let index = 0; index < usuarioCadastro.length; index++) {
+      if (usuarioCadastro[index].nome === nomeUsuario) {
+          return
+      }
+  }
+
+  if (nomeUsuario !== '' && nomeEmail !== '' && telefone !== '') {
+
+      apiCase.post(`usuario`, { nome: nomeUsuario, telefone: telefone , email: nomeEmail })
+          .then(() => {
+              window.location.replace('perfilUsuario')
+
+          })
+
+  }
+
+  else{
+    Swal.fire({
+      title: 'Por Favor, Preencha os campos vazios',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#DB1812',
+      cancelButtonColor: '#41B8D2',
+      confirmButtonText: 'OK'
+  })
+  }
+}
+
   return (
     <>
       <div className='centralizarLogin'>
@@ -47,12 +85,37 @@ export const Login = (): JSX.Element => {
                 <h2 className='tituloCadastrar'>Cadastrar</h2>
                 <div className='alinhamentoButtonInputLogin'>
                   <div className='alinharInputsLogin'>
-                    <input placeholder='Nome Completo' className='inputCadastrarLogin' type="text" />
-                    <input placeholder='Telefone' className='inputCadastrarLogin' type="text" />
-                    <input placeholder='E-mail' className='inputCadastrarLogin' type="text" />
+                    <input  
+                    placeholder='Nome Completo' 
+                    className='inputCadastrarLogin' 
+                    type="text" 
+                    defaultValue={nomeUsuario}
+                    onChange={e => setNomeUsuario(e.target.value)}
+                    minLength={3}
+                    maxLength={15}
+                    />
+                    <input 
+                    placeholder='Telefone' 
+                    className='inputCadastrarLogin' 
+                    type="text" 
+                    defaultValue={telefone}
+                    onChange={e => setTelefone(e.target.value)}
+                    minLength={10}
+                    maxLength={15}
+                    
+                    />
+                    <input 
+                    placeholder='E-mail' 
+                    className='inputCadastrarLogin'
+                    type="text"
+                    defaultValue={nomeEmail}
+                    onChange={e => setNomeEmail(e.target.value)}
+                    minLength={15}
+                    maxLength={25}
+                   />
                   </div>
                   <div className='divButtonCadastrarLogin'>
-                    <button className='linkBtnCadastra'>Cadastrar</button>
+                    <button className='linkBtnCadastra'onClick={() => CadastrarPerfil()}>Cadastrar</button>
                   </div>
                 </div>
               </div>
