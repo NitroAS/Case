@@ -104,7 +104,7 @@ export const ReservaUsuario = (): JSX.Element => {
                         <div className='alinhamentoSectionUmCarrosUsuario'>
                             <div className='alinhamentoCadastrarCarrosUsuario'>
                                 <div className='divH1CarrosUsuario'>
-                                    <h1>Reservas</h1>
+                                    <h1 className='tituloReservasUsuario'>Reservas</h1>
                                 </div>
                                 <div className='divInputMaiorUsuario'>
                                     <input

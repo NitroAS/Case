@@ -32,7 +32,6 @@ export const Reserva = (): JSX.Element => {
         PegandoReservas()
     }, [])
 
-
     // const TrazerDadosDoReservas = (nome: any, data: any, horario: number, dataentrega: any) => {
 
     //     setNomeCarro(nome)
@@ -72,9 +71,9 @@ export const Reserva = (): JSX.Element => {
                                     </div>
                                     <div className='Textos'>
                                         <h1 className='nomeCarro'>{item.carro.nome}</h1>
-                                        <p className='informacoesReserva'>{item.data}</p>
-                                        <p className='informacoesReserva'>{item.horario}</p>
-                                        <p className='informacoesReserva'>{item.dataentrega}</p>
+                                        <p className='informacoesReserva'>{`Data retirada: ${item.data}`}</p>
+                                        <p className='informacoesReserva'>{`Horário retirada: ${item.horario}`}</p>
+                                        <p className='informacoesReserva'>{`Data de devolução: ${item.dataentrega}`}</p>
                                     </div>
                                     <div className='ButtonR'>
                                         <button className='ExcluirReserva' onClick={() => ExcluirReservas(item.id)} >Excluir Reserva</button>
@@ -84,12 +83,10 @@ export const Reserva = (): JSX.Element => {
                         </div>
                     </div>
                 )
-
             })}
             <Footer />
         </>
     )
-
 }
 
 export default Reserva
