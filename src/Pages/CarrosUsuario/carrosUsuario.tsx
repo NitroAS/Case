@@ -17,8 +17,13 @@ import React, { useEffect, useState } from "react"
 // API
 import { apiCase } from '../../services/api'
 
+// Modal
+import { ModalCarros } from "../../Components/ModalCarros/modalCarros"
+
 export const CarrosUsuario = ():JSX.Element => {
-    
+    // Back-end
+    // ---------------------------------
+
     let propsLocadora: any = {
         descriptionHome: 'Home',
         descriptionCarrosUsuario: 'Carros',
@@ -29,6 +34,8 @@ export const CarrosUsuario = ():JSX.Element => {
         underlineLocadora: 'underlineLocadora',
     }
 
+    // Modal
+
     // Listar
     const [carros, setCarros] = useState<any[]>([])
     const ListarNomes = ():any => {
@@ -37,13 +44,13 @@ export const CarrosUsuario = ():JSX.Element => {
         .then(resultado => {
  
             setCarros(resultado.data)
-         })
+        })
  
-     }
+    }
  
-     useEffect(() => {
-         ListarNomes()
-     }, [])
+    useEffect(() => {
+        ListarNomes()
+    }, [])
     
     return(
         <>
@@ -59,6 +66,7 @@ export const CarrosUsuario = ():JSX.Element => {
 
                         {/* Econômico */}
                         
+                        <ModalCarros />
                         <section className='sectionsDoscardscarros espaçamentoEntreAsSections'>
                             <h2 className='h2Carros'>Econômico</h2>
                             <div className="barraDeSeparacaoCarros"></div>
