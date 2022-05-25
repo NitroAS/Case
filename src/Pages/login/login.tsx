@@ -15,15 +15,15 @@ export const Login = (): JSX.Element => {
   
   
   const [cadastrar, setCadastrar] = useState('')
-    const salvar = () =>{
-        apiFilmes.post('genero', {Genero : inputGenero})
-        .then( () =>{
-            setCadastrar('')
-        })
-        .then(() =>{
-            window.location.reload()
-        })
-    }
+    // const salvar = () =>{
+    //     apiFilmes.post('genero', {Genero : inputGenero})
+    //     .then( () =>{
+    //         setCadastrar('')
+    //     })
+    //     .then(() =>{
+    //         window.location.reload()
+    //     })
+    // }
   
   return (
     <>
