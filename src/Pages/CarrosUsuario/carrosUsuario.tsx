@@ -21,10 +21,10 @@ export const CarrosUsuario = ():JSX.Element => {
     
     let propsLocadora: any = {
         descriptionHome: 'Home',
-        descriptionCarros: 'Carros',
-        descriptionReservas: 'Reservas',
+        descriptionCarrosUsuario: 'Carros',
+        descriptionReservasUsuario: 'Reservas',
         descriptionLocadora: 'Locadora',
-        descriptionPerfil: 'Perfil',
+        descriptionPerfilUsuario: 'Perfil',
         supdescription: 'Sair',
         underlineLocadora: 'underlineLocadora',
     }
