@@ -27,7 +27,7 @@ export const Home = (): JSX.Element => {
                     <div className='Carros'>
                         <img className='imagensCarros' src={SFoto} alt="Econômico" />
                         <h3 className='textoH3'>Econômico</h3>
-                        <button className='ReservarB'>Reservar</button>
+                        <Link className=''to='/ReservasUsuario'><button className='ReservarB'>Reservar</button></Link>
                     </div>
                     <div className='Carros'>
                         <img className='imagensCarros' src={TFoto} alt="Especial" />
@@ -37,7 +37,7 @@ export const Home = (): JSX.Element => {
                     <div className='Carros'>
                         <img className='imagensCarros' src={QFoto} alt="Luxo" />
                         <h3 className='textoH3'>Luxo</h3>
-                        <button className='ReservarB'>Reservar</button>
+                        <Link className=''to='/ReservasUsuario'><button className='ReservarB'>Reservar</button></Link>
                     </div>
                 </div>
             </section>
