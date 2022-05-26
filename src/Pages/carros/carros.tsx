@@ -68,10 +68,26 @@ export const Carros = ():JSX.Element => {
         ListarNomes()
     }, [])
 
+    
+
     // Excluir
     const Excluir = (id:number) => {
-        apiCase.delete(`carros/${id}`)
-        .then(() => window.location.reload())
+
+        Swal.fire({
+            title: 'Deseja Deleta esse  Carro??',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete!'
+        })
+
+        .then((resultado) => {
+            if (resultado.isConfirmed){
+                apiCase.delete(`carros/${id}`)
+                .then(() => window.location.reload())
+            } 
+        })
     }
 
 
@@ -86,6 +102,11 @@ export const Carros = ():JSX.Element => {
                 showConfirmButton: false,
                 timer: 1500
             })
+
+            // setTimeout(Salvar() {
+                
+            //   }, 2000)
+          
             
             apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
             .then(ListarNomes())
