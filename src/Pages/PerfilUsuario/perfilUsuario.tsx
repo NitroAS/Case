@@ -28,6 +28,8 @@ export const PerfilUsuario = (): JSX.Element => {
         PegandoPerfisUsuario()
     }, [])
 
+    
+
     const ExcluirPerfilUsario = (id: any) => {
         if (window.confirm('Deseja realmente excluir o Perfil?')) {
             apiCase.delete(`usuario/${id}`)
