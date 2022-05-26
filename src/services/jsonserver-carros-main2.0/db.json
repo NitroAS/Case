@@ -31,22 +31,6 @@
       "airbag": true,
       "locadoraId": "2",
       "id": 1
-    },
-    {
-      "nome": "ca",
-      "portas": "5",
-      "npessoas": "5",
-      "airbag": "true",
-      "locadoraId": "2",
-      "id": 2
-    },
-    {
-      "nome": "c",
-      "portas": "5",
-      "npessoas": "5",
-      "airbag": "true",
-      "locadoraId": "2",
-      "id": 3
     }
   ],
   "reservas": [
