@@ -1,10 +1,10 @@
 {
   "usuario": [
     {
-      "id": 1,
-      "nome": "Paulo",
+      "nome": "kana",
       "email": "paulo@email.com",
-      "foto": "avatar.png"
+      "telefone": "333333333333333333",
+      "id": 1
     },
     {
       "id": 2,
