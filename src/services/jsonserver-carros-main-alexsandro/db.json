@@ -17,6 +17,18 @@
       "telefone": "(21) 9999-666",
       "email": "alexsandrosouzadasilva75@gmail.com",
       "id": 5
+    },
+    {
+      "nome": "a",
+      "telefone": "a",
+      "email": "a",
+      "id": 6
+    },
+    {
+      "nome": "4141",
+      "telefone": "21(211)",
+      "email": "alexsandrosouzadasilva75@gmail.com",
+      "id": 7
     }
   ],
   "locadoras": [
@@ -49,7 +61,7 @@
       "locadoraId": 1
     },
     {
-      "nome": "1",
+      "nome": "Andrei chato",
       "portas": "1",
       "npessoas": "1",
       "airbag": "false",
