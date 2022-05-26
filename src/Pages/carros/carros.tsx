@@ -74,7 +74,7 @@ export const Carros = ():JSX.Element => {
     const Excluir = (id:number) => {
 
         Swal.fire({
-            title: 'Deseja Deleta esse  Carro??',
+            title: 'Deseja Excluir esse Carro??',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -94,7 +94,7 @@ export const Carros = ():JSX.Element => {
     // Salvar
     const [nome, setNome] = useState('')
     const Salvar = () => {
-        if (nome != '' && portas != '' && npessoas != '' && airbag != '') {
+        if (nome !== '' && portas !== '' && npessoas !== '' && airbag !== '') {
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -106,18 +106,20 @@ export const Carros = ():JSX.Element => {
             // setTimeout(Salvar() {
                 
             //   }, 2000)
-          
-            
+  
             apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
             .then(ListarNomes())
             .then(() => window.location.reload())
         }else{
-            Swal.fire({
-                title: 'Obrigatório preencher todos os campos',
-                icon: 'warning',
-                confirmButtonColor: '#d33',
-                confirmButtonText: 'Ok!'
-              })
+                Swal.fire({
+                    title: 'Por Favor, Preencha os campos vazios',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DB1812',
+                    cancelButtonColor: '#41B8D2',
+                    confirmButtonText: 'OK'
+                })
+            
         }
     }
 

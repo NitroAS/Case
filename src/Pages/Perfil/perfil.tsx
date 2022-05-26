@@ -21,8 +21,7 @@ export const Perfil = (): JSX.Element => {
         apiCase.get('usuario')
             .then(resultado => {
                 setPerfis(resultado.data)
-            })
-            
+            })  
         }
         
         useEffect(() => {
@@ -33,7 +32,6 @@ export const Perfil = (): JSX.Element => {
             BuscarUsuarios()
         }, [perfis])
         
-        
         const BuscarUsuarios = () =>  {
             
             const A:any = localStorage.getItem('token')
@@ -43,21 +41,18 @@ export const Perfil = (): JSX.Element => {
             const usuario = perfis.find(usuario => usuario.email === token.email)
             
     
-            if (usuario != undefined) {
-                console.log(token);
-                
+            if (usuario !== undefined) {
                 setGuardaId(usuario.Id)
                 setNomeEmail(usuario.email)
                 setTelefone(usuario.telefone)
                 setNomePerfis(usuario.nome)
             }
-
-    }
+        }
 
     const ExcluirPerfil = (id: any) => {
 
         Swal.fire({
-            title: 'Deseja Deleta esse Perfil??',
+            title: 'Deseja Excluir esse Perfil??',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
