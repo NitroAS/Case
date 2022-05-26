@@ -78,8 +78,8 @@ export const Carros = ():JSX.Element => {
     // Salvar
     const [nome, setNome] = useState('')
     const Salvar = () => {
-        if (nome != '' && portas != '' && npessoas != '' && airbag != '') {
-            Swal.fire({
+        if (nome !== '' && portas !== '' && npessoas !== '' && airbag !== '') {
+            Swal.fire({   
                 position: 'top-end',
                 icon: 'success',
                 title: 'Your work has been saved',

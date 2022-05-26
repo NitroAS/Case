@@ -32,6 +32,12 @@ h1{
     font-weight: 400;
     padding: 0px 0px 0px 70px;
     color: var(--pretoClarocarros);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../img/select.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.2em top 60%, 0 0;
+    background-size: 0.8em auto, 100%;
 }
 
 .inputsMenoresCarrosUsuario{
@@ -44,7 +50,7 @@ h1{
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     padding: 0px 0px 0px 70px;
-    color: var(--pretoClarocarros);
+    color: var(--pretoClarocarros); 
 }
 
 .selectLocadouraCarrosUsuario{
@@ -58,6 +64,12 @@ h1{
     font-weight: 400;
     padding: 0px 0px 0px 70px;
     color: var(--pretoClarocarros);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../img/select.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.2em top 60%, 0 0;
+    background-size: 0.8em auto, 100%;
 }
 
 .buttonCadastrarCarrosUsuario{

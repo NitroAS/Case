@@ -40,4 +40,29 @@ function parseJwt (token) {
   return decoded;
 };
 
+
+// const BuscarUsuarios = () =>  {
+
+//   const PegandoPerfis = () => {
+//     apiCase.get('usuario')
+//       .then(resultado => {
+//         setPerfis(resultado.data)
+//       })  
+//     }
+
+//   const A = localStorage.getItem('token')
+
+//   const token  = JSON.parse(A)
+  
+//   const usuario = perfis.find(usuario => usuario.email === token.email) 
+  
+//   if (usuario !== undefined){
+//     window.location.replace('http://localhost:3000/carros')
+//   }
+//   else{
+//     window.location.replace('http://localhost:3000/perfilUsuario')
+//   }
+
+// }
+
 export default HandleCredentialResponse;
