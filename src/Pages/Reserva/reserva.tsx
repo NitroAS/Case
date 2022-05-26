@@ -33,27 +33,15 @@ export const Reserva = (): JSX.Element => {
         PegandoReservas()
     }, [])
 
-    // const TrazerDadosDoReservas = (nome: any, data: any, horario: number, dataentrega: any) => {
-
-    //     setNomeCarro(nome)
-    //     setDataRetiradaReserva(data)
-    //     setHorarioRetirada(horario)
-    //     setdevolucao(dataentrega)
-    // }
-
-    // const [nomeCarro, setNomeCarro] = useState<any[]>([]);
-    // const [dataRetiradaReserva, setDataRetiradaReserva] = useState<any[]>([]);
-    // const [horarioRetirada, setHorarioRetirada] = useState<number>(0);
-    // const [devolucao, setdevolucao] = useState<any[]>([]);
 
     const ExcluirReservas = (id: any) => {
         Swal.fire({
-            title: 'Deseja Deleta essa Reserva??',
+            title: 'Deseja Excluir essa Reserva??',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Delete!'
+            confirmButtonText: 'Excluir!'
           })
 
           .then((resultado) => {
@@ -65,9 +53,6 @@ export const Reserva = (): JSX.Element => {
                     })
             }
           })
-
-    
-
     }
     return (
         <>

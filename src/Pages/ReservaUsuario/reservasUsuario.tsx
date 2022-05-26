@@ -5,6 +5,7 @@ import carroAzul from '../../Assets/img/economico.png'
 import { apiCase } from '../../services/api'
 import { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
+import { useLocation } from 'react-router-dom'
 
 
 let propsReservaUsuario: any = {
@@ -17,20 +18,29 @@ let propsReservaUsuario: any = {
 }
 
 export const ReservaUsuario = (): JSX.Element => {
-
+    const Location:any = useLocation()
+    const {id} = Location.state
+    const {locadoraId} = Location.state
+    const {guardaNomeCarros} = Location.state
+    const {guardaLocadora} = Location.state
+    
     const [reservaUsuario, setReservaUsuario] = useState<any[]>([]);
     const PegandoReservasUsuario = () => {
 
         apiCase.get('reservas?_expand=carro')
             .then(resultado => {
                 setReservaUsuario(resultado.data)
-                console.log(resultado.data);
+                console.log(id);
+                console.log(locadoraId);
             })
     }
     useEffect(() => {
 
         PegandoReservasUsuario()
     }, [])
+
+
+
     
       // Listar Locadoras
       const [locadoras, setLocadoras] = useState<any[]>([])
@@ -50,12 +60,12 @@ export const ReservaUsuario = (): JSX.Element => {
     const ExcluirReservasUsuario = (id: any) => {
 
         Swal.fire({
-            title: 'Deseja Deleta essa Reserva??',
+            title: 'Deseja Excluir essa Reserva??',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Delete!'
+            confirmButtonText: 'Excluir!'
           })
 
           .then((resultado) => {
@@ -97,7 +107,7 @@ export const ReservaUsuario = (): JSX.Element => {
    
     const EditarReservasUsuario = (id: number) => {
 
-        if (nomeCarroUsuario !== '' && dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '' && locadoraValorUsuario !== '') {
+        if (dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '') {
 
             apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario})
                 .then(() => {
@@ -116,7 +126,7 @@ export const ReservaUsuario = (): JSX.Element => {
             }
         }
 
-        if (nomeCarroUsuario !== '' && dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '' && locadoraValorUsuario !== '') {
+        if ( dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' ) {
 
             apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario  })
                 .then(() => {
@@ -152,7 +162,7 @@ export const ReservaUsuario = (): JSX.Element => {
                                         type="text"
                                         placeholder='Onix 2.0'
                                         className='escolherTiposDeCarros'
-                                        defaultValue={nomeCarroUsuario}
+                                        defaultValue={guardaNomeCarros}
                                         disabled
                                          />
                                 </div>
@@ -181,14 +191,15 @@ export const ReservaUsuario = (): JSX.Element => {
                                     />
                                 </div>
                                 <div className='divCadastrarCarrosUsuario'>
-                                    <select className='selectLocadouraCarrosUsuario'>
-                                        <option selected disabled hidden>Qual a Locadoura?</option>
-                                    {locadoras.map((item): any => {
-                                        return(
-                                        <option value={item.locadoraId}>{item.nome}</option>
-                                        )
-                                    })
-                                }
+                                    <select 
+                                    className='selectLocadouraCarrosUsuario'
+                                    defaultValue={1}
+                                    disabled>
+                                       
+                                        <option
+                                        value={1}>{guardaLocadora}</option>
+                                    
+                                
                                 </select>
 
                                     

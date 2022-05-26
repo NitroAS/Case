@@ -32,12 +32,12 @@ export const Locadora = (): JSX.Element => {
     const ExcluirLocadora = (id: any) => {
 
         Swal.fire({
-            title: 'Deseja Deleta esse Locadora??',
+            title: 'Deseja Excluir esse Locadora??',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Delete!'
+            confirmButtonText: 'Excluir!'
           })
 
           .then((resultado) =>  {
@@ -50,8 +50,7 @@ export const Locadora = (): JSX.Element => {
                     })
             }
           })
-            
-        
+               
     }
 
     const [guardaIdLocadoras, setGuardaIdLocadoras] = useState(0);
@@ -99,7 +98,6 @@ export const Locadora = (): JSX.Element => {
                 window.location.reload()
             })
         }
-
 
         else {
             Swal.fire({

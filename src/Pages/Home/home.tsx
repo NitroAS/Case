@@ -32,7 +32,7 @@ export const Home = (): JSX.Element => {
                     <div className='Carros'>
                         <img className='imagensCarros' src={TFoto} alt="Especial" />
                         <h3 className='textoH3'>Especial</h3>
-                        <button className='ReservarB'>Reservar</button>
+                        <Link className=''to='/ReservasUsuario'><button className='ReservarB'>Reservar</button></Link>
                     </div>
                     <div className='Carros'>
                         <img className='imagensCarros' src={QFoto} alt="Luxo" />

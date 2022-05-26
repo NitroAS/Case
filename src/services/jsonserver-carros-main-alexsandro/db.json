@@ -52,6 +52,14 @@
       "npessoas": 5,
       "airbag": true,
       "locadoraId": 1
+    },
+    {
+      "nome": "1",
+      "portas": "1",
+      "npessoas": "1",
+      "airbag": "false",
+      "locadoraId": "1",
+      "id": 3
     }
   ],
   "reservas": [

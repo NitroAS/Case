@@ -68,10 +68,26 @@ export const Carros = ():JSX.Element => {
         ListarNomes()
     }, [])
 
+    
+
     // Excluir
     const Excluir = (id:number) => {
-        apiCase.delete(`carros/${id}`)
-        .then(() => window.location.reload())
+
+        Swal.fire({
+            title: 'Deseja Excluir esse Carro??',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Excluir!'
+        })
+
+        .then((resultado) => {
+            if (resultado.isConfirmed){
+                apiCase.delete(`carros/${id}`)
+                .then(() => window.location.reload())
+            } 
+        })
     }
 
 
@@ -79,24 +95,31 @@ export const Carros = ():JSX.Element => {
     const [nome, setNome] = useState('')
     const Salvar = () => {
         if (nome !== '' && portas !== '' && npessoas !== '' && airbag !== '') {
-            Swal.fire({   
+            Swal.fire({
                 position: 'top-end',
                 icon: 'success',
                 title: 'Your work has been saved',
                 showConfirmButton: false,
                 timer: 1500
             })
-            
+
+            // setTimeout(Salvar() {
+                
+            //   }, 2000)
+  
             apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
             .then(ListarNomes())
             .then(() => window.location.reload())
         }else{
-            Swal.fire({
-                title: 'Obrigatório preencher todos os campos',
-                icon: 'warning',
-                confirmButtonColor: '#d33',
-                confirmButtonText: 'Ok!'
-              })
+                Swal.fire({
+                    title: 'Por Favor, Preencha os campos vazios',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DB1812',
+                    cancelButtonColor: '#41B8D2',
+                    confirmButtonText: 'OK'
+                })
+            
         }
     }
 
@@ -140,6 +163,7 @@ export const Carros = ():JSX.Element => {
         setNPessoas(npessoas)
         setAirbag(airbag)
         setLocadoraValor(locadoraValor.toString())
+        
 
     }
 
@@ -184,8 +208,8 @@ export const Carros = ():JSX.Element => {
                                     onChange = {(e) => setNPessoas(e.target.value)} />
                                 </div>
                                 <div className='divCadastrarCarros'>
-                                    <select className='selectLocadouraCarros' onChange={(e) => setLocadoraValor(e.target.value)}>
-                                        <option selected disabled hidden>Qual a Locadoura?</option>
+                                    <select className='selectLocadouraCarros' value={locadoraValor} onChange={(e) => setLocadoraValor(e.target.value)}>
+                                        <option value={''} disabled hidden>Qual a Locadoura?</option>
                                         {locadoras.map((item):any =>{
                                             return(
                                                 <option value={item.id}>{item.nome}</option>
