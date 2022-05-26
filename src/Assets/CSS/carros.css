@@ -67,6 +67,7 @@ h1{
     font-weight: 700;
     border: 1px solid var(--vermelhoCarros);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .buttonCadastrarCarros:hover{
@@ -193,6 +194,7 @@ h1{
     font-size: 24px;
     font-weight: 700;
     font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
 }
 
 .buttonEditarCarros:hover{
@@ -210,6 +212,7 @@ h1{
     font-size: 24px;
     font-weight: 700;
     font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
 }
 
 .buttonExcluirCarros:hover{

@@ -71,12 +71,14 @@ h1{
     line-height: 30px;
     color: #FFFFFF;
     border:none;
+    cursor: pointer;
 }
 
 .btnPerfilAtualizar:hover{
     background-color: #FFFFFF;
     color: #DB1812;
     border: 3px solid #DB1812;
+    cursor: pointer;
 }
 
 .btnPerfilExcluir{
@@ -90,12 +92,14 @@ h1{
     font-size: 24px;
     font-weight: 700;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .btnPerfilExcluir:hover{
     background-color: #DB1812;
     color: #DCE0E2;
     border: 3px solid #DCE0E2;
+    cursor: pointer;
 }
 
 
@@ -176,12 +180,20 @@ h1{
     cursor: pointer;
 }
 
+.excluirCadastroPerfil:hover{
+    background: #DB1812;
+    color:#FFFFFF
+}
 
 /* div pai */
 .alinhamentoPerfilFinal{
     display: flex;
     flex-direction: column;
     width: 1236px;
+}
+
+.inputNomeGeral{
+    width:376.72px;
 }
 
 /* Alinhamento box-Secundaria */

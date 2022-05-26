@@ -10,12 +10,26 @@
       "email": "priscila@email.com",
       "telefone": "a",
       "id": 2
+    },
+    {
+      "nome": "OlaMundo",
+      "telefone": "21 9880-32107",
+      "email": "AAAAAAAA@gmail.com",
+      "id": 3
+    },
+    {
+      "nome": "Alexsandro",
+      "telefone": "(21) 9999-666",
+      "email": "alexsandrosouzadasilva75@gmail.com",
+      "id": 5
     }
   ],
   "locadoras": [
     {
-      "id": 1,
-      "nome": "Dois Irmãos"
+      "nome": "Dois Irmãos",
+      "endereco": "Rua",
+      "telefone": "(21) 9998-000",
+      "id": 1
     },
     {
       "id": 2,

@@ -3,6 +3,7 @@ import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
 import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
+import Swal from 'sweetalert2'
 export const Locadora = (): JSX.Element => {
     let propsLocadora: any = {
         descriptionHome: 'Home',
@@ -29,14 +30,28 @@ export const Locadora = (): JSX.Element => {
     }, [])
 
     const ExcluirLocadora = (id: any) => {
-        if (window.confirm('Deseja realmente excluir o Perfil?')) {
-            apiCase.delete(`locadoras/${id}`)
-                .then(() => {
-                    window.location.reload()
 
+        Swal.fire({
+            title: 'Deseja Deleta esse Locadora??',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete!'
+          })
 
-                })
-        }
+          .then((resultado) =>  {
+            if(resultado.isConfirmed){
+                apiCase.delete(`locadoras/${id}`)
+                    .then(() => {
+                        window.location.reload()
+      
+      
+                    })
+            }
+          })
+            
+        
     }
 
     const [guardaIdLocadoras, setGuardaIdLocadoras] = useState(0);
@@ -78,10 +93,24 @@ export const Locadora = (): JSX.Element => {
             }
         }
 
-        apiCase.post(`locadoras`, {nome: nomeLocadoras, endereco: enderecoLocadoras, telefone: telefonelocadora})
-        .then(() => {
-            window.location.reload()
-        })
+        if (nomeLocadoras !== '' && enderecoLocadoras !== '' && telefonelocadora !== '' ) {
+            apiCase.post(`locadoras`, {nome: nomeLocadoras, endereco: enderecoLocadoras, telefone: telefonelocadora})
+            .then(() => {
+                window.location.reload()
+            })
+        }
+
+
+        else {
+            Swal.fire({
+                title: 'Por Favor, Preencha os campos vazios',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#DB1812',
+                cancelButtonColor: '#41B8D2',
+                confirmButtonText: 'OK'
+            })
+        }
     }
 
     return (

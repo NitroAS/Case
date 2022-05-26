@@ -7,6 +7,13 @@ export function HandleCredentialResponse(response) {
     localStorage.setItem('token', JSON.stringify(token))
     console.log(token)
   }
+  
+  let objeto = {
+    nome : "nome",
+    telefone : "telefone",
+    email : "email",
+  }
+  localStorage.setItem('usuario', JSON.stringify(objeto))
 
   window.google.accounts.id.initialize({
     client_id: "671297347573-1m7mp3sei7iphdom1pa6cfvfg10dobv2.apps.googleusercontent.com",

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
 import Swal from 'sweetalert2'
 
+
 export const Perfil = (): JSX.Element => {
     let propsPerfil: any = {
         descriptionCarros: 'Carros',
@@ -12,7 +13,7 @@ export const Perfil = (): JSX.Element => {
         descriptionLocadora: 'Locadora',
         descriptionPerfil: 'Perfis',
         supdescription: 'Sair',
-        underline: 'underlinePerfil'
+        underlinePerfil: 'underlinePerfil'
     }
 
     const [perfis, setPerfis] = useState<any[]>([]);
@@ -20,38 +21,60 @@ export const Perfil = (): JSX.Element => {
         apiCase.get('usuario')
             .then(resultado => {
                 setPerfis(resultado.data)
-
             })
+            
+        }
+        
+        useEffect(() => {
+            PegandoPerfis()
+        }, [])
+
+        useEffect(() => {
+            BuscarUsuarios()
+        }, [perfis])
+        
+        
+        const BuscarUsuarios = () =>  {
+            
+            const A:any = localStorage.getItem('token')
+    
+            const token:any  = JSON.parse(A)
+            
+            const usuario = perfis.find(usuario => usuario.email === token.email)
+            
+    
+            if (usuario != undefined) {
+                console.log(token);
+                
+                setGuardaId(usuario.Id)
+                setNomeEmail(usuario.email)
+                setTelefone(usuario.telefone)
+                setNomePerfis(usuario.nome)
+            }
 
     }
 
-    useEffect(() => {
-        PegandoPerfis()
-    }, [])
-
     const ExcluirPerfil = (id: any) => {
-        
-            Swal.fire({
-                title: 'Deseja Deleta esse Perfil??',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Delete!'
-              })
 
-              .then((resultado) => {
-                  if(resultado.isConfirmed){
+        Swal.fire({
+            title: 'Deseja Deleta esse Perfil??',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete!'
+        })
 
-                      apiCase.delete(`usuario/${id}`)
-                          .then(() => {
-                              window.location.reload()
-          
-                          })
-                  }
-              })
-        
-      
+            .then((resultado) => {
+                if (resultado.isConfirmed) {
+
+                    apiCase.delete(`usuario/${id}`)
+                        .then(() => {
+                            window.location.reload()
+
+                        })
+                }
+            })
 
     }
 
@@ -116,7 +139,7 @@ export const Perfil = (): JSX.Element => {
 
         }
 
-     
+
 
         else {
             Swal.fire({
@@ -130,6 +153,10 @@ export const Perfil = (): JSX.Element => {
         }
     }
 
+ 
+
+
+
 
     return (
         <>
@@ -141,44 +168,41 @@ export const Perfil = (): JSX.Element => {
                             <h1>Perfil</h1>
                         </div>
                         <div className="InputPerfilAlinhamento">
-                            <input
-                                className="inputsPerfil"
-                                type="text" name="InputPerfil"
-                                placeholder="Maria de Fátma Muniz"
-                                maxLength={40}
-                                defaultValue={nomePerfis}
-                                onChange={e => setNomePerfis(e.target.value)}
-                            ></input>
-                            <input
-                                className="inputsPerfil"
-                                type="text"
-                                name="InputPerfil"
-                                placeholder="(11) 9999-9090"
-                                maxLength={40}
-                                defaultValue={telefone}
-                                onChange={e => setTelefone(e.target.value)}
-                            ></input>
-
-                            <input
-                                className="inputsPerfil"
-                                type="text"
-                                name="InputPerfil"
-                                placeholder="maria@gmail.com"
-                                maxLength={40}
-                                defaultValue={nomeEmail}
-                                onChange={e => setNomeEmail(e.target.value)}
-
-
-                            ></input>
-                            <input 
-                                className="inputsPerfil"
-                                type="text" 
-                                name="InputPerfil" 
-                                placeholder="maria@gmail.com" 
-                                maxLength={40}
-                                defaultValue={nomeEmail}
-                                onChange={e => setNomeEmail(e.target.value)}
-                            ></input>
+                            <div className='inputNomeGeral'>
+                                <input
+                                    className="inputsPerfil"
+                                    type="text" name="InputPerfil"
+                                    placeholder="Maria de Fátma Muniz"
+                                    minLength={3}
+                                    maxLength={28}
+                                    defaultValue={nomePerfis}
+                                    onChange={e => setNomePerfis(e.target.value)}
+                                ></input>
+                            </div>
+                            <div className='inputTelefoneGeral'>
+                                <input
+                                    className="inputsPerfil"
+                                    type="text"
+                                    name="InputPerfil"
+                                    placeholder="(11) 9999-9090"
+                                    minLength={3}
+                                    maxLength={22}
+                                    defaultValue={telefone}
+                                    onChange={e => setTelefone(e.target.value)}
+                                ></input>
+                            </div>
+                            <div className='inputEmailGeral'>
+                                <input
+                                    className="inputsPerfil"
+                                    type="text"
+                                    name="InputPerfil"
+                                    placeholder="maria@gmail.com"
+                                    minLength={10}
+                                    maxLength={40}
+                                    defaultValue={nomeEmail}
+                                    onChange={e => setNomeEmail(e.target.value)}
+                                ></input>
+                            </div>
                         </div>
                         <div className="btnPerfilAlinhamento">
                             <div className="btnAtualizar">

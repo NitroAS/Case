@@ -3,14 +3,14 @@ import { Header } from '../../Components/Header/header'
 import { Footer } from '../../Components/Footer/footer'
 import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
-
+import Swal from 'sweetalert2'
 export const PerfilUsuario = (): JSX.Element => {
     let propsPerfilUsuario: any = {
         descriptionCarrosUsuario: 'Carros',
         descriptionReservasUsuario: 'Reservas',
         descriptionPerfilUsuario: 'Perfis',
         supdescription: 'Sair',
-        underlinePerfilUsuario: 'underlinePerfilUsuario'
+        underlinePerfil: 'underlinePerfil'
     }
 
     const [perfisUsuario, setPerfisUsuario] = useState<any[]>([]);
@@ -27,6 +27,8 @@ export const PerfilUsuario = (): JSX.Element => {
     useEffect(() => {
         PegandoPerfisUsuario()
     }, [])
+
+    
 
     const ExcluirPerfilUsario = (id: any) => {
         if (window.confirm('Deseja realmente excluir o Perfil?')) {
@@ -63,21 +65,38 @@ export const PerfilUsuario = (): JSX.Element => {
             }   
     }
 
-    // const CadastrarPerfilUsuario = () => {
+    const CadastrarPerfilUsuario = () => {
 
-    //     for (let index = 0; index < perfisUsuario.length; index++) {
-    //         if(perfisUsuario[index].nome === nomePerfisUsuario)
-    //         {
-    //             return
-    //         }
-    //     }
+        for (let index = 0; index < perfisUsuario.length; index++) {
+            if(perfisUsuario[index].nome === nomePerfisUsuario)
+            {
+                return
+            }
+        }
 
-    //     apiCase.post(`usuario`, {nome: nomePerfisUsuario, email: nomeEmailUsuario, telefone: telefoneUsuario})
-    //     .then(() => {
-    //         window.location.reload()
-            
-    //     })
-    // }
+
+        if (nomePerfisUsuario !== '' && nomeEmailUsuario !== '' && telefoneUsuario !== '') {
+
+            apiCase.post(`usuario`, {nome: nomePerfisUsuario, email: nomeEmailUsuario, telefone: telefoneUsuario})
+            .then(() => {
+                window.location.reload()
+                
+            })
+        }
+
+        else {
+            Swal.fire({
+                title: 'Por Favor, Preencha os campos vazios',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#DB1812',
+                cancelButtonColor: '#41B8D2',
+                confirmButtonText: 'OK'
+            })
+        }
+        
+     
+    }
    
     return (
         <>
@@ -89,37 +108,46 @@ export const PerfilUsuario = (): JSX.Element => {
                             <h1>Perfil</h1>
                         </div>
                         <div className="InputPerfilAlinhamentoUsuario">
-                            <input
-                                className="inputsPerfilUsuario"
-                                type="text" name="InputPerfil"
-                                placeholder="Maria de Fátma Muniz"
-                                maxLength={40}
-                                defaultValue={nomePerfisUsuario}
-                                onChange={e => setNomePerfisUsuario(e.target.value)}
+                            <div className='inputNomeGeral'>
+                                <input
+                                    className="inputsPerfilUsuario"
+                                    type="text" name="InputPerfil"
+                                    placeholder="Maria de Fátma Muniz"
+                                    minLength={3}
+                                    maxLength={28}
+                                    defaultValue={nomePerfisUsuario}
+                                    onChange={e => setNomePerfisUsuario(e.target.value)}
                                 ></input>
-                            <input
-                                className="inputsPerfilUsuario"
-                                type="text"
-                                name="InputPerfil"
-                                placeholder="(11) 9999-9090"
-                                maxLength={40}
-                                defaultValue={telefoneUsuario}
-                                onChange={e => setTelefoneUsuario(e.target.value)}
+                            </div>
+                            <div className='inputTelefoneGeral'>
+                                <input
+                                    className="inputsPerfilUsuario"
+                                    type="text"
+                                    name="InputPerfil"
+                                    placeholder="(11) 9999-9090"
+                                    minLength={10}
+                                    maxLength={15}
+                                    defaultValue={telefoneUsuario}
+                                    onChange={e => setTelefoneUsuario(e.target.value)}
                                 ></input>
-                            <input 
-                                className="inputsPerfilUsuario"
-                                type="text" 
-                                name="InputPerfil" 
-                                placeholder="maria@gmail.com" 
-                                maxLength={40}
-                                defaultValue={nomeEmailUsuario}
-                                onChange={e => setNomeEmailUsuario(e.target.value)}
-                            ></input>
+                            </div>
+                            <div className='inputEmailGeral'>    
+                                <input 
+                                    className="inputsPerfilUsuario"
+                                    type="text" 
+                                    name="InputPerfil" 
+                                    placeholder="maria@gmail.com" 
+                                    minLength={10}
+                                    maxLength={35}
+                                    defaultValue={nomeEmailUsuario}
+                                    onChange={e => setNomeEmailUsuario(e.target.value)}
+                                ></input>
+                            </div>
                         </div>
                         <div className="btnPerfilAlinhamentoUsuario">
                             <div className="btnAtualizarUsuario">
                                 <button className='btnPerfilAtualizarUsuario' onClick={() => EditarPerfilUsuario(guardaIdUsuario)}>Editar</button>
-                                <button className='btnPerfilAtualizarUsuario'>Atualizar</button>
+                                <button className='btnPerfilAtualizarUsuario' onClick={() => CadastrarPerfilUsuario()}>Atualizar</button>
                             </div>
                             <div className="btnExcluirAlinhamentoPerfilUsuario">
                                 <button className='btnPerfilExcluirUsuario'>Excluir Cadastro</button>
@@ -128,11 +156,10 @@ export const PerfilUsuario = (): JSX.Element => {
                     </div>
                 </div>
                 <div className='alinhamentoPerfilFinal'>
-                    <div className="ContainerH2">
-                        <h2 className='h2Perfil'>USUÁRIOS CADASTRADOS</h2>
-                    </div>
-                    <div className="bordaAuxiliar">
-                    </div>
+                  
+                   
+                    
+                    
                     {perfisUsuario.map((item): any => {
                         return (
                             <div className="bordaPerfil" onClick={() => TrazerDadosDoPerfilUsuario (item.id , item.nome , item.email, item.telefone )}>

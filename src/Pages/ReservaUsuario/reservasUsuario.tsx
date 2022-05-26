@@ -4,7 +4,7 @@ import { Footer } from '../../Components/Footer/footer'
 import carroAzul from '../../Assets/img/economico.png'
 import { apiCase } from '../../services/api'
 import { useEffect, useState } from 'react'
-
+import Swal from 'sweetalert2'
 
 
 let propsReservaUsuario: any = {
@@ -13,7 +13,7 @@ let propsReservaUsuario: any = {
     descriptionReservasUsuario: 'Reservas',
     descriptionPerfilUsuario: 'Perfil',
     supdescription: 'Sair',
-    underlineReservaUsuario: 'underlineReservaUsuario',
+    underlineReserva: 'underlineReserva',
 }
 
 export const ReservaUsuario = (): JSX.Element => {
@@ -48,13 +48,27 @@ export const ReservaUsuario = (): JSX.Element => {
       }, [])
 
     const ExcluirReservasUsuario = (id: any) => {
-        if (window.confirm('Deseja realmente excluir o Perfil?')) {
-            apiCase.delete(`reservas/${id}`)
-                .then(() => {
-                    window.location.reload()
 
-                })
-        }
+        Swal.fire({
+            title: 'Deseja Deleta essa Reserva??',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete!'
+          })
+
+          .then((resultado) => {
+            if(resultado.isConfirmed){
+                  apiCase.delete(`reservas/${id}`)
+                      .then(() => {
+                          window.location.reload()
+      
+                      })
+            }
+          }) 
+
+        
     }
 
     const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string , carroId: number , locadoraId: string) => {
@@ -102,11 +116,24 @@ export const ReservaUsuario = (): JSX.Element => {
             }
         }
 
-        apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario  })
-            .then(() => {
-                window.location.reload()
+        if (nomeCarroUsuario !== '' && dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '' && locadoraValorUsuario !== '') {
 
-            })
+            apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario  })
+                .then(() => {
+                    window.location.reload()
+    
+                })
+        }
+            else {
+                Swal.fire({
+                    title: 'Por Favor, Preencha os campos vazios',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DB1812',
+                    cancelButtonColor: '#41B8D2',
+                    confirmButtonText: 'OK'
+                })
+            }
     }
 
     return (
@@ -196,8 +223,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                             <p className='informacoesReservaUsuario'>{`Data de devolução: ${item.dataentrega}`}</p>
                                         </div>
                                         <div className='ButtonRUsuario'>
+                                            <button className='EditarReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega,item.carroId , item.carro.locadoraId)}>Editar</button>
                                             <button className='ExcluirReservaUsuario' onClick={() => ExcluirReservasUsuario(item.id)} >Excluir Reserva</button>
-                                            <button className='ExcluirReservaUsuario' onClick={() => TrazerDadosDoReservasUsuario(item.id, item.carro.nome, item.data, item.horario, item.dataentrega,item.carroId , item.carro.locadoraId)}>Editar</button>
                                         </div>
                                     </div>
                                 </section>
