@@ -48,8 +48,6 @@ export const PerfilUsuario = (): JSX.Element => {
             setTelefoneUsuario(usuario.telefone)
             setNomePerfisUsuario(usuario.nome)
         }
-      
-
     }
 
     const ExcluirPerfilUsario = (id: any) => {
