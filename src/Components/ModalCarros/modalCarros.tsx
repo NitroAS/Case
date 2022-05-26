@@ -1,11 +1,21 @@
 import car3_2 from '../../Assets/IMGsCarros/car3_2.png'
 import '../../Assets/CSS/modalCarros.css'
 import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { log } from 'console';
 
 export const ModalCarros = (props: any): JSX.Element => {
 
+    
+        
+    
+        
+  
+
     {
         if (props.Modal === true) {
+            console.log(props.item);
+            
             return (
                 <>
                     <div className='fundoModal' onClick={props.Fechar}></div>
@@ -22,7 +32,7 @@ export const ModalCarros = (props: any): JSX.Element => {
                                 <input type="text" value={props.item.locadora.nome} className='inputModal' />
                             </div>
                             <div className='divButtonModal'>
-                                <Link className='linkModal' to='/reservasUsuario'><button className='bittonReservaModal'>Reservar</button></Link>
+                                <Link className='linkModal' to='/ReservasUsuario' state={{id: props.item.id , locadoraId: props.item.locadoraId , guardaNomeCarros: props.item.nome  , guardaLocadora: props.item.locadora.nome }}><button className='bittonReservaModal'>Reservar</button></Link>
                             </div>
                         </div>
                     </div>
