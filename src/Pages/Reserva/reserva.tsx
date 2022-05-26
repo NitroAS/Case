@@ -53,9 +53,6 @@ export const Reserva = (): JSX.Element => {
                     })
             }
           })
-
-    
-
     }
     return (
         <>
