@@ -4,7 +4,7 @@ import { Footer } from '../../Components/Footer/footer'
 import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
 import Swal from 'sweetalert2'
-import { ButtonPerfil } from '../../Components/BotaoEditarPerfil/botaoEditarPerfil'
+// import { ButtonPerfil } from '../../Components/BotaoEditarPerfil/botaoEditarPerfil'
 
 export const Perfil = (): JSX.Element => {
     let propsPerfil: any = {
@@ -208,7 +208,8 @@ export const Perfil = (): JSX.Element => {
                         </div>
                         <div className="btnPerfilAlinhamento">
                             <div className="btnAtualizar">
-                                <ButtonPerfil Booleano={booleanoPerfil} Editar={EditarPerfil} Cadastrar={CadastrarPerfil} />
+                            <button className='btnPerfilAtualizar' onClick={() =>EditarPerfil(guardaId)}>Atualizar</button>
+                                {/* <ButtonPerfil Booleano={booleanoPerfil} Editar={EditarPerfil} Cadastrar={CadastrarPerfil} /> */}
                             </div>
                             <div className="btnExcluirAlinhamentoPerfil">
                                 <button className='btnPerfilExcluir'>Excluir Cadastro</button>

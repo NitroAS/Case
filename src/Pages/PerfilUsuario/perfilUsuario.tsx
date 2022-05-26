@@ -146,8 +146,7 @@ export const PerfilUsuario = (): JSX.Element => {
                         </div>
                         <div className="btnPerfilAlinhamentoUsuario">
                             <div className="btnAtualizarUsuario">
-                                <button className='btnPerfilAtualizarUsuario' onClick={() => EditarPerfilUsuario(guardaIdUsuario)}>Editar</button>
-                                <button className='btnPerfilAtualizarUsuario' onClick={() => CadastrarPerfilUsuario()}>Atualizar</button>
+                                <button className='btnPerfilAtualizarUsuario' onClick={() => EditarPerfilUsuario(guardaIdUsuario)}>Atualizar</button>
                             </div>
                             <div className="btnExcluirAlinhamentoPerfilUsuario">
                                 <button className='btnPerfilExcluirUsuario'>Excluir Cadastro</button>
@@ -158,8 +157,6 @@ export const PerfilUsuario = (): JSX.Element => {
                 <div className='alinhamentoPerfilFinal'>
                   
                    
-                    
-                    
                     {perfisUsuario.map((item): any => {
                         return (
                             <div className="bordaPerfil" onClick={() => TrazerDadosDoPerfilUsuario (item.id , item.nome , item.email, item.telefone )}>
