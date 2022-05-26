@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './Assets/CSS/global.css'
-
+import {ProtectedRoute} from './Components/AuthBlock/authBlock'
 // Rotas
 import { Home } from './Pages/Home/home'
 import { Login } from './Pages/Login/login';
@@ -19,11 +19,28 @@ const Rotas = () =>{
           <Routes>
               <Route element={<Home/>} path="/"/>
               <Route element={<Login/>} path="/login" />
-              <Route element={<Carros/>} path="/carros" />
-              <Route element={<Locadora/>} path="/locadora" />
-              <Route element={<Perfil/>} path="/perfil" />
+              <Route path='/perfil' element={
+                <ProtectedRoute user={undefined} children={<Perfil/>}></ProtectedRoute>
+              }>
+              </Route>
+              <Route path='/locadora' element={
+                <ProtectedRoute user={undefined} children={<Locadora/>}></ProtectedRoute>
+              }>
+              </Route>
+              <Route path='/reservas' element={
+                <ProtectedRoute user={undefined} children={<Reserva/>}></ProtectedRoute>
+              }>
+              </Route>
+              <Route path='/carros' element={
+                <ProtectedRoute user={undefined} children={<Carros/>}></ProtectedRoute>
+              }>
+              </Route>
+              {/* rotas antigas */}
+              {/* <Route element={<Carros/>} path="/carros" /> */}
+              {/* <Route element={<Locadora/>} path="/locadora" /> */}
+              {/* <Route element={<Perfil/>} path="/perfil" /> */}
+              {/* <Route element={<Reserva/>} path="/reservas" /> */}
               <Route element={<PerfilUsuario/>} path="/perfilUsuario" />
-              <Route element={<Reserva/>} path="/reservas" />
               <Route element={<ReservaUsuario/>} path="/ReservasUsuario" />
               <Route element={<CarrosUsuario/>} path="/CarrosUsuario" />
           </Routes>

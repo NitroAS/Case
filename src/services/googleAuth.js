@@ -1,4 +1,5 @@
 import jwt_decode from "jwt-decode";
+import { apiCase } from "./api";
 
 export function HandleCredentialResponse(response) {
   
@@ -31,38 +32,29 @@ function parseJwt (token) {
   var decoded = jwt_decode(token);
   console.log(decoded)
   // let redirect = localStorage.getItem('token')
-  if(decoded.email === "viniciusgomesdecerqueira@gmail.com" || decoded.email === "alexsandrosouzadasilva75@gmail.com" ){
-    window.location.replace('http://localhost:3000/carros')
-  }
-  else{
-    window.location.replace('http://localhost:3000/perfilUsuario')
-  }
+  BuscarUsuarios(decoded)
   return decoded;
 };
 
 
-// const BuscarUsuarios = () =>  {
+const BuscarUsuarios = (decoded) =>  {
 
-//   const PegandoPerfis = () => {
-//     apiCase.get('usuario')
-//       .then(resultado => {
-//         setPerfis(resultado.data)
-//       })  
-//     }
+  apiCase.get('usuario')
+    .then(resultado => {
+           
+        // const decoded  = JSON.parse(A)
+        
+        const usuario = resultado.data.find(usuario => usuario.email === decoded.email) 
+        
+        if (usuario !== undefined){
+          window.location.replace('http://localhost:3000/carros')
+        }
+        else{
+          window.location.replace('http://localhost:3000/perfilUsuario')
+        }
+    })  
+    
 
-//   const A = localStorage.getItem('token')
-
-//   const token  = JSON.parse(A)
-  
-//   const usuario = perfis.find(usuario => usuario.email === token.email) 
-  
-//   if (usuario !== undefined){
-//     window.location.replace('http://localhost:3000/carros')
-//   }
-//   else{
-//     window.location.replace('http://localhost:3000/perfilUsuario')
-//   }
-
-// }
+}
 
 export default HandleCredentialResponse;
