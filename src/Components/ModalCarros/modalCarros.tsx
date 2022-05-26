@@ -19,7 +19,7 @@ export const ModalCarros = (props: any): JSX.Element => {
                                 <input type="text" value={props.item.portas} className='inputModal' />
                                 <input type="text" value={props.item.airbag} className='inputModal' />
                                 <input type="text" value={props.item.npessoas} className='inputModal' />
-                                <input type="text" placeholder='Locadoura Matriz' className='inputModal' />
+                                <input type="text" value={props.item.locadora.nome} className='inputModal' />
                             </div>
                             <div className='divButtonModal'>
                                 <Link className='linkModal' to='/reservasUsuario'><button className='bittonReservaModal'>Reservar</button></Link>

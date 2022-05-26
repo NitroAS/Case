@@ -56,7 +56,7 @@ export const CarrosUsuario = ():JSX.Element => {
     const [carros, setCarros] = useState<any[]>([])
     const ListarNomes = ():any => {
  
-        apiCase.get('carros')
+        apiCase.get('carros?_expand=locadora')
         .then(resultado => {
  
             setCarros(resultado.data)
