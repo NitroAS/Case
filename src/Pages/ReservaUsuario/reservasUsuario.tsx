@@ -60,7 +60,7 @@ export const ReservaUsuario = (): JSX.Element => {
     const ExcluirReservasUsuario = (id: any) => {
 
         Swal.fire({
-            title: 'Deseja Deleta essa Reserva??',
+            title: 'Deseja Excluir essa Reserva??',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',

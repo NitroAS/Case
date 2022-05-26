@@ -52,6 +52,14 @@
       "npessoas": 5,
       "airbag": true,
       "locadoraId": 1
+    },
+    {
+      "nome": "1",
+      "portas": "1",
+      "npessoas": "1",
+      "airbag": "false",
+      "locadoraId": "1",
+      "id": 3
     }
   ],
   "reservas": [
@@ -70,26 +78,6 @@
       "dataentrega": "2022-05-25",
       "usuarioId": 2,
       "carroId": 1
-    },
-    {
-      "nome": "",
-      "data": "'12",
-      "horario": "21",
-      "dataentrega": "21",
-      "usuarioId": 1,
-      "carroId": 1,
-      "locadoraId": "",
-      "id": 3
-    },
-    {
-      "nome": "",
-      "data": "21sas",
-      "horario": "21sas",
-      "dataentrega": "211ass",
-      "usuarioId": 1,
-      "carroId": 1,
-      "locadoraId": "",
-      "id": 4
     }
   ]
 }

@@ -31,7 +31,7 @@ export const PerfilUsuario = (): JSX.Element => {
     
 
     const ExcluirPerfilUsario = (id: any) => {
-        if (window.confirm('Deseja realmente excluir o Perfil?')) {
+        if (window.confirm('Deseja realmente Excluir o Perfil?')) {
             apiCase.delete(`usuario/${id}`)
                 .then(() => {
                     window.location.reload()
