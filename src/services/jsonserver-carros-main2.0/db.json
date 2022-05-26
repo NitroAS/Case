@@ -33,10 +33,11 @@
       "id": 1
     },
     {
-      "nome": "c",
-      "portas": "3",
-      "npessoas": "4",
+      "nome": "ca",
+      "portas": "5",
+      "npessoas": "5",
       "airbag": "true",
+      "locadoraId": "2",
       "id": 2
     },
     {
@@ -44,6 +45,7 @@
       "portas": "5",
       "npessoas": "5",
       "airbag": "true",
+      "locadoraId": "2",
       "id": 3
     }
   ],

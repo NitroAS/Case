@@ -87,7 +87,7 @@ export const Carros = ():JSX.Element => {
                 timer: 1500
             })
             
-            apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
+            apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
             .then(ListarNomes())
             .then(() => window.location.reload())
         }else{
