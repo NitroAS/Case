@@ -128,7 +128,7 @@ export const ReservaUsuario = (): JSX.Element => {
 
         if (dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '') {
 
-            apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario})
+            apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: guardaIdLocadora})
                 .then(() => {
                     window.location.reload()
 
@@ -182,7 +182,7 @@ export const ReservaUsuario = (): JSX.Element => {
                                         placeholder='Onix 2.0'
                                         className='escolherTiposDeCarros'
                                         defaultValue={guardaNomeCarros}
-                                        disabled
+                                        readOnly
                                          />
                                 </div>
                                 <div className='inputsMenoresUsuario'>
@@ -214,7 +214,6 @@ export const ReservaUsuario = (): JSX.Element => {
                                     className='selectLocadouraCarrosUsuario'
                                     defaultValue={1}
                                     disabled>
-                                       
                                         <option
                                         value={1}>{guardaLocadora}</option>
                                     
