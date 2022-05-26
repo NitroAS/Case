@@ -16,7 +16,7 @@ export const Header = (props:any): JSX.Element => {
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineCarros} to='/carros'>{props.objeto.descriptionCarros}</Link>
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineCarros} to='/CarrosUsuario'>{props.objeto.descriptionCarrosUsuario}</Link>
                         <Link className={"btnHeaderPerfil " + props.objeto.underlineReserva} to='/reservas'>{props.objeto.descriptionReservas}</Link>
-                        <Link className={"btnHeaderPerfil " + props.objeto.underlineReserva} to='/reservasUsuario'>{props.objeto.descriptionReservasUsuario}</Link>
+                        <Link className={"btnHeaderPerfil " + props.objeto.underlineReserva} to='/ReservasUsuario'>{props.objeto.descriptionReservasUsuario}</Link>
                 
 
                     <div className="LogoHeader">

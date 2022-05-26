@@ -19,10 +19,29 @@ let propsReservaUsuario: any = {
 
 export const ReservaUsuario = (): JSX.Element => {
     const Location:any = useLocation()
-    const {id} = Location.state
-    const {locadoraId} = Location.state
-    const {guardaNomeCarros} = Location.state
-    const {guardaLocadora} = Location.state
+    const [guardaLocadora, setGuardaLocadora] = useState('')
+    const [guardaNomeCarros, setGuardaCarros] = useState('')
+    const [guardaIdCarros, setGuardaIdCarros] = useState('')
+    const [guardaIdLocadora, setGuardaIdLocadora] = useState('')
+
+
+    useEffect(() => {
+
+        if(Location.state !== null){
+            
+            const {id} = Location.state
+            const {locadoraId} = Location.state
+            const {guardaNomeCarros} = Location.state
+            const {guardaLocadora} = Location.state
+            setGuardaLocadora(guardaLocadora)
+            setGuardaCarros(guardaNomeCarros)
+            setGuardaIdCarros(id)
+            setGuardaIdLocadora(locadoraId)
+        }
+       
+    }, [])
+
+
     
     const [reservaUsuario, setReservaUsuario] = useState<any[]>([]);
     const PegandoReservasUsuario = () => {
@@ -30,8 +49,8 @@ export const ReservaUsuario = (): JSX.Element => {
         apiCase.get('reservas?_expand=carro')
             .then(resultado => {
                 setReservaUsuario(resultado.data)
-                console.log(id);
-                console.log(locadoraId);
+                // console.log(id);
+                // console.log(locadoraId);
             })
     }
     useEffect(() => {
@@ -128,7 +147,7 @@ export const ReservaUsuario = (): JSX.Element => {
 
         if ( dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' ) {
 
-            apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario  })
+            apiCase.post(`reservas?_expand=carro`, { nome: nomeCarroUsuario, data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaIdCarros  })
                 .then(() => {
                     window.location.reload()
     

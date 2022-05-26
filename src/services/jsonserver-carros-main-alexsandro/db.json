@@ -3,19 +3,14 @@
     {
       "nome": "Paulo",
       "email": "paulo@email.com",
+      "telefone": "(21) 99900-0002",
       "id": 1
     },
     {
       "nome": "Priscila",
       "email": "priscila@email.com",
-      "telefone": "a",
+      "telefone": "a2",
       "id": 2
-    },
-    {
-      "nome": "OlaMundo",
-      "telefone": "21 9880-32107",
-      "email": "AAAAAAAA@gmail.com",
-      "id": 3
     },
     {
       "nome": "Alexsandro",
