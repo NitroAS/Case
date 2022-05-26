@@ -4,7 +4,7 @@ import { Footer } from '../../Components/Footer/footer'
 import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
 import Swal from 'sweetalert2'
-import { buttonPerfil } from '../../Components/BotaoEditarPerfil/botaoEditarPerfil'
+import { ButtonPerfil } from '../../Components/BotaoEditarPerfil/botaoEditarPerfil'
 
 export const Perfil = (): JSX.Element => {
     let propsPerfil: any = {
@@ -62,7 +62,7 @@ export const Perfil = (): JSX.Element => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Excluir!'
+            confirmButtonText: 'Delete!'
         })
 
             .then((resultado) => {
@@ -99,10 +99,12 @@ export const Perfil = (): JSX.Element => {
     const [telefone, setTelefone] = useState('')
 
 
+    // booleanoBotaoPeril
+    const [booleanoPerfil, setBooleanoPerfil] = useState(false)
     
 
     const EditarPerfil = (id: number) => {
-
+        setBooleanoPerfil(true)
         if (nomePerfis !== '' && nomeEmail !== '' && telefone !== '') {
 
             apiCase.put(`usuario/${id}`, { nome: nomePerfis, email: nomeEmail, telefone: telefone })
@@ -122,6 +124,8 @@ export const Perfil = (): JSX.Element => {
                 confirmButtonText: 'OK'
             })
         }
+
+        
 
     }
 
@@ -209,9 +213,7 @@ export const Perfil = (): JSX.Element => {
                         </div>
                         <div className="btnPerfilAlinhamento">
                             <div className="btnAtualizar">
-                                <button className='btnPerfilAtualizar' onClick={() => EditarPerfil(guardaId)}>Editar</button>
-                                <button className='btnPerfilAtualizar' onClick={() => CadastrarPerfil()}>Atualizar</button>
-                                {/* <buttonPerfil /> */}
+                                <ButtonPerfil Booleano={booleanoPerfil} Editar={EditarPerfil} Cadastrar={CadastrarPerfil} />
                             </div>
                             <div className="btnExcluirAlinhamentoPerfil">
                                 <button className='btnPerfilExcluir'>Excluir Cadastro</button>

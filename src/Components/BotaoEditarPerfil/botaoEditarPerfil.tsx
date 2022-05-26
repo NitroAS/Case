@@ -1,7 +1,8 @@
-export const buttonPerfil = (props:any) => {
-    if(props.booleano === true){
-        return(<button className='editar' onClick={props.Editar}>Editar</button>)
+export const ButtonPerfil = (props:any) => {
+
+    if(props.Booleano === true){
+        return( <button className='btnPerfilAtualizar' onClick={props.Editar}>Editar</button>)
     }else{
-        return( <button className='buttonCadastrarCarros' onClick={props.Salvar}>Cadastrar</button>)
+        return(<button className='btnPerfilAtualizar' onClick={props.Cadastrar}>Atualizar</button>)
     }
 }
