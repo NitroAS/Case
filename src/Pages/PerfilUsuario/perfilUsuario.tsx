@@ -154,9 +154,7 @@ export const PerfilUsuario = (): JSX.Element => {
                         </div>
                     </div>
                 </div>
-                <div className='alinhamentoPerfilFinal'>
-                  
-                   
+                {/* <div className='alinhamentoPerfilFinal'>
                     {perfisUsuario.map((item): any => {
                         return (
                             <div className="bordaPerfil" onClick={() => TrazerDadosDoPerfilUsuario (item.id , item.nome , item.email, item.telefone )}>
@@ -171,7 +169,7 @@ export const PerfilUsuario = (): JSX.Element => {
                             </div>
                         )
                     })}
-                </div>
+                </div> */}
             </div>
             <Footer />
         </>
