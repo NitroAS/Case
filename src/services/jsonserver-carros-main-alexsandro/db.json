@@ -1,12 +1,6 @@
 {
   "usuario": [
     {
-      "nome": "PauloA",
-      "email": "paulo@email.com",
-      "telefone": "(21) 99900-0002",
-      "id": 1
-    },
-    {
       "nome": "Priscila",
       "email": "priscila@email.com",
       "telefone": "a2",
@@ -23,6 +17,12 @@
       "telefone": "21(211)",
       "email": "alexsandrosouzadasilva75@gmail.com",
       "id": 7
+    },
+    {
+      "nome": "po",
+      "telefone": "as",
+      "email": "asas@gmail.com",
+      "id": 8
     }
   ],
   "locadoras": [
@@ -39,12 +39,12 @@
   ],
   "carros": [
     {
-      "id": 1,
       "nome": "Ford Fusion",
       "portas": 4,
       "npessoas": 5,
       "airbag": true,
-      "locadoraId": 1
+      "locadoraId": "1",
+      "id": 1
     },
     {
       "id": 2,
@@ -61,6 +61,14 @@
       "airbag": "false",
       "locadoraId": "1",
       "id": 3
+    },
+    {
+      "nome": "As",
+      "portas": "3",
+      "npessoas": "6",
+      "airbag": "false",
+      "locadoraId": "2",
+      "id": 4
     }
   ],
   "reservas": [
