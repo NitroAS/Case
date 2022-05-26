@@ -20,6 +20,8 @@ import { apiCase } from '../../services/api'
 // Modal
 import { ModalCarros } from "../../Components/ModalCarros/modalCarros"
 
+
+
 export const CarrosUsuario = ():JSX.Element => {
     // Back-end
     // ---------------------------------
@@ -34,7 +36,22 @@ export const CarrosUsuario = ():JSX.Element => {
         underlineLocadora: 'underlineLocadora',
     }
 
+    // Carro selecionado
+    const [item, setItem] = useState()
+
     // Modal
+    const [modal, setModal] = useState(false)
+    const AbrirFechar = (item:any):any => {
+        if (modal === false) {
+            
+            setModal(true)
+        }else{
+            setModal(false)
+        }
+        
+        setItem(item)
+
+    }
 
     // Listar
     const [carros, setCarros] = useState<any[]>([])
@@ -66,7 +83,7 @@ export const CarrosUsuario = ():JSX.Element => {
 
                         {/* Econômico */}
                         
-                        <ModalCarros />
+                        <ModalCarros Modal={modal} Fechar={AbrirFechar} item={item} />
                         <section className='sectionsDoscardscarros espaçamentoEntreAsSections'>
                             <h2 className='h2Carros'>Econômico</h2>
                             <div className="barraDeSeparacaoCarros"></div>
@@ -87,7 +104,7 @@ export const CarrosUsuario = ():JSX.Element => {
                                                         <p className='pCardCarros'>Faça a sua reserva e garata a locação do automóvel.</p>
                                                     </div>
                                                     <div className='buttonsDoCardcarro'>
-                                                        <button className='buttonDetalhesCarros'>Detalhes</button>
+                                                        <button className='buttonDetalhesCarros' onClick={() => AbrirFechar(item)}>Detalhes</button>
                                                     </div>
                                                 </div>
                                             </div>

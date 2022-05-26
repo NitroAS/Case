@@ -6,6 +6,8 @@ import car3_2 from '../../Assets/IMGsCarros/car3_2.png'
 import car2_2 from '../../Assets/IMGsCarros/car2_2.png'
 import car1_1 from '../../Assets/IMGsCarros/car1_1.png'
 
+// sweetalert
+import Swal from 'sweetalert2'
 
 // Header e Footer
 import Header from '../../Components/Header/header'
@@ -72,13 +74,30 @@ export const Carros = ():JSX.Element => {
         .then(() => window.location.reload())
     }
 
+
     // Salvar
     const [nome, setNome] = useState('')
     const Salvar = () => {
-        
-        apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
-        .then(ListarNomes())
-        .then(() => window.location.reload())
+        if (nome != '' && portas != '' && npessoas != '' && airbag != '') {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            
+            apiCase.post('carros', {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag})
+            .then(ListarNomes())
+            .then(() => window.location.reload())
+        }else{
+            Swal.fire({
+                title: 'Obrigatório preencher todos os campos',
+                icon: 'warning',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'Ok!'
+              })
+        }
     }
 
     // Hook do airbag

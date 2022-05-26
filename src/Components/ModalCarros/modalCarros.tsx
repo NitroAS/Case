@@ -1,28 +1,38 @@
 import car3_2 from '../../Assets/IMGsCarros/car3_2.png'
 import '../../Assets/CSS/modalCarros.css'
+import { Link } from "react-router-dom";
 
-export const ModalCarros = ():JSX.Element => {
+export const ModalCarros = (props: any): JSX.Element => {
 
-    return(
-        <>
-            <div className='contornoModal'>
-                <img src={car3_2} alt="imagem de um carro econômico" className='imgCarroEonômicocarros' />
-                <div className='alinhamentoModal'>
-                    <div className='divH3Modal'>
-                        <h3 className='h3Modal'>papa</h3>
+    {
+        if (props.Modal === true) {
+            return (
+                <>
+                    <div className='fundoModal' onClick={props.Fechar}></div>
+                    <div className='contornoModal'>
+                        <img src={car3_2} alt="imagem de um carro econômico" className='imgCarroEonômicocarros' />
+                        <div className='alinhamentoModal'>
+                            <div className='divH3Modal'>
+                                <h3 className='h3Modal'>{props.item.nome}</h3>
+                            </div>
+                            <div className='divInputsModal'>
+                                <input type="text" value={props.item.portas} className='inputModal' />
+                                <input type="text" value={props.item.airbag} className='inputModal' />
+                                <input type="text" value={props.item.npessoas} className='inputModal' />
+                                <input type="text" placeholder='Locadoura Matriz' className='inputModal' />
+                            </div>
+                            <div className='divButtonModal'>
+                                <Link className='linkModal' to='/reservasUsuario'><button className='bittonReservaModal'>Reservar</button></Link>
+                            </div>
+                        </div>
                     </div>
-                    <div className='divInputsModal'>
-                        <input type="text" placeholder='portas' className='inputModal' />
-                        <input type="text" placeholder='Airbag' className='inputModal' />
-                        <input type="text" placeholder='5 pessoas' className='inputModal' />
-                        <input type="text" placeholder='Locadoura Matriz' className='inputModal' />
-                    </div>
-                    <div className='divButtonModal'> 
-                        <button className='bittonReservaModal'>Reservar</button>
-                    </div>
-                </div>
-            </div>
-        </>
+                </>
+            )
+        }
+    }
+
+    return (
+        <div></div>
     )
 
 }
