@@ -161,6 +161,7 @@ export const Carros = ():JSX.Element => {
         setNPessoas(npessoas)
         setAirbag(airbag)
         setLocadoraValor(locadoraValor.toString())
+        
 
     }
 
@@ -205,8 +206,8 @@ export const Carros = ():JSX.Element => {
                                     onChange = {(e) => setNPessoas(e.target.value)} />
                                 </div>
                                 <div className='divCadastrarCarros'>
-                                    <select className='selectLocadouraCarros' onChange={(e) => setLocadoraValor(e.target.value)}>
-                                        <option selected disabled hidden>Qual a Locadoura?</option>
+                                    <select className='selectLocadouraCarros' value={locadoraValor} onChange={(e) => setLocadoraValor(e.target.value)}>
+                                        <option value={''} disabled hidden>Qual a Locadoura?</option>
                                         {locadoras.map((item):any =>{
                                             return(
                                                 <option value={item.id}>{item.nome}</option>
