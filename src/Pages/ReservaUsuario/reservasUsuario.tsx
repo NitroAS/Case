@@ -188,7 +188,7 @@ export const ReservaUsuario = (): JSX.Element => {
                                 <div className='inputsMenoresUsuario'>
                                     <input
                                         type="text"
-                                        placeholder="Horário da reserva:"
+                                        placeholder="Data reserva:"
                                         className='inputsMenoresCarrosUsuario'
                                         defaultValue={dataRetiradaReservaUsuario}
                                         onChange={e => setDataRetiradaReservaUsuario(e.target.value)}
