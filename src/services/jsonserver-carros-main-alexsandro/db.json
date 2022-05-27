@@ -8,8 +8,8 @@
     },
     {
       "nome": "Alexsandro",
-      "telefone": "(21) 9999-666",
       "email": "alexsandrosouzadasilva75@gmail.com",
+      "telefone": "(21) 9999-666",
       "id": 5
     },
     {
@@ -47,18 +47,18 @@
       "id": 1
     },
     {
-      "id": 2,
-      "nome": "Ford Focus",
-      "portas": 4,
+      "nome": "Ford Focuss",
+      "portas": "42",
       "npessoas": 5,
-      "airbag": true,
-      "locadoraId": 1
+      "airbag": "true",
+      "locadoraId": "1",
+      "id": 2
     },
     {
       "nome": "Andrei chato",
       "portas": "1",
       "npessoas": "1",
-      "airbag": "false",
+      "airbag": "true",
       "locadoraId": "1",
       "id": 3
     },

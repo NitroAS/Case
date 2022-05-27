@@ -146,7 +146,7 @@ export const Carros = ():JSX.Element => {
 
     const Editar = ():any => {
       
-        if(nome !== '' && portas !== '' && npessoas !== ''  && locadoraValor !== '') {
+        if(nome !== '' && portas !== '' && npessoas !== ''  && locadoraValor !== '' && airbag !== '') {
 
             apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
             .then(() => window.location.reload())
