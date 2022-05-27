@@ -1,7 +1,9 @@
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './Assets/CSS/global.css'
-import {ProtectedRoute} from './Components/AuthBlock/authBlock'
+
+// import {ProtectedRoute} from './Components/AuthBlock/authBlock'
+
 // Rotas
 import { Home } from './Pages/Home/home'
 import { Login } from './Pages/Login/login';
@@ -19,27 +21,29 @@ const Rotas = () =>{
           <Routes>
               <Route element={<Home/>} path="/"/>
               <Route element={<Login/>} path="/login" />
-              <Route path='/perfil' element={
-                <ProtectedRoute user={undefined} children={<Perfil/>}></ProtectedRoute>
+              
+              {/* <Route path='/perfil' element={
+                <ProtectedRoute children={<Perfil/>}></ProtectedRoute>
               }>
               </Route>
               <Route path='/locadora' element={
-                <ProtectedRoute user={undefined} children={<Locadora/>}></ProtectedRoute>
+                <ProtectedRoute children={<Locadora/>}></ProtectedRoute>
               }>
               </Route>
               <Route path='/reservas' element={
-                <ProtectedRoute user={undefined} children={<Reserva/>}></ProtectedRoute>
+                <ProtectedRoute children={<Reserva/>}></ProtectedRoute>
               }>
               </Route>
               <Route path='/carros' element={
-                <ProtectedRoute user={undefined} children={<Carros/>}></ProtectedRoute>
+                <ProtectedRoute children={<Carros/>}></ProtectedRoute>
               }>
-              </Route>
+              </Route> */}
+              
               {/* rotas antigas */}
-              {/* <Route element={<Carros/>} path="/carros" /> */}
-              {/* <Route element={<Locadora/>} path="/locadora" /> */}
-              {/* <Route element={<Perfil/>} path="/perfil" /> */}
-              {/* <Route element={<Reserva/>} path="/reservas" /> */}
+              <Route element={<Carros/>} path="/carros" />
+              <Route element={<Locadora/>} path="/locadora" />
+              <Route element={<Perfil/>} path="/perfil" />
+              <Route element={<Reserva/>} path="/reservas" />
               <Route element={<PerfilUsuario/>} path="/perfilUsuario" />
               <Route element={<ReservaUsuario/>} path="/ReservasUsuario" />
               <Route element={<CarrosUsuario/>} path="/CarrosUsuario" />

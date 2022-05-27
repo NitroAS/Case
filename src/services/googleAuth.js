@@ -36,12 +36,11 @@ function parseJwt (token) {
   return decoded;
 };
 
-
 const BuscarUsuarios = (decoded) =>  {
 
   apiCase.get('usuario')
     .then(resultado => {
-           
+       
         // const decoded  = JSON.parse(A)
         
         const usuario = resultado.data.find(usuario => usuario.email === decoded.email) 
@@ -53,8 +52,6 @@ const BuscarUsuarios = (decoded) =>  {
           window.location.replace('http://localhost:3000/perfilUsuario')
         }
     })  
-    
-
 }
 
 export default HandleCredentialResponse;
