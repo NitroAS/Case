@@ -15,8 +15,21 @@ export const ModalCarros = (props: any): JSX.Element => {
     {
         if (props.Modal === true) {
             console.log(props.item);
-            
+
+
+            let texto;
+
+        if(props.item.airbag === false)
+        {
+            texto= 'Sem airbag'
+        }
+
+        else
+        {
+            texto = 'Com airbag'
+        }
             return (
+                
                 <>
                     <div className='fundoModal' onClick={props.Fechar}></div>
                     <div className='contornoModal'>
@@ -26,9 +39,9 @@ export const ModalCarros = (props: any): JSX.Element => {
                                 <h3 className='h3Modal'>{props.item.nome}</h3>
                             </div>
                             <div className='divInputsModal'>
-                                <input type="text" value={props.item.portas} className='inputModal' />
-                                <input type="text" value={props.item.airbag} className='inputModal' />
-                                <input type="text" value={props.item.npessoas} className='inputModal' />
+                                <input type="text" value= {`${props.item.portas}  Portas`} className='inputModal' />
+                                <input type="text" value={texto} className='inputModal' />
+                                <input type="text" value={` ${props.item.npessoas} Pessoas`} className='inputModal' />
                                 <input type="text" value={props.item.locadora.nome} className='inputModal' />
                             </div>
                             <div className='divButtonModal'>

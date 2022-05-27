@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 import { useLocation } from 'react-router-dom'
 
 
+
 let propsReservaUsuario: any = {
     descriptionHome: 'Home',
     descriptionCarrosUsuario: 'Carros',
@@ -100,7 +101,11 @@ export const ReservaUsuario = (): JSX.Element => {
         
     }
 
+    
+    const [booleano, setBooleano] = useState(false)
     const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string , carroId: number , locadoraId: string) => {
+        setBooleano(true)
+
         setGuardaIReservasdUsuario(id)
         setNomeCarroUsuario(nome)
         setDataRetiradaReservaUsuario(data)
@@ -124,11 +129,14 @@ export const ReservaUsuario = (): JSX.Element => {
     const [horarioRetiradaUsuario, setHorarioRetiradaUsuario] = useState('');
     const [devolucaoUsuario, setdevolucaoUsuario] = useState('');
    
-    const EditarReservasUsuario = (id: number) => {
 
+    
+    const EditarReservasUsuario = (id:number) => {
+
+        
         if (dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '') {
 
-            apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: locadoraValorUsuario})
+            apiCase.put(`reservas/${id}`, { data: dataRetiradaReservaUsuario, horario: horarioRetiradaUsuario, dataentrega: devolucaoUsuario, usuarioId: guardaUsuarioId , carroId: guardaCarroId, locadoraId: guardaIdLocadora})
                 .then(() => {
                     window.location.reload()
 
@@ -182,13 +190,13 @@ export const ReservaUsuario = (): JSX.Element => {
                                         placeholder='Onix 2.0'
                                         className='escolherTiposDeCarros'
                                         defaultValue={guardaNomeCarros}
-                                        disabled
+                                        readOnly
                                          />
                                 </div>
                                 <div className='inputsMenoresUsuario'>
                                     <input
                                         type="text"
-                                        placeholder="Horário da reserva:"
+                                        placeholder="Data reserva:"
                                         className='inputsMenoresCarrosUsuario'
                                         defaultValue={dataRetiradaReservaUsuario}
                                         onChange={e => setDataRetiradaReservaUsuario(e.target.value)}
@@ -214,16 +222,15 @@ export const ReservaUsuario = (): JSX.Element => {
                                     className='selectLocadouraCarrosUsuario'
                                     defaultValue={1}
                                     disabled>
-                                       
                                         <option
                                         value={1}>{guardaLocadora}</option>
                                     
                                 
                                 </select>
-
                                     
-                                    <button className='buttonCadastrarCarrosUsuario' onClick={() => CadastrarReservasUsuario()}>Reservar</button>
-                                    <button className='buttonCadastrarCarrosUsuario' onClick={() => EditarReservasUsuario(guardaIReservasdUsuario)}>Editar</button>
+                                <button className='buttonCadastrarCarrosUsuario' onClick={() => CadastrarReservasUsuario()}>Reservar</button>
+                                <button className='buttonCadastrarCarrosUsuario' onClick={() => EditarReservasUsuario(guardaIReservasdUsuario)}>Editar</button>
+                                   
                                 </div>
                             </div>
                         </div>

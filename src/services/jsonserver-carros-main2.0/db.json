@@ -7,20 +7,24 @@
       "id": 1
     },
     {
-      "id": 2,
       "nome": "Priscila",
       "email": "priscila@email.com",
-      "foto": "avatar.png"
+      "telefone": "54677777",
+      "id": 2
     }
   ],
   "locadoras": [
     {
-      "id": 1,
-      "nome": "Dois Irmãos"
+      "nome": "Dois Irmãos",
+      "endereco": "Pedra dos Lagos",
+      "telefone": "2199999999999",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Tres Irmãos"
+      "nome": "Três irmãos",
+      "endereco": "pppp",
+      "telefone": "88888888",
+      "id": 2
     }
   ],
   "carros": [
@@ -31,6 +35,14 @@
       "airbag": true,
       "locadoraId": "2",
       "id": 1
+    },
+    {
+      "nome": "carros",
+      "portas": "5",
+      "npessoas": "5",
+      "airbag": "true",
+      "locadoraId": "2",
+      "id": 2
     }
   ],
   "reservas": [
@@ -43,12 +55,22 @@
       "carroId": 1
     },
     {
-      "id": 2,
       "data": "2022-05-21",
-      "horario": "15:00",
+      "horario": "4444",
       "dataentrega": "2022-05-25",
-      "usuarioId": 2,
-      "carroId": 1
+      "usuarioId": 1,
+      "carroId": 1,
+      "locadoraId": "2",
+      "id": 2
+    },
+    {
+      "nome": "",
+      "data": "444",
+      "horario": "444",
+      "dataentrega": "4444",
+      "usuarioId": 1,
+      "carroId": 2,
+      "id": 3
     }
   ]
 }

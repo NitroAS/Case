@@ -1,12 +1,6 @@
 {
   "usuario": [
     {
-      "nome": "Paulo",
-      "email": "paulo@email.com",
-      "telefone": "(21) 99900-0002",
-      "id": 1
-    },
-    {
       "nome": "Priscila",
       "email": "priscila@email.com",
       "telefone": "a2",
@@ -17,6 +11,18 @@
       "telefone": "(21) 9999-666",
       "email": "alexsandrosouzadasilva75@gmail.com",
       "id": 5
+    },
+    {
+      "nome": "4141",
+      "telefone": "21(211)",
+      "email": "alexsandrosouzadasilva75@gmail.com",
+      "id": 7
+    },
+    {
+      "nome": "po",
+      "telefone": "as",
+      "email": "asas@gmail.com",
+      "id": 8
     }
   ],
   "locadoras": [
@@ -33,12 +39,12 @@
   ],
   "carros": [
     {
-      "id": 1,
       "nome": "Ford Fusion",
       "portas": 4,
       "npessoas": 5,
       "airbag": true,
-      "locadoraId": 1
+      "locadoraId": "1",
+      "id": 1
     },
     {
       "id": 2,
@@ -49,31 +55,40 @@
       "locadoraId": 1
     },
     {
-      "nome": "1",
+      "nome": "Andrei chato",
       "portas": "1",
       "npessoas": "1",
       "airbag": "false",
       "locadoraId": "1",
       "id": 3
+    },
+    {
+      "nome": "As",
+      "portas": "3",
+      "npessoas": "6",
+      "airbag": "false",
+      "locadoraId": "2",
+      "id": 4
     }
   ],
   "reservas": [
     {
-      "data": "2022-05-20",
+      "nome": "",
+      "data": "21/05/2001",
       "horario": "15:00",
-      "dataentrega": "2022-05-25",
+      "dataentrega": "21/05/2022",
       "usuarioId": 1,
-      "carroId": 1,
-      "id": 1
+      "carroId": 2,
+      "id": 4
     },
     {
-      "data": "2022-09-21",
-      "horario": "17:00",
-      "dataentrega": "2022-07-25",
+      "nome": "",
+      "data": "04/11/2022",
+      "horario": "23:00",
+      "dataentrega": "11/11/2022",
       "usuarioId": 1,
       "carroId": 1,
-      "locadoraId": 1,
-      "id": 2
+      "id": 5
     }
   ]
 }
