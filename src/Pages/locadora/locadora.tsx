@@ -4,6 +4,9 @@ import { Footer } from '../../Components/Footer/footer'
 import { useEffect, useState } from 'react'
 import { apiCase } from '../../services/api'
 import Swal from 'sweetalert2'
+
+import { ButtonLocadora } from '../../Components/ButtonLocadora/buttonLocadora'
+
 export const Locadora = (): JSX.Element => {
     let propsLocadora: any = {
         descriptionHome: 'Home',
@@ -53,13 +56,18 @@ export const Locadora = (): JSX.Element => {
                
     }
 
+    const [booleano, setBooleano] = useState(false)
+
     const [guardaIdLocadoras, setGuardaIdLocadoras] = useState(0);
     const [nomeLocadoras, setNomeLocadoras] = useState('');
     const [enderecoLocadoras, setEnderecoLocadora] = useState('');
     const [telefonelocadora, setTelefoneLocadora] = useState('')
+    const [id,  setId] = useState(0)
 
         const TrazerDadosDoLocadora = (id:number, nome: string, endereco: string, telefone: string) => {
 
+            setId(id)
+            setBooleano(true)
             setNomeLocadoras(nome)
             setEnderecoLocadora(endereco)
             setTelefoneLocadora(telefone)
@@ -73,7 +81,8 @@ export const Locadora = (): JSX.Element => {
 
     // const feita para guarda o Id e la em baixo no Onclick
 
-    const EditarLocadora = (id: number) => {
+    
+    const EditarLocadora = () => {
 
         if (nomeLocadoras !== '' && enderecoLocadoras !== '' && telefonelocadora !== '' ) {
             apiCase.put(`locadoras/${id}`, { nome: nomeLocadoras , endereco: enderecoLocadoras , telefone: telefonelocadora  })
@@ -81,6 +90,9 @@ export const Locadora = (): JSX.Element => {
                     window.location.reload()
                 })
         }
+
+        
+
     }
 
     const CadastrarLocadora = () => {
@@ -132,7 +144,7 @@ export const Locadora = (): JSX.Element => {
                             placeholder='Endereço:' 
                             className='inputCadastrarLocadora' 
                             type="text"
-                            defaultValue={enderecoLocadoras}
+                            defaultValue={telefonelocadora}
                                 onChange={e => setEnderecoLocadora(e.target.value)}
                              />
                         </div>
@@ -141,11 +153,12 @@ export const Locadora = (): JSX.Element => {
                                 placeholder='Telefone:' 
                                 className='inputCadastrarLocadora telefoneLocadora'
                                 type="text"
-                                defaultValue={telefonelocadora}
+                                defaultValue={enderecoLocadoras}
                                 onChange={e => setTelefoneLocadora(e.target.value)}
                              />
-                            <button className='botaoCadastrarLocadora' onClick={() => EditarLocadora(guardaIdLocadoras)}>Editar</button>
-                            <button className='botaoCadastrarLoacadora' onClick={() => CadastrarLocadora()}>Cadastrar</button>
+                            
+                           
+                            <ButtonLocadora booleano={booleano} Editar={EditarLocadora} Cadastrar={CadastrarLocadora} />
                         </div>
                     </div>
                 </section>
