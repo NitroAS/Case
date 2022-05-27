@@ -102,9 +102,9 @@ export const ReservaUsuario = (): JSX.Element => {
     }
 
     const [id, setId] = useState(0)
-    const [booleano, setBooleano] = useState(false)
+ 
     const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string , carroId: number , locadoraId: string) => {
-        setBooleano(true)
+      
         setId(id)
 
         setGuardaIReservasdUsuario(id)
@@ -230,7 +230,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                 </select>
                                     
                                     
-                                    <ButtonReserva booleano={booleano} cadastrar={CadastrarReservasUsuario} editar={EditarReservasUsuario} />
+                                <button className='buttonCadastrarCarrosUsuario' onClick={() => CadastrarReservasUsuario()}>Reservar</button>
+                                <button className='buttonCadastrarCarrosUsuario' onClick={() => EditarReservasUsuario()}>Editar</button>
                                 </div>
                             </div>
                         </div>
