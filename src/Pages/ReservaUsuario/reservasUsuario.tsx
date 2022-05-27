@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import { useLocation } from 'react-router-dom'
 
-import { ButtonReserva } from '../../Components/BotaoReserva/botaoReserva'
+
 
 let propsReservaUsuario: any = {
     descriptionHome: 'Home',
@@ -101,11 +101,10 @@ export const ReservaUsuario = (): JSX.Element => {
         
     }
 
-    const [id, setId] = useState(0)
+    
     const [booleano, setBooleano] = useState(false)
     const TrazerDadosDoReservasUsuario = (id: number, nome: string, data: string, horario: string, dataentrega: string , carroId: number , locadoraId: string) => {
         setBooleano(true)
-        setId(id)
 
         setGuardaIReservasdUsuario(id)
         setNomeCarroUsuario(nome)
@@ -132,7 +131,7 @@ export const ReservaUsuario = (): JSX.Element => {
    
 
     
-    const EditarReservasUsuario = () => {
+    const EditarReservasUsuario = (id:number) => {
 
         
         if (dataRetiradaReservaUsuario !== '' && horarioRetiradaUsuario !== '' && devolucaoUsuario !== '') {
@@ -229,8 +228,9 @@ export const ReservaUsuario = (): JSX.Element => {
                                 
                                 </select>
                                     
-                                    
-                                    <ButtonReserva booleano={booleano} cadastrar={CadastrarReservasUsuario} editar={EditarReservasUsuario} />
+                                <button className='buttonCadastrarCarrosUsuario' onClick={() => CadastrarReservasUsuario()}>Reservar</button>
+                                <button className='buttonCadastrarCarrosUsuario' onClick={() => EditarReservasUsuario(guardaIReservasdUsuario)}>Editar</button>
+                                   
                                 </div>
                             </div>
                         </div>
