@@ -71,15 +71,5 @@
       "id": 4
     }
   ],
-  "reservas": [
-    {
-      "nome": "",
-      "data": "21/05/2001",
-      "horario": "15:00",
-      "dataentrega": "21/05/2022",
-      "usuarioId": 1,
-      "carroId": 2,
-      "id": 4
-    }
-  ]
+  "reservas": []
 }

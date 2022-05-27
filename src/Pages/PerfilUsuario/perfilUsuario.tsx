@@ -98,7 +98,18 @@ export const PerfilUsuario = (): JSX.Element => {
                     window.location.reload()
                     
                 })
-            }   
+            } 
+            
+            else {
+                Swal.fire({
+                    title: 'Por Favor, Preencha os campos vazios',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DB1812',
+                    cancelButtonColor: '#41B8D2',
+                    confirmButtonText: 'OK'
+                })
+            }
     }
 
     return (

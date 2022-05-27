@@ -145,10 +145,23 @@ export const Carros = ():JSX.Element => {
     const [booleano, setbooleano] = useState(false)
 
     const Editar = ():any => {
-        console.log(locadoraValor);
-        
-        apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
-        .then(() => window.location.reload())
+      
+        if(nome !== '' && portas !== '' && npessoas !== ''  && locadoraValor !== '') {
+
+            apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
+            .then(() => window.location.reload())
+        }
+
+        else {
+            Swal.fire({
+                title: 'Por Favor, Preencha os campos vazios',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#DB1812',
+                cancelButtonColor: '#41B8D2',
+                confirmButtonText: 'OK'
+            })
+        }
     }
 
     

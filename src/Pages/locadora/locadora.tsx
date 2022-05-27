@@ -85,13 +85,24 @@ export const Locadora = (): JSX.Element => {
     const EditarLocadora = () => {
 
         if (nomeLocadoras !== '' && enderecoLocadoras !== '' && telefonelocadora !== '' ) {
+
+
             apiCase.put(`locadoras/${id}`, { nome: nomeLocadoras , endereco: enderecoLocadoras , telefone: telefonelocadora  })
                 .then(() => {
                     window.location.reload()
                 })
         }
 
-        
+        else {
+            Swal.fire({
+                title: 'Por Favor, Preencha os campos vazios',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#DB1812',
+                cancelButtonColor: '#41B8D2',
+                confirmButtonText: 'OK'
+            })
+        }
 
     }
 
