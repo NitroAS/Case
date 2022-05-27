@@ -201,8 +201,7 @@ export const Carros = ():JSX.Element => {
                                     className='escolherTiposDeCarros'/>
                                 </div>
                                 <div className='inputsMenores'>
-                                    <select className='selectBooleanoAirbag' defaultValue='default' onChange={(e) => setAirbag(e.target.value)}>
-                                        <option value='default' disabled hidden>Airbag</option>
+                                    <select className='selectBooleanoAirbag' defaultValue={airbag} onChange={(e) => setAirbag(e.target.value)}>
                                         <option value="false">Sem Airbag</option>
                                         <option value="true">Com Airbag</option>
                                     </select>

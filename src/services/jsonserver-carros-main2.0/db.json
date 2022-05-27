@@ -32,7 +32,7 @@
       "nome": "Ford Fusion",
       "portas": 4,
       "npessoas": 5,
-      "airbag": true,
+      "airbag": "true",
       "locadoraId": "2",
       "id": 1
     },
