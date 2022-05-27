@@ -17,18 +17,6 @@
       "telefone": "(21) 9999-666",
       "email": "alexsandrosouzadasilva75@gmail.com",
       "id": 5
-    },
-    {
-      "nome": "vini",
-      "telefone": "adm né pae",
-      "email": "viniciusgomesdecerqueira@gmail.com",
-      "id": 6
-    },
-    {
-      "nome": "a",
-      "telefone": "a",
-      "email": "a",
-      "id": 7
     }
   ],
   "locadoras": [
@@ -79,12 +67,13 @@
       "id": 1
     },
     {
-      "id": 2,
-      "data": "2022-05-21",
-      "horario": "15:00",
-      "dataentrega": "2022-05-25",
-      "usuarioId": 2,
-      "carroId": 1
+      "data": "2022-09-21",
+      "horario": "17:00",
+      "dataentrega": "2022-07-25",
+      "usuarioId": 1,
+      "carroId": 1,
+      "locadoraId": 1,
+      "id": 2
     }
   ]
 }
