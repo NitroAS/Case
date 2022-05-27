@@ -33,6 +33,14 @@
       "airbag": true,
       "locadoraId": "2",
       "id": 1
+    },
+    {
+      "nome": "carros",
+      "portas": "5",
+      "npessoas": "5",
+      "airbag": "true",
+      "locadoraId": "2",
+      "id": 2
     }
   ],
   "reservas": [
