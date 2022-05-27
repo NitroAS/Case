@@ -143,6 +143,17 @@ export const ReservaUsuario = (): JSX.Element => {
                 })
 
         }
+
+        else {
+            Swal.fire({
+                title: 'Por Favor, Preencha os campos vazios',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#DB1812',
+                cancelButtonColor: '#41B8D2',
+                confirmButtonText: 'OK'
+            })
+        }
     }
 
     const CadastrarReservasUsuario = () => {

@@ -1,15 +1,15 @@
 {
   "usuario": [
     {
-      "nome": "Priscila",
-      "email": "priscila@email.com",
-      "telefone": "a2",
+      "nome": "Carloss",
+      "email": "carlos@email.com",
+      "telefone": "(21)",
       "id": 2
     },
     {
       "nome": "Alexsandro",
-      "telefone": "(21) 9999-666",
       "email": "alexsandrosouzadasilva75@gmail.com",
+      "telefone": "(21) 9999-666",
       "id": 5
     },
     {
@@ -47,18 +47,18 @@
       "id": 1
     },
     {
-      "id": 2,
-      "nome": "Ford Focus",
-      "portas": 4,
+      "nome": "Ford Focuss",
+      "portas": "42",
       "npessoas": 5,
-      "airbag": true,
-      "locadoraId": 1
+      "airbag": "true",
+      "locadoraId": "1",
+      "id": 2
     },
     {
       "nome": "Andrei chato",
       "portas": "1",
       "npessoas": "1",
-      "airbag": "false",
+      "airbag": "true",
       "locadoraId": "1",
       "id": 3
     },
@@ -71,6 +71,7 @@
       "id": 4
     }
   ],
+<<<<<<< HEAD
   "reservas": [
     {
       "nome": "",
@@ -91,4 +92,7 @@
       "id": 5
     }
   ]
+=======
+  "reservas": []
+>>>>>>> 0a9e7ada776aa11ec04bad264871fa9ee09a01e3
 }

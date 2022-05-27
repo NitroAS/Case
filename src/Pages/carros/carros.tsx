@@ -145,10 +145,23 @@ export const Carros = ():JSX.Element => {
     const [booleano, setbooleano] = useState(false)
 
     const Editar = ():any => {
-        console.log(locadoraValor);
-        
-        apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
-        .then(() => window.location.reload())
+      
+        if(nome !== '' && portas !== '' && npessoas !== ''  && locadoraValor !== '' && airbag !== '') {
+
+            apiCase.put(`carros/${id}`, {nome : nome, portas : portas, npessoas : npessoas, airbag : airbag, locadoraId : locadoraValor})
+            .then(() => window.location.reload())
+        }
+
+        else {
+            Swal.fire({
+                title: 'Por Favor, Preencha os campos vazios',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#DB1812',
+                cancelButtonColor: '#41B8D2',
+                confirmButtonText: 'OK'
+            })
+        }
     }
 
     
@@ -188,8 +201,7 @@ export const Carros = ():JSX.Element => {
                                     className='escolherTiposDeCarros'/>
                                 </div>
                                 <div className='inputsMenores'>
-                                    <select className='selectBooleanoAirbag' defaultValue='default' onChange={(e) => setAirbag(e.target.value)}>
-                                        <option value='default' disabled hidden>Airbag</option>
+                                    <select className='selectBooleanoAirbag' defaultValue={airbag} onChange={(e) => setAirbag(e.target.value)}>
                                         <option value="false">Sem Airbag</option>
                                         <option value="true">Com Airbag</option>
                                     </select>
