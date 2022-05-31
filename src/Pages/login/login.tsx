@@ -6,6 +6,7 @@ import { Footer } from '../../Components/Footer/footer'
 import { apiCase } from '../../services/api';
 import Swal from 'sweetalert2'
 
+
 export const Login = (): JSX.Element => {
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const CadastrarPerfil = () => {
 
       apiCase.post(`usuario`, { nome: nomeUsuario, telefone: telefone , email: nomeEmail })
           .then(() => {
-              window.location.replace('perfilUsuario')
+              window.location.replace('/perfilUsuario')
 
           })
 
