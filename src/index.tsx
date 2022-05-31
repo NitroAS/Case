@@ -6,9 +6,9 @@ import './Assets/CSS/global.css'
 
 // Rotas
 import { Home } from './Pages/Home/home'
-import { Locadora } from './Pages/Locadora/locadora'
-import { Carros } from './Pages/Carros/carros';
-import { Login } from './Pages/Login/login';
+import { Locadora } from './Pages/locadora/locadora'
+import { Carros } from './Pages/carros/carros';
+import { Login } from './Pages/login/login';
 import { Perfil } from './Pages/Perfil/perfil'
 import { PerfilUsuario } from './Pages/PerfilUsuario/perfilUsuario'
 import { Reserva } from './Pages/Reserva/reserva'
