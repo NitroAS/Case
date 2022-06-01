@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,13 +17,21 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto&display=swap');
 :root{ 
-    --cor1: #F6511D;
+    --cor1: #040404;
     --cor2: #41B8D2;
     --cor3: #9BD2DE;
+    --cinzaInputs: #DCE0E2;
+    --pretoClarocarros: #040404;
+    --vermelhoCarros: #DB1812;
+    --cinzaCardCarros: #9F9999;
+    --cinzaClaroCardCarros: #C6C4C4;
+    --cinzaFooter: #CAD0D3;
+    --cinzaModal: #9F9999;
 }
 
 *{
     margin: 0%;
     padding: 0%;
     font-family: Roboto;
+    box-sizing: border-box;
 }

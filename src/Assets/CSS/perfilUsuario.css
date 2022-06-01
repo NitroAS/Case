@@ -1,0 +1,192 @@
+@import '../CSS/global.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Montserrat&display=swap');
+*{
+    font-family: 'Quicksand'
+}
+
+.BoxPerfilUsuario{
+    border: solid 1px #9F9999;
+    border-radius: px;
+    width: 1234px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 893px;
+}
+
+.tituloAlinhamentoPerfilUsuario{
+    margin-top: 40px;
+}
+h1{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #040404;
+}
+
+.AlinhamentoBoxPerfilUsuario{
+ display: flex;
+ justify-content: center
+}
+
+
+
+
+.inputsPerfilUsuario{
+    background: #DCE0E2;
+    border-radius: 10px;
+    width: 953px;
+    height: 70px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #040404;
+    padding: 0px 0px 0px 60px ;
+    margin-top: 60px;
+    border: none;
+}
+.btnPerfilAlinhamentoUsuario{
+    display: flex;
+    justify-content:flex-end;
+    width: 38px;
+    margin-top: 250px;
+}
+.btnExcluirAlinhamentoPerfilUsuario{
+    margin-left: 20px;
+}
+
+
+.btnPerfilAtualizarUsuario{
+    background: #DB1812;
+    border-radius: 5px;
+    width: 250px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    border:none;
+    cursor: pointer;
+}
+
+.btnPerfilAtualizarUsuario:hover{
+    background-color: #FFFFFF;
+    color: #DB1812;
+    border: 3px solid #DB1812;
+}
+
+
+
+.btnPerfilExcluirUsuario{
+    border: 3px solid #DB1812;
+    border-radius: 5px;
+    width: 250px;
+    height: 70px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #DB1812;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.btnPerfilExcluirUsuario:hover{
+    background-color: #DB1812;
+    color: #DCE0E2;
+    border: 3px solid #DCE0E2;
+}
+
+
+/* Parte q vamos utilizar no Back-End */
+
+
+/* Parte do text: tamanho/cor */
+.pMsgPerfilUsuario{
+    color: #040404;
+    font-size: 20px;
+    line-height: 25px;  
+}
+
+.pTituloPerfilUsuario{
+    color: #000000;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'Montserrat'
+
+}
+
+.h2PerfilUsuario{
+    font-size: 40px;
+    line-height: 49px;
+    color: #040404;
+    font-family: 'Montserrat'
+}
+
+.ContainerH2Usuario{
+    margin-top: 150px;
+}
+
+/* Borda */
+.bordaPerfilUsuario{
+    background: #FFFFFF;
+    border: 1px solid #C6C4C4;
+    border-radius: 10px;
+    width: 1235px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px
+    
+}
+
+/* borda ´auxiliar por texto */
+.bordaAuxiliarUsuario{
+    border: 1px solid #000000;
+    width: 634px;
+    margin-top: 10px;
+}
+
+/* Botão excluir cor/tamanho/alinhamento/adicionais */
+.excluirCadastroPerfilUsuario{
+    border: 2px solid #DB1812;
+    border-radius: 5px;
+    width: 250px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #DB1812; 
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+
+/* div pai */
+.alinhamentoPerfilFinalUsuario{
+    display: flex;
+    flex-direction: column;
+    width: 1236px;
+}
+
+/* Alinhamento box-Secundaria */
+.boxCadastroUsuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1195px;
+
+}
+
+.alinahemntoGeralPerfilUsuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.supdescriptionUsuario{
+    color: #DB1812;
+}
+

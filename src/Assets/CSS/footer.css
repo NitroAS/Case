@@ -1,0 +1,108 @@
+@import '../CSS/global.css';
+
+/* Tamanhos e cores */
+
+.footer{
+    background-color: var(--cinzaFooter);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 328px;
+}
+
+.buttonFooter{
+    background-color: var(--cinzaFooter);
+    border: none;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--pretoFooter);
+}
+
+.buttonFooter:hover{
+    border-bottom: 2px solid ;
+}
+
+.pFooter{
+    color: var(--pretoFooter);
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.imgFooter{
+    width: 60px;
+    height: 60px;
+}
+
+.pMaiorFooter{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--pretoFooter);
+}
+
+/* Alinhamento e mais alguns tamanhos */
+
+.alinhamentoFooter{
+    width: 1097px;
+    display: flex;
+    justify-content: space-between;
+    height: 267px;
+    margin-top: 30px;
+}
+
+.paiInfosFooter{
+    display: flex;
+}
+
+.infosFooter{
+    width: 600px;
+    margin-top: 30px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infosFooterUm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.infosFooterDois{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.barraFooter{
+    height: 266px;
+    width: 2px;
+    background-color: black;
+    margin-left: 40px;
+}
+
+.proteçãoBarra{
+    height: 266px;
+}
+
+.alinhamentoImgFooter{
+    width: 301px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ultimaDivFooter{
+    margin-top: 30px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aFooter{
+    text-decoration: none;
+    color: var(--pretoFooter);
+}

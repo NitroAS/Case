@@ -1,0 +1,337 @@
+@import '../CSS/global.css';
+
+
+/* Tamanhos e cores */
+h1{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.escolherTiposDeCarrosUsuario{
+    width: 991px;
+    height: 67px;
+    border: 1px solid var(--cinzaInputs);
+    background-color: var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros);
+}
+
+.selectBooleanoAirbagUsuario{
+    background-color: var(--cinzaInputs);
+    width: 320px;
+    height: 70px;
+    border: 1px solid var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../img/select.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.2em top 60%, 0 0;
+    background-size: 0.8em auto, 100%;
+}
+
+.inputsMenoresCarrosUsuario{
+    background-color: var(--cinzaInputs);
+    width: 320px;
+    height: 70px;
+    border: 1px solid var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros); 
+}
+
+.selectLocadouraCarrosUsuario{
+    background-color: var(--cinzaInputs);
+    width: 583px;
+    height: 70px;
+    border: 1px solid var(--cinzaInputs);
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    padding: 0px 0px 0px 70px;
+    color: var(--pretoClarocarros);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../img/select.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right 1.2em top 60%, 0 0;
+    background-size: 0.8em auto, 100%;
+}
+
+.buttonCadastrarCarrosUsuario{
+    width: 250px;
+    height: 70px;
+    background-color: var(--vermelhoCarros);
+    color: white;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    border: 1px solid var(--vermelhoCarros);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonCadastrarCarrosUsuario:hover{
+    background-color: white;
+    color: var(--vermelhoCarros);
+}
+
+.h2CarrosUsuario{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--pretoClarocarros);
+    margin-bottom: 10px;
+}
+
+.barraDeSeparacaoCarrosUsuario{
+    width: 634px;
+    height: 1px;
+    background-color: black;
+}
+
+/* Posicionamentos */
+
+.mainCarrosUsuario{
+    display: flex;
+    justify-content: center;
+}
+
+.alinhamentoMainCarrosUsuario{
+    width: 1140px;
+}
+
+.alinhamentoSectionUmCarrosUsuario{
+    margin-top: 10px;
+    border: 1px solid var(--cinzaCardCarros);
+    height: 531px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.alinhamentoCadastrarCarrosUsuario{
+    width: 991px;
+    flex-wrap: wrap;
+}
+
+.divH1CarrosUsuario{
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divInputMaiorUsuario{
+    height: 128px;
+}
+
+.inputsMenoresUsuario{
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divCadastrarCarrosUsuario{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionsDoscardscarrosUsuario{
+    height: 687px;
+    margin-top: 30px;
+}
+
+.espaçamentoEntreAsSectionsUsuario{
+    margin-top: 166px;
+}
+
+.cardsAPICarrosUsuario{
+    border: 1px solid var(--cinzaClaroCardCarros);
+    border-radius: 10px;
+    width: 351px;
+    height: 600px;
+    margin-top: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.nomeCarroUsuario{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: black;
+}
+
+.alinhamentocardCarrosUsuario{
+    width: 251px;
+}
+
+.h3CardDivUsuario{
+    height: 98px;
+    display: flex;
+    align-items: center;
+}
+
+.pCardCarrosUsuario{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.divPCardCarrosUsuario{
+    height: 114px;
+}
+
+
+/* borda */
+
+.ContainerH2ReservasUsuario{
+    margin-top: 150px;
+}
+
+.h2PerfilReservasUsuario{
+    font-size: 40px;
+    line-height: 49px;
+    color: #040404;
+    font-family: 'Montserrat'
+
+}
+
+.bordaAuxiliarReservasUsuario{
+    border: 1px solid #000000;
+    width: 634px;
+    margin-top: 10px;
+}
+
+
+/* parte das reservas dos carros */
+.reservaTextUsuario{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #040404;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.ImagemUsuario{
+    width: 350px;
+    height: 198.22px;
+    border-radius: 10px;
+}
+
+.CentralizadoraUsuario{
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #C6C4C4;
+    border-radius: 10px;
+    width: 1140px;
+    height: 198px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.nomeCarroUsuario{
+    margin-bottom: 25px;
+}
+
+.informacoesReservaUsuario{
+    margin-bottom: 15px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #040404;
+}
+
+.TextosUsuario{
+    flex-direction: column;
+}
+
+.ButtonRUsuario{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-right: 18px;
+}
+
+.EditarReservaUsuario{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    color: #FFFFFF;
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+.EditarReservaUsuario:hover{
+    background-color: #FFFFFF;
+    color:#DB1812;
+    border: 2px solid #DB1812;
+}
+
+.ExcluirReservaUsuario{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #DB1812;
+    width: 250px;
+    height: 70px;
+    border: 2px solid #DB1812;
+    border-radius: 5px; 
+    box-sizing: border-box;
+    background-color: white;
+    cursor: pointer;
+}
+
+.ExcluirReservaUsuario:hover{
+    background-color: var(--vermelhoCarros);
+    color: white;
+}
+
+
+/* Alinhamento aereo significa que estou alinhando por fora o conteúdo que está grudando no canto da tela*/
+.alinhamentoAereoMainUsuario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ImgCarroUsuario{
+    width: 350px;
+    height: 198.22px;
+}
+

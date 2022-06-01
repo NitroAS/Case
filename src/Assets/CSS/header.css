@@ -1,0 +1,42 @@
+@import '../CSS/global.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Quicksand&display=swap');
+
+*{
+    font-family: 'Quicksand'
+}
+.LogoHeader {
+    display: flex;
+
+}
+
+.AlinhamentoHeaderPerfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 321px;
+    width: 1420px;   
+}
+
+.btnHeaderPerfil , .btnHeaderPerfilSair {
+    text-decoration: none;
+    font-size: 24px;
+    color: #040404;
+    
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.btnHeaderPerfilSair{
+    text-decoration: underline;
+}
+
+
+
+.underlinePerfil , .underlineReserva , .underlineLocadora , .underlineCarros{
+    text-decoration: underline;
+}

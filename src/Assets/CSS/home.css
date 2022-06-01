@@ -1,0 +1,144 @@
+@import '../CSS/global.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.PagMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 128px;
+}
+
+.PrimeiraFoto{
+    width: 1140px;
+    height: 688.03px;
+}
+
+.cards{
+    height: 389px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 167.7px;
+    width: 1140px;
+    justify-content: space-between;
+}
+
+.Carros{
+    flex-direction: column;
+    display: flex;
+    border: 1px solid #C6C4C4;
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.ImgPrincipal{
+    width: 1140px;
+    height: 688.03px;
+}
+
+.centralizarLogoBranco{
+    width: 1140px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 15px;
+}
+
+.LoginB{
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    position: relative;
+    bottom: 125px;
+    margin-right: 40px;
+    font-family: 'Quicksand';
+}
+
+.ReservarB:hover{
+    background-color: #FFFFFF;
+    color: #DB1812;
+    border: 3px solid #DB1812;
+}
+.CadastrarB{
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    position: relative;
+    bottom: 125px;
+    font-family: 'Quicksand';
+}
+.botoes1{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    font-family: 'Quicksand';
+}
+
+.textoH3{
+    margin-top: 20px;
+    font-family: 'Quicksand';
+}
+
+.ReservarB{
+    width: 250px;
+    height: 75px;
+    background: #DB1812;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    font-family: 'Quicksand';
+    cursor: pointer;
+}
+
+
+.linkBtnHome{
+    width: 250px;
+    height: 70px;
+    background: #DB1812;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-right: 28px;
+}
+
+
+.linkBtnHome:hover{
+    color: #DB1812;
+    background-color: white;
+    border: 3px solid #DB1812;
+    border-radius: 5px;
+}
+
+.imagensCarros{
+    border-radius: 10px;
+}
