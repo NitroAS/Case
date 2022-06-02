@@ -128,7 +128,7 @@ export const PerfilUsuario = (): JSX.Element => {
                                     type="text" name="InputPerfil"
                                     placeholder="Maria de Fátma Muniz"
                                     minLength={3}
-                                    maxLength={28}
+                                    maxLength={15}
                                     defaultValue={nomePerfisUsuario}
                                     onChange={e => setNomePerfisUsuario(e.target.value)}
                                 ></input>
@@ -139,7 +139,7 @@ export const PerfilUsuario = (): JSX.Element => {
                                     type="text"
                                     name="InputPerfil"
                                     placeholder="(11) 9999-9090"
-                                    minLength={10}
+                                    minLength={9}
                                     maxLength={15}
                                     defaultValue={telefoneUsuario}
                                     onChange={e => setTelefoneUsuario(e.target.value)}
@@ -152,7 +152,7 @@ export const PerfilUsuario = (): JSX.Element => {
                                     name="InputPerfil" 
                                     placeholder="maria@gmail.com" 
                                     minLength={10}
-                                    maxLength={35}
+                                    maxLength={40}
                                     defaultValue={nomeEmailUsuario}
                                     onChange={e => setNomeEmailUsuario(e.target.value)}
                                 ></input>

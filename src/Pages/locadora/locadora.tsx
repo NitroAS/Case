@@ -148,6 +148,8 @@ export const Locadora = (): JSX.Element => {
                                 type="text"
                                 defaultValue={nomeLocadoras}
                                 onChange={e => setNomeLocadoras(e.target.value)}
+                                minLength={2}
+                                maxLength={15}
                             />
                         </div>
                         <div className='centralizarInputslocadora'>
@@ -155,8 +157,10 @@ export const Locadora = (): JSX.Element => {
                             placeholder='Endereço:' 
                             className='inputCadastrarLocadora' 
                             type="text"
-                            defaultValue={telefonelocadora}
-                                onChange={e => setEnderecoLocadora(e.target.value)}
+                                defaultValue={enderecoLocadoras}
+                                onChange={e => setTelefoneLocadora(e.target.value)}
+                                minLength={5}
+                                maxLength={40}
                              />
                         </div>
                         <div id='centralizarInputBotao'>
@@ -164,8 +168,10 @@ export const Locadora = (): JSX.Element => {
                                 placeholder='Telefone:' 
                                 className='inputCadastrarLocadora telefoneLocadora'
                                 type="text"
-                                defaultValue={enderecoLocadoras}
-                                onChange={e => setTelefoneLocadora(e.target.value)}
+                                defaultValue={telefonelocadora}
+                                onChange={e => setEnderecoLocadora(e.target.value)}
+                                minLength={9}
+                                maxLength={15}
                              />
                             
                            

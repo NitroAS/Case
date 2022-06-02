@@ -198,6 +198,8 @@ export const Carros = ():JSX.Element => {
                                     placeholder='Ex.: Onix 2.0' 
                                     value={nome}
                                     onChange={(e) => setNome(e.target.value)}
+                                    minLength={2}
+                                    maxLength={15}
                                     className='escolherTiposDeCarros'/>
                                 </div>
                                 <div className='inputsMenores'>
@@ -210,14 +212,18 @@ export const Carros = ():JSX.Element => {
                                     placeholder="Portas:" 
                                     className='inputsMenoresCarros' 
                                     value={portas}
-                                    onChange = {(e) => setPortas(e.target.value)} />
+                                    onChange = {(e) => setPortas(e.target.value)}
+                                    minLength={1}
+                                    maxLength={2} />
 
                                     <input 
                                     type="text" 
                                     placeholder="N° de Pessoas" 
                                     className='inputsMenoresCarros'
                                     value={npessoas}
-                                    onChange = {(e) => setNPessoas(e.target.value)} />
+                                    onChange = {(e) => setNPessoas(e.target.value)}
+                                    minLength={1}
+                                    maxLength={2} />
                                 </div>
                                 <div className='divCadastrarCarros'>
                                     <select className='selectLocadouraCarros' value={locadoraValor} onChange={(e) => setLocadoraValor(e.target.value)}>

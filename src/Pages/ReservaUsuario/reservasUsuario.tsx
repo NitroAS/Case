@@ -211,6 +211,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                         className='inputsMenoresCarrosUsuario'
                                         defaultValue={dataRetiradaReservaUsuario}
                                         onChange={e => setDataRetiradaReservaUsuario(e.target.value)}
+                                        minLength={8}
+                                        maxLength={12}
 
                                     />
                                     <input
@@ -219,6 +221,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                         className='inputsMenoresCarrosUsuario'
                                         defaultValue={horarioRetiradaUsuario}
                                         onChange={e => setHorarioRetiradaUsuario(e.target.value)}
+                                        minLength={3}
+                                        maxLength={4}
                                     />
                                     <input
                                         type="text"
@@ -226,6 +230,8 @@ export const ReservaUsuario = (): JSX.Element => {
                                         className='inputsMenoresCarrosUsuario'
                                         defaultValue={devolucaoUsuario}
                                         onChange={e => setdevolucaoUsuario(e.target.value)}
+                                        minLength={8}
+                                        maxLength={12}
                                     />
                                 </div>
                                 <div className='divCadastrarCarrosUsuario'>
